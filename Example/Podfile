@@ -1,0 +1,6 @@
+use_frameworks!
+target 'WExpandLibrary_Tests' do
+  pod 'WExpandLibrary', :path => '../'
+  
+  
+end
