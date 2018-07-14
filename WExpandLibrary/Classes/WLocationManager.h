@@ -5,16 +5,16 @@
 //  Created by 吴志强 on 2018/3/6.
 //
 
-#import "Definitions.h"
+#import <WBasicLibrary/WBasicHeader.h>
 #import <CoreLocation/CoreLocation.h>
-#import "MessageTool.h"
-#import "WNetwork.h"
 
+typedef void (^LocationBlock)(CLPlacemark * _Nullable placeMark);
 
 @interface WLocationManager : NSObject
-
-@property (nonatomic,copy) LocationBlock location;
 //************************* 定位 *************************//
+//
+@property (nonatomic,copy) LocationBlock location;
+
 //经度
 @property (nonatomic,assign) double longitude;
 

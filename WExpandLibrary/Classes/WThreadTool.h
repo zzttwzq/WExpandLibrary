@@ -1,12 +1,11 @@
 //
-//  ThreadTools.h
-//  wzqproject
+//  WThreadTool.h
+//  Pods
 //
-//  Created by 吴志强 on 2017/11/9.
-//  Copyright © 2017年 吴志强. All rights reserved.
+//  Created by 吴志强 on 2018/7/14.
 //
 
-#import "Definitions.h"
+#import <WBasicLibrary/WBasicHeader.h>
 
 typedef NS_ENUM(NSInteger,WThreadSExcutionType) {
     WThreadType_SYNC,                    //同步执行
@@ -18,7 +17,8 @@ typedef NS_ENUM(NSInteger,WThreadQueueType) {
     WThreadType_CONCURRENT,              //并行队列
 };
 
-@interface ThreadTools : NSObject
+
+@interface WThreadTool : NSObject
 
 #pragma mark - GCD 应用
 #pragma mark -------定时器应用
@@ -27,7 +27,7 @@ typedef NS_ENUM(NSInteger,WThreadQueueType) {
 
  @return 返回创建播放view
  */
-+ (ThreadTools *)getInstanceWithTotalTime:(NSTimeInterval)total
++ (WThreadTool *)getInstanceWithTotalTime:(NSTimeInterval)total
                                   pertime:(NSTimeInterval)pertime
                                startFrom0:(BOOL)startFrom0
                                  callBack:(floatCallBack)callBack;
@@ -40,23 +40,23 @@ typedef NS_ENUM(NSInteger,WThreadQueueType) {
  @param countHandler 每秒回调
  @return 返回一个执行线程
  */
-+(ThreadTools *)startTimerWithTotalTime:(NSTimeInterval)totalTime
++(WThreadTool *)startTimerWithTotalTime:(NSTimeInterval)totalTime
                            countHandler:(floatCallBack)countHandler;
 
 
-///**
-// 类方法开启一个定时器,时间间隔是1s，可以设置时间长度，累加还是累减，有主线程和完成回调
-//
-// @param timeout 到期时间
-// @param startFrom0 是否从0开始
-// @param countHandler 每秒回调
-// @param complete 完成回调
-// @return 返回一个执行线程
-// */
-//+(ThreadTools *)startTimerWithTimeout:(NSTimeInterval)timeout
-//                           startFrom0:(BOOL)startFrom0
-//                         countHandler:(floatCallBack)countHandler
-//                             complete:(StateBlock)complete;
+    ///**
+    // 类方法开启一个定时器,时间间隔是1s，可以设置时间长度，累加还是累减，有主线程和完成回调
+    //
+    // @param timeout 到期时间
+    // @param startFrom0 是否从0开始
+    // @param countHandler 每秒回调
+    // @param complete 完成回调
+    // @return 返回一个执行线程
+    // */
+    //+(ThreadTools *)startTimerWithTimeout:(NSTimeInterval)timeout
+    //                           startFrom0:(BOOL)startFrom0
+    //                         countHandler:(floatCallBack)countHandler
+    //                             complete:(StateBlock)complete;
 
 
 /**
@@ -69,7 +69,7 @@ typedef NS_ENUM(NSInteger,WThreadQueueType) {
  @param complete 完成回调
  @return 返回一个执行线程
  */
-+(ThreadTools *)startTimerWithTimeout:(NSTimeInterval)timeout
++(WThreadTool *)startTimerWithTimeout:(NSTimeInterval)timeout
                          timeInterVal:(NSTimeInterval)timeInterVal
                            startFrom0:(BOOL)startFrom0
                          countHandler:(floatCallBack)countHandler
@@ -131,4 +131,6 @@ typedef NS_ENUM(NSInteger,WThreadQueueType) {
  @param block 传入要执行的操作
  */
 +(void)startTaskWithBlock:(BlankBlock)block;
+
+
 @end

@@ -6,8 +6,7 @@
 //  Copyright © 2017年 吴志强. All rights reserved.
 //
 
-#import "Definitions.h"
-#import "MessageTool.h"
+#import <WBasicLibrary/WBasicHeader.h>
 
 #import <CoreLocation/CoreLocation.h>
 #import <Photos/Photos.h>

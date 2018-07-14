@@ -1,35 +1,35 @@
 //
-//  ThreadTools.m
-//  wzqproject
+//  WThreadTool.m
+//  Pods
 //
-//  Created by 吴志强 on 2017/11/9.
-//  Copyright © 2017年 吴志强. All rights reserved.
+//  Created by 吴志强 on 2018/7/14.
 //
 
-#import "ThreadTools.h"
+#import "WThreadTool.h"
 
-@interface ThreadTools ()
+@interface WThreadTool ()
 @property (nonatomic, strong) dispatch_source_t timer; //定时器
 @property (nonatomic,copy) BlankBlock interCallBack;
 
 @end
 
-@implementation ThreadTools
+static WThreadTool *sharedInstance = nil;
+static dispatch_once_t once;
+
+@implementation WThreadTool
 /**
  创建一个单利用户获取定时器的参数
 
  @return 返回创建播放view
  */
-+ (ThreadTools *)getInstanceWithTotalTime:(NSTimeInterval)total
++ (WThreadTool *)getInstanceWithTotalTime:(NSTimeInterval)total
                                   pertime:(NSTimeInterval)pertime
                                startFrom0:(BOOL)startFrom0
                                  callBack:(floatCallBack)callBack;
 {
-    static ThreadTools *sharedInstance = nil;
-    static dispatch_once_t once;
     dispatch_once(&once, ^{
 
-        sharedInstance = [ThreadTools startTimerWithTimeout:total
+        sharedInstance = [WThreadTool startTimerWithTimeout:total
                                                timeInterVal:pertime
                                                  startFrom0:startFrom0
                                                countHandler:callBack
@@ -49,19 +49,18 @@
  @param countHandler 每秒回调
  @return 返回一个执行线程
  */
-+(ThreadTools *)startTimerWithTotalTime:(NSTimeInterval)totalTime
-                countHandler:(floatCallBack)countHandler;
++(WThreadTool *)startTimerWithTotalTime:(NSTimeInterval)totalTime
+                           countHandler:(floatCallBack)countHandler;
 {
-    ThreadTools *tool = [ThreadTools new];
-
+    WThreadTool *tool = [WThreadTool new];
     countHandler(totalTime);
 
     [tool startTimer:1 timeout:totalTime decrease:YES mainThread:^(float count) {
 
         countHandler(count);
     }
-    backThread:nil
-    compolete:nil];
+          backThread:nil
+           compolete:nil];
 
     return tool;
 }
@@ -76,22 +75,22 @@
  @param complete 完成回调
  @return 返回一个执行线程
  */
-+(ThreadTools *)startTimerWithTimeout:(NSTimeInterval)timeout
-                  startFrom0:(BOOL)startFrom0
-                countHandler:(floatCallBack)countHandler
-                    complete:(StateBlock)complete;
++(WThreadTool *)startTimerWithTimeout:(NSTimeInterval)timeout
+                           startFrom0:(BOOL)startFrom0
+                         countHandler:(floatCallBack)countHandler
+                             complete:(StateBlock)complete;
 {
-    ThreadTools *tool = [ThreadTools new];
+    WThreadTool *tool = [WThreadTool new];
 
     [tool startTimer:1 timeout:timeout decrease:!startFrom0 mainThread:^(float count) {
 
         countHandler(count);
     }
-    backThread:nil
-    compolete:^(BOOL state) {
+          backThread:nil
+           compolete:^(BOOL state) {
 
-        complete(YES);
-    }];
+               complete(YES);
+           }];
 
     return tool;
 }
@@ -107,22 +106,22 @@
  @param complete 完成回调
  @return 返回一个执行线程
  */
-+(ThreadTools *)startTimerWithTimeout:(NSTimeInterval)timeout
-                timeInterVal:(NSTimeInterval)timeInterVal
-                  startFrom0:(BOOL)startFrom0
-                countHandler:(floatCallBack)countHandler
-                    complete:(StateBlock)complete;
++(WThreadTool *)startTimerWithTimeout:(NSTimeInterval)timeout
+                         timeInterVal:(NSTimeInterval)timeInterVal
+                           startFrom0:(BOOL)startFrom0
+                         countHandler:(floatCallBack)countHandler
+                             complete:(StateBlock)complete;
 {
-    ThreadTools *tool = [ThreadTools new];
+    WThreadTool *tool = [WThreadTool new];
     [tool startTimer:timeInterVal timeout:timeout decrease:!startFrom0 mainThread:^(float count) {
 
         countHandler(count);
     }
-    backThread:nil
-    compolete:^(BOOL state) {
+          backThread:nil
+           compolete:^(BOOL state) {
 
-        complete(YES);
-    }];
+               complete(YES);
+           }];
 
     return tool;
 }
@@ -147,28 +146,27 @@
 {
     __block int count = 0;
     if (decrease) {
-
         count = timeout;
     }
 
-    // 获得队列
+        // 获得队列
     dispatch_queue_t queue = dispatch_get_main_queue();
 
-    // 创建一个定时器(dispatch_source_t本质还是个OC对象)
+        // 创建一个定时器(dispatch_source_t本质还是个OC对象)
     self.timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
 
-    // 设置定时器的各种属性（几时开始任务，每隔多长时间执行一次）
-    // GCD的时间参数，一般是纳秒（1秒 == 10的9次方纳秒）
-    // 何时开始执行第一个任务
-    // dispatch_time(DISPATCH_TIME_NOW, 1.0 * NSEC_PER_SEC) 比当前时间晚3秒
+        // 设置定时器的各种属性（几时开始任务，每隔多长时间执行一次）
+        // GCD的时间参数，一般是纳秒（1秒 == 10的9次方纳秒）
+        // 何时开始执行第一个任务
+        // dispatch_time(DISPATCH_TIME_NOW, 1.0 * NSEC_PER_SEC) 比当前时间晚3秒
     dispatch_time_t start = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(perTime * NSEC_PER_SEC));
     uint64_t interval = (uint64_t)(perTime * NSEC_PER_SEC);
     dispatch_source_set_timer(self.timer, start, interval, 0);
 
-    //设置回调
+        //设置回调
     dispatch_source_set_event_handler(self.timer, ^{
 
-        //通知主线程
+            //通知主线程
         dispatch_async(dispatch_get_main_queue(), ^{
 
             if (mainThread) {
@@ -176,7 +174,7 @@
             }
         });
 
-        //通知后台线程
+            //通知后台线程
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
 
             if (backThread) {
@@ -184,16 +182,16 @@
             }
         });
 
-        //累加count
+            //累加count
         if (decrease) {
 
             count -= perTime;
             if (count == 0) {
 
-                //取消定时器
+                    //取消定时器
                 [self cancelTimer];
 
-                //完成回调
+                    //完成回调
                 dispatch_async(dispatch_get_main_queue(), ^{
 
                     if (compolete) {
@@ -206,10 +204,10 @@
             count += perTime;
             if (count == timeout) {
 
-                //取消定时器
+                    //取消定时器
                 [self cancelTimer];
 
-                //完成回调
+                    //完成回调
                 dispatch_async(dispatch_get_main_queue(), ^{
 
                     if (compolete) {
@@ -220,7 +218,7 @@
         }
     });
 
-    // 启动定时器
+        // 启动定时器
     dispatch_resume(self.timer);
 }
 
@@ -230,7 +228,7 @@
  */
 -(void)cancelTimer
 {
-    //取消定时器
+        //取消定时器
     dispatch_cancel(self.timer);
     self.timer = nil;
 }
@@ -242,8 +240,8 @@
  */
 +(dispatch_queue_t)getMainQueue;
 {
-    // 主队列的获取方法
-   return dispatch_get_main_queue();
+        // 主队列的获取方法
+    return dispatch_get_main_queue();
 }
 
 
@@ -256,18 +254,18 @@
 {
     if (queueType == WThreadType_SERIAL) {
 
-        //串行队列的创建方法(主动创建)
+            //串行队列的创建方法(主动创建)
         return dispatch_queue_create("net.zzttwzq.top", DISPATCH_QUEUE_SERIAL);
 
-        //或者使用主队列
-//        return dispatch_get_main_queue();
+            //或者使用主队列
+            //        return dispatch_get_main_queue();
     }else{
 
-        // 并发队列的创建方法(主动创建)
+            // 并发队列的创建方法(主动创建)
         return dispatch_queue_create("net.zzttwzq.top", DISPATCH_QUEUE_CONCURRENT);
 
-        //获取使用全局并发主队列
-//        return dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+            //获取使用全局并发主队列
+            //        return dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     }
 }
 
@@ -311,7 +309,7 @@
         [thread start];
     } else {
 
-        ThreadTools *tool = [ThreadTools new];
+        WThreadTool *tool = [WThreadTool new];
         NSThread *thread = [[NSThread alloc] initWithTarget:tool selector:@selector(callback) object:nil];
 
         tool.interCallBack = ^{

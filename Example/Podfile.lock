@@ -1,6 +1,7 @@
 PODS:
   - WBasicLibrary (0.3.0)
-  - WExpandLibrary (0.1.0)
+  - WExpandLibrary (0.1.0):
+    - WBasicLibrary
 
 DEPENDENCIES:
   - WBasicLibrary
@@ -16,7 +17,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   WBasicLibrary: 6bd0ed867c9b699980664ded3b448fab03174404
-  WExpandLibrary: d5d93c305ced3256b4db5fae659911af53139a4d
+  WExpandLibrary: 0b21d9cd4bcd7cbf7c171cbc5eb98ae6782c6f14
 
 PODFILE CHECKSUM: 0b241436bf0d2f808cb27f7680e35f9904b21c4e
 

@@ -26,7 +26,6 @@
 
 
 #import <Foundation/Foundation.h>
-#import "Definitions.h"
 
 typedef NS_ENUM(NSInteger,WFileBasePath) {
     WFileBasePath_Document,

@@ -131,30 +131,30 @@
     }];
 }
 
-/**
- 使用api解析定位经纬度
-
- @param block 返回定位结果
- */
--(void)getPlaceWithAMAP:(LocationBlock)block;
-{
-    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-    [dic setObject:@"78edb11fdb50003fede3a860c4234783" forKey:@"key"];
-    [dic setObject:[NSString stringWithFormat:@"%f,%f",[WLocationManager getInstance].longitude,[WLocationManager getInstance].latitude] forKey:@"location"];
-    [dic setObject:@"100" forKey:@"radius"];
-    [WNetwork
-     postTaskWithURL:@"https://restapi.amap.com/v3/geocode/regeo?parameters" params:dic hostType:HostType_Main enableLoading:YES setHeaderfield:^(NSMutableURLRequest * _Nonnull request) {
-
-     } result:^(NSDictionary * _Nullable dic, NSError * _Nullable error) {
-
-
-//         block();
-     }];
-}
+///**
+// 使用api解析定位经纬度
+//
+// @param block 返回定位结果
+// */
+//-(void)getPlaceWithAMAP:(LocationBlock)block;
+//{
+//    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+//    [dic setObject:@"78edb11fdb50003fede3a860c4234783" forKey:@"key"];
+//    [dic setObject:[NSString stringWithFormat:@"%f,%f",[WLocationManager getInstance].longitude,[WLocationManager getInstance].latitude] forKey:@"location"];
+//    [dic setObject:@"100" forKey:@"radius"];
+//    [WNetwork
+//     postTaskWithURL:@"https://restapi.amap.com/v3/geocode/regeo?parameters" params:dic hostType:HostType_Main enableLoading:YES setHeaderfield:^(NSMutableURLRequest * _Nonnull request) {
+//
+//     } result:^(NSDictionary * _Nullable dic, NSError * _Nullable error) {
+//
+//
+////         block();
+//     }];
+//}
 
 -(void)showMessage:(NSString *)message
 {
-    [MessageTool showToast:message];
+//    [MessageTool showToast:message];
 }
 
 - (void)locationManager:(CLLocationManager *)manager

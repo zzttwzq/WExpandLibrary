@@ -5,19 +5,15 @@
 //  Created by 吴志强 on 2018/2/10.
 //
 
-#import <Foundation/Foundation.h>
-#import "Definitions.h"
+#import <WBasicLibrary/WBasicHeader.h>
 
 @interface WDataModel : NSObject
-
-//打印对象属性
 /**
  把数组的数据转换成对象属性
 
  @param array 要打印的数组
  */
-+(void)printPropertyWithArray:(NSArray *)array;
-
++ (void) printPropertyWithArray:(NSArray *)array;
 
 
 /**

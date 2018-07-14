@@ -13,7 +13,7 @@
 
 @interface WDevice ()
 
-@property (nonatomic,copy)viewOrientationChanged orientationChange;
+//@property (nonatomic,copy)viewOrientationChanged orientationChange;
 
 @end
 
@@ -147,71 +147,71 @@
 }
 
 
-/**
- 屏幕方向改变
-
- @param change 改变的方向
- */
-+(void)viewOrientationChange:(viewOrientationChanged)change;
-{
-    //设备旋转通知
-    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
-
-
-    WDevice *device = [WDevice new];
-    device.orientationChange = ^(UIDeviceOrientation orientation) {
-
-        change(orientation);
-    };
-
-
-    [[NSNotificationCenter defaultCenter] addObserver:device
-                                             selector:@selector(handleDeviceOrientationDidChange:)
-                                                 name:UIDeviceOrientationDidChangeNotification
-                                               object:nil
-     ];
-}
-
-- (void)handleDeviceOrientationDidChange:(UIInterfaceOrientation)interfaceOrientation{
-    UIDevice *device = [UIDevice currentDevice] ;
-
-    switch (device.orientation) {
-        case UIDeviceOrientationFaceUp:
-            NSLog(@"屏幕朝上平躺");
-            break;
-
-        case UIDeviceOrientationFaceDown:
-            NSLog(@"屏幕朝下平躺");
-            break;
-
-        case UIDeviceOrientationUnknown:
-            NSLog(@"未知方向");
-            break;
-
-        case UIDeviceOrientationLandscapeLeft:
-            NSLog(@"home键在右");
-
-            break;
-
-        case UIDeviceOrientationLandscapeRight:
-            NSLog(@"home键在左");
-
-            break;
-
-        case UIDeviceOrientationPortrait:
-            NSLog(@"home键在下");
-
-            break;
-
-        case UIDeviceOrientationPortraitUpsideDown:
-            NSLog(@"home键在上");
-            break;
-
-        default:
-            NSLog(@"无法辨识");
-            break;
-    }
-}
+///**
+// 屏幕方向改变
+//
+// @param change 改变的方向
+// */
+//+(void)viewOrientationChange:(viewOrientationChanged)change;
+//{
+//    //设备旋转通知
+//    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+//
+//
+//    WDevice *device = [WDevice new];
+//    device.orientationChange = ^(UIDeviceOrientation orientation) {
+//
+//        change(orientation);
+//    };
+//
+//
+//    [[NSNotificationCenter defaultCenter] addObserver:device
+//                                             selector:@selector(handleDeviceOrientationDidChange:)
+//                                                 name:UIDeviceOrientationDidChangeNotification
+//                                               object:nil
+//     ];
+//}
+//
+//- (void)handleDeviceOrientationDidChange:(UIInterfaceOrientation)interfaceOrientation{
+//    UIDevice *device = [UIDevice currentDevice] ;
+//
+//    switch (device.orientation) {
+//        case UIDeviceOrientationFaceUp:
+//            NSLog(@"屏幕朝上平躺");
+//            break;
+//
+//        case UIDeviceOrientationFaceDown:
+//            NSLog(@"屏幕朝下平躺");
+//            break;
+//
+//        case UIDeviceOrientationUnknown:
+//            NSLog(@"未知方向");
+//            break;
+//
+//        case UIDeviceOrientationLandscapeLeft:
+//            NSLog(@"home键在右");
+//
+//            break;
+//
+//        case UIDeviceOrientationLandscapeRight:
+//            NSLog(@"home键在左");
+//
+//            break;
+//
+//        case UIDeviceOrientationPortrait:
+//            NSLog(@"home键在下");
+//
+//            break;
+//
+//        case UIDeviceOrientationPortraitUpsideDown:
+//            NSLog(@"home键在上");
+//            break;
+//
+//        default:
+//            NSLog(@"无法辨识");
+//            break;
+//    }
+//}
 
 
 #pragma mark - 设置系统状态
@@ -394,7 +394,7 @@
 +(void)openSystemVibrateFor:(NSTimeInterval)seconds;
 {
     AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);// 震动
-    [ThreadTools startTimerWithTotalTime:2 countHandler:^(float count) {
+    [WThreadTool startTimerWithTotalTime:2 countHandler:^(float count) {
 
         AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);// 震动
     }];

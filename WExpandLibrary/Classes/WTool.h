@@ -6,7 +6,7 @@
 //  Copyright © 2017年 吴志强. All rights reserved.
 //
 
-#import "Definitions.h"
+#import <WBasicLibrary/WBasicHeader.h>
 #import "WDevice.h"
 
 @interface WTool : NSObject

@@ -19,21 +19,21 @@
  */
 +(void)showAlert:(NSString *)alert viewController:(UIViewController *)viewController;
 {
-    [MessageTool showAlertWithTarget:viewController
-                                title:@""
-                             message:alert
-                             actions:@[@"取消",@"去设置"]
-                              colors:@[[UIColor colorWithHexString:@"a8a8a8"],[UIColor colorWithHexString:@"c7322b"]] comfirmAction:^(UIAlertAction *action) {
-
-                                  if ([action.title isEqualToString:@"去设置"]){
-
-                                      NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
-                                      if ([ [UIApplication sharedApplication] canOpenURL:url]){
-
-                                          [[UIApplication sharedApplication] openURL:url];
-                                      }
-                                  }
-                              }];
+//    [MessageTool showAlertWithTarget:viewController
+//                                title:@""
+//                             message:alert
+//                             actions:@[@"取消",@"去设置"]
+//                              colors:@[[UIColor colorWithHexString:@"a8a8a8"],[UIColor colorWithHexString:@"c7322b"]] comfirmAction:^(UIAlertAction *action) {
+//
+//                                  if ([action.title isEqualToString:@"去设置"]){
+//
+//                                      NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+//                                      if ([ [UIApplication sharedApplication] canOpenURL:url]){
+//
+//                                          [[UIApplication sharedApplication] openURL:url];
+//                                      }
+//                                  }
+//                              }];
 }
 
 #pragma mark - 检查权限状态
@@ -52,7 +52,7 @@
         case AVAuthorizationStatusRestricted:
 
             //显示消息
-            [MessageTool showToast:@"未授权，家长限制"];
+//            [MessageTool showToast:@"未授权，家长限制"];
             return AVAuthorizationStatusRestricted;
         case AVAuthorizationStatusDenied:
 
@@ -82,7 +82,7 @@
         case AVAuthorizationStatusRestricted:
 
             //显示消息
-            [MessageTool showToast:@"未授权，家长限制"];
+//            [MessageTool showToast:@"未授权，家长限制"];
             return AVAuthorizationStatusRestricted;
         case AVAuthorizationStatusDenied:
 
@@ -121,7 +121,7 @@
         case PHAuthorizationStatusRestricted:
 
             //显示消息
-            [MessageTool showToast:@"未授权，家长限制"];
+//            [MessageTool showToast:@"未授权，家长限制"];
             return PHAuthorizationStatusRestricted;
 
         default:
@@ -140,7 +140,7 @@
     BOOL isLocation = [CLLocationManager locationServicesEnabled];
     if (!isLocation) {
 
-        [MessageTool showToast:@"请打开定位！！！"];
+//        [MessageTool showToast:@"请打开定位！！！"];
         return 100;
     }
     CLAuthorizationStatus CLstatus = [CLLocationManager authorizationStatus];
@@ -353,7 +353,7 @@
 
             if (!granted) {
 
-                [MessageTool showToast:@"用户取消授权!"];
+//                [MessageTool showToast:@"用户取消授权!"];
             }else{
 
                 if (handler) {
@@ -387,7 +387,7 @@
 
             if (!granted) {
 
-                [MessageTool showToast:@"用户取消授权!"];
+//                [MessageTool showToast:@"用户取消授权!"];
             }else{
 
                 if (handler) {
@@ -421,7 +421,7 @@
 
             if (!status) {
 
-                [MessageTool showToast:@"用户取消授权!"];
+//                [MessageTool showToast:@"用户取消授权!"];
             }else{
 
                 if (handler) {
@@ -509,7 +509,7 @@
                 CFRelease(addressBook);
             }else{
 
-                [MessageTool showToast:@"用户取消授权!"];
+//                [MessageTool showToast:@"用户取消授权!"];
                 CFRelease(addressBook);
             }
         });
@@ -546,7 +546,7 @@
                 }
             }else{
 
-                [MessageTool showToast:@"用户取消授权!"];
+//                [MessageTool showToast:@"用户取消授权!"];
             }
         }];
     }else if (state == kABAuthorizationStatusDenied) {
@@ -581,7 +581,7 @@
                 }
             }else{
 
-                [MessageTool showToast:@"用户取消授权!"];
+//                [MessageTool showToast:@"用户取消授权!"];
             }
         }];
     }else if (state == kABAuthorizationStatusDenied) {

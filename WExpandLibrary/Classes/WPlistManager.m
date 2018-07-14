@@ -124,7 +124,7 @@
                      value:(id)value;
 {
     WEAK_SELF(WPlistManager);
-    [ThreadTools startTaskWithBlock:^{
+    [WThreadTool startTaskWithBlock:^{
 
         for (NSString *dictKey in weakSelf.fileDict) {
 
@@ -149,7 +149,7 @@
                   value:(id)value;
 {
     WEAK_SELF(WPlistManager);
-    [ThreadTools startTaskWithBlock:^{
+    [WThreadTool startTaskWithBlock:^{
 
         for (NSString *dictKey in weakSelf.fileDict) {
 
@@ -171,7 +171,7 @@
 - (void) deleteItemWithKey:(NSString *)key;
 {
     WEAK_SELF(WPlistManager);
-    [ThreadTools startTaskWithBlock:^{
+    [WThreadTool startTaskWithBlock:^{
 
         for (NSString *dictKey in weakSelf.fileDict) {
 

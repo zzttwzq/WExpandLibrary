@@ -79,7 +79,7 @@
     for (NSDictionary *consumptionDic in array) {
 
         id obj = [[NSClassFromString(NSStringFromClass([self class])) alloc] init];
-        [obj setObjWithDic:consumptionDic];
+        [obj setObjectWithDict:consumptionDic];
         [tmpArray addObject:obj];
     }
 

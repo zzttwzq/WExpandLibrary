@@ -227,7 +227,7 @@
 
     }else{
 
-        WLOG(@"<WFileManager :> 文件名为空");
+//        WLOG(@"<WFileManager :> 文件名为空");
     }
 
     return nil;
@@ -277,7 +277,7 @@
         }
     }
 
-    WLOG(@"<WFileManager :> 文件不存在");
+//    WLOG(@"<WFileManager :> 文件不存在");
     return nil;
 }
 
@@ -296,7 +296,7 @@
         return [NSURL fileURLWithPath:filePath];
     }
 
-    WLOG(@"<WFileManager :> 文件不存在");
+//    WLOG(@"<WFileManager :> 文件不存在");
     return nil;
 }
 
@@ -367,7 +367,7 @@
             return filePath;
         }else{
 
-            WLOG(@"<WFileManager :> 文件创建失败！");
+//            WLOG(@"<WFileManager :> 文件创建失败！");
         }
     }else{
 
@@ -380,7 +380,7 @@
             return filePath;
         }else{
 
-            WLOG(@"<WFileManager :> 文件创建失败！");
+//            WLOG(@"<WFileManager :> 文件创建失败！");
         }
     }
 
@@ -436,7 +436,7 @@
         NSError *error;
         if (![fileManager removeItemAtPath:filePath error:&error]) {
 
-            WLOG(@"<WFileManager :> 文件创建失败！%@",error.description);
+//            WLOG(@"<WFileManager :> 文件创建失败！%@",error.description);
         }
     }
 }
