@@ -21,7 +21,7 @@
   "source_files": "WExpandLibrary/Classes/**/*",
   "frameworks": "UIKit",
   "dependencies": {
-    "WBasicLibrary": [
+    "WBasicLibrary~> 0.3.1": [
 
     ]
   }

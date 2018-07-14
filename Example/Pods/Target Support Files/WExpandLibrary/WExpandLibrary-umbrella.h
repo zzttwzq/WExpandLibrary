@@ -11,7 +11,6 @@
 #endif
 
 #import "Reachability.h"
-#import "ThreadTools.h"
 #import "WBasicCell.h"
 #import "WCheckAuthor.h"
 #import "WDataModel.h"
@@ -25,6 +24,7 @@
 #import "WPlistManager.h"
 #import "WScanCodeVC.h"
 #import "WSiderViewController.h"
+#import "WThreadTool.h"
 #import "WTool.h"
 
 FOUNDATION_EXPORT double WExpandLibraryVersionNumber;

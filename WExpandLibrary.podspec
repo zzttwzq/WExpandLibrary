@@ -38,5 +38,5 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'
-  s.dependency 'WBasicLibrary'
+  s.dependency 'WBasicLibrary' '~> 0.3.1'
 end
