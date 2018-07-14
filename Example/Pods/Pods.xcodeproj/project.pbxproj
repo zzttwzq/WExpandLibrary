@@ -10,9 +10,12 @@
 		048F19AD79A10366EE5616EBDA056AA3 /* WExpandLibrary-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A07707A0D2654E8EA69CFD9F2A07E6B /* WExpandLibrary-dummy.m */; };
 		09E6C37661FE1FF86B6D254A5C675B8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		1226C86D45D44332DA070CADEDECFD11 /* Pods-WExpandLibrary_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 707F2B822C57D556CBD5C0438EDA1808 /* Pods-WExpandLibrary_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1C7E07EB20F9DDED000417A7 /* WScanCodeVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C7E07E920F9DDED000417A7 /* WScanCodeVC.h */; };
+		1C7E07EC20F9DDED000417A7 /* WScanCodeVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C7E07E920F9DDED000417A7 /* WScanCodeVC.h */; };
+		1C7E07ED20F9DDED000417A7 /* WScanCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7E07EA20F9DDED000417A7 /* WScanCodeVC.m */; };
+		1C7E07EE20F9DDED000417A7 /* WScanCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7E07EA20F9DDED000417A7 /* WScanCodeVC.m */; };
 		6AB1ECF64985E4CFA60DBD03F8BB0218 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		8C652F4521FC8ED390BBA1A5E6DD2084 /* Pods-WExpandLibrary_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE9851084F175ED61BA98E62944B032 /* Pods-WExpandLibrary_Tests-dummy.m */; };
-		9572929E925ECBCB1076F94725649F13 /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = F059B440ED4D2211AB402676F4388CF8 /* ReplaceMe.m */; };
 		C5E7B63C5019D4A027CDF424142A64AF /* WExpandLibrary-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 551C135C8261D9FEB36A0BD7C295E804 /* WExpandLibrary-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -27,26 +30,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		015D5EE92C3DAA8137ED874E1A49D7F3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		015D5EE92C3DAA8137ED874E1A49D7F3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		0C0059FC654504B3FB877FDCDE759B0D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C7E07E920F9DDED000417A7 /* WScanCodeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WScanCodeVC.h; path = WExpandLibrary/Classes/WScanCodeVC.h; sourceTree = "<group>"; };
+		1C7E07EA20F9DDED000417A7 /* WScanCodeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WScanCodeVC.m; path = WExpandLibrary/Classes/WScanCodeVC.m; sourceTree = "<group>"; };
 		22FBFE7E7FB7C672A85A6305E705833D /* Pods-WExpandLibrary_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WExpandLibrary_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		3A6FB390B4942AC4E3078425CAA81ED4 /* WExpandLibrary.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WExpandLibrary.xcconfig; sourceTree = "<group>"; };
 		4B67EE911D75719BDC1122186D7DF059 /* Pods-WExpandLibrary_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WExpandLibrary_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		551C135C8261D9FEB36A0BD7C295E804 /* WExpandLibrary-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WExpandLibrary-umbrella.h"; sourceTree = "<group>"; };
-		5FE8AADB269C4B7BC6BC2B39601347E5 /* WExpandLibrary.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = WExpandLibrary.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		5FE8AADB269C4B7BC6BC2B39601347E5 /* WExpandLibrary.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = WExpandLibrary.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		61D97607F383786F9BDC2E2048609F48 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6A07707A0D2654E8EA69CFD9F2A07E6B /* WExpandLibrary-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WExpandLibrary-dummy.m"; sourceTree = "<group>"; };
 		707F2B822C57D556CBD5C0438EDA1808 /* Pods-WExpandLibrary_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WExpandLibrary_Tests-umbrella.h"; sourceTree = "<group>"; };
 		7AE9851084F175ED61BA98E62944B032 /* Pods-WExpandLibrary_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WExpandLibrary_Tests-dummy.m"; sourceTree = "<group>"; };
-		8CFE8EC8A850E5ABDDACF4B669E4E6F3 /* WExpandLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WExpandLibrary.framework; path = WExpandLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CFE8EC8A850E5ABDDACF4B669E4E6F3 /* WExpandLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WExpandLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EA48E449B7339E8F2D86B21974CF579 /* Pods-WExpandLibrary_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WExpandLibrary_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A9F495F6387872AD3EC0F3BF0DE49455 /* Pods-WExpandLibrary_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WExpandLibrary_Tests.modulemap"; sourceTree = "<group>"; };
-		B5649CF2DDDFD7C6C926D71BEFCAF596 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		B5649CF2DDDFD7C6C926D71BEFCAF596 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E5F4C6B37E0E062372166B1357F11A2B /* WExpandLibrary.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WExpandLibrary.modulemap; sourceTree = "<group>"; };
-		F0084DBE66554C8E6CE0CA0B3F6515A6 /* Pods_WExpandLibrary_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_WExpandLibrary_Tests.framework; path = "Pods-WExpandLibrary_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F059B440ED4D2211AB402676F4388CF8 /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ReplaceMe.m; path = WExpandLibrary/Classes/ReplaceMe.m; sourceTree = "<group>"; };
+		F0084DBE66554C8E6CE0CA0B3F6515A6 /* Pods_WExpandLibrary_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WExpandLibrary_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2D2BCFE4B149E549D4E4DFC008616B9 /* Pods-WExpandLibrary_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WExpandLibrary_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		F6131D5AF58C78E5C0C807A6F58399DC /* WExpandLibrary-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WExpandLibrary-prefix.pch"; sourceTree = "<group>"; };
 		F6E8EE4755574B926F64EDFED1A3682B /* Pods-WExpandLibrary_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WExpandLibrary_Tests-resources.sh"; sourceTree = "<group>"; };
@@ -85,7 +89,8 @@
 		54E9204473863433B4001E0C93BF46D5 /* WExpandLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				F059B440ED4D2211AB402676F4388CF8 /* ReplaceMe.m */,
+				1C7E07E920F9DDED000417A7 /* WScanCodeVC.h */,
+				1C7E07EA20F9DDED000417A7 /* WScanCodeVC.m */,
 				FD57E06980A437909F1096088EF8D700 /* Pod */,
 				94FDAB93606EEB736A6CBB996FF94AF2 /* Support Files */,
 			);
@@ -186,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1226C86D45D44332DA070CADEDECFD11 /* Pods-WExpandLibrary_Tests-umbrella.h in Headers */,
+				1C7E07EB20F9DDED000417A7 /* WScanCodeVC.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5E7B63C5019D4A027CDF424142A64AF /* WExpandLibrary-umbrella.h in Headers */,
+				1C7E07EC20F9DDED000417A7 /* WScanCodeVC.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C7E07ED20F9DDED000417A7 /* WScanCodeVC.m in Sources */,
 				8C652F4521FC8ED390BBA1A5E6DD2084 /* Pods-WExpandLibrary_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,7 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9572929E925ECBCB1076F94725649F13 /* ReplaceMe.m in Sources */,
+				1C7E07EE20F9DDED000417A7 /* WScanCodeVC.m in Sources */,
 				048F19AD79A10366EE5616EBDA056AA3 /* WExpandLibrary-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
