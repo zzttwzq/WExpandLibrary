@@ -1,0 +1,22 @@
+{
+  "name": "WExpandLibrary",
+  "version": "0.1.0",
+  "summary": "A short description of WExpandLibrary.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/zzttwzq/WExpandLibrary",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "zzttwzq": "1076976262@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/zzttwzq/WExpandLibrary.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "WExpandLibrary/Classes/**/*"
+}

@@ -1,0 +1,577 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		048F19AD79A10366EE5616EBDA056AA3 /* WExpandLibrary-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A07707A0D2654E8EA69CFD9F2A07E6B /* WExpandLibrary-dummy.m */; };
+		09E6C37661FE1FF86B6D254A5C675B8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		1226C86D45D44332DA070CADEDECFD11 /* Pods-WExpandLibrary_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 707F2B822C57D556CBD5C0438EDA1808 /* Pods-WExpandLibrary_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6AB1ECF64985E4CFA60DBD03F8BB0218 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		8C652F4521FC8ED390BBA1A5E6DD2084 /* Pods-WExpandLibrary_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE9851084F175ED61BA98E62944B032 /* Pods-WExpandLibrary_Tests-dummy.m */; };
+		9572929E925ECBCB1076F94725649F13 /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = F059B440ED4D2211AB402676F4388CF8 /* ReplaceMe.m */; };
+		C5E7B63C5019D4A027CDF424142A64AF /* WExpandLibrary-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 551C135C8261D9FEB36A0BD7C295E804 /* WExpandLibrary-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7CED6A14F35CB258E45B86DD05A6AE09 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E67CC58411094C2FD8F2DE0E5FAA33B9;
+			remoteInfo = WExpandLibrary;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		015D5EE92C3DAA8137ED874E1A49D7F3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		0C0059FC654504B3FB877FDCDE759B0D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22FBFE7E7FB7C672A85A6305E705833D /* Pods-WExpandLibrary_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WExpandLibrary_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		3A6FB390B4942AC4E3078425CAA81ED4 /* WExpandLibrary.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WExpandLibrary.xcconfig; sourceTree = "<group>"; };
+		4B67EE911D75719BDC1122186D7DF059 /* Pods-WExpandLibrary_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WExpandLibrary_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		551C135C8261D9FEB36A0BD7C295E804 /* WExpandLibrary-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WExpandLibrary-umbrella.h"; sourceTree = "<group>"; };
+		5FE8AADB269C4B7BC6BC2B39601347E5 /* WExpandLibrary.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = WExpandLibrary.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		61D97607F383786F9BDC2E2048609F48 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6A07707A0D2654E8EA69CFD9F2A07E6B /* WExpandLibrary-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WExpandLibrary-dummy.m"; sourceTree = "<group>"; };
+		707F2B822C57D556CBD5C0438EDA1808 /* Pods-WExpandLibrary_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WExpandLibrary_Tests-umbrella.h"; sourceTree = "<group>"; };
+		7AE9851084F175ED61BA98E62944B032 /* Pods-WExpandLibrary_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WExpandLibrary_Tests-dummy.m"; sourceTree = "<group>"; };
+		8CFE8EC8A850E5ABDDACF4B669E4E6F3 /* WExpandLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WExpandLibrary.framework; path = WExpandLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EA48E449B7339E8F2D86B21974CF579 /* Pods-WExpandLibrary_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WExpandLibrary_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A9F495F6387872AD3EC0F3BF0DE49455 /* Pods-WExpandLibrary_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WExpandLibrary_Tests.modulemap"; sourceTree = "<group>"; };
+		B5649CF2DDDFD7C6C926D71BEFCAF596 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		E5F4C6B37E0E062372166B1357F11A2B /* WExpandLibrary.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WExpandLibrary.modulemap; sourceTree = "<group>"; };
+		F0084DBE66554C8E6CE0CA0B3F6515A6 /* Pods_WExpandLibrary_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_WExpandLibrary_Tests.framework; path = "Pods-WExpandLibrary_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F059B440ED4D2211AB402676F4388CF8 /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ReplaceMe.m; path = WExpandLibrary/Classes/ReplaceMe.m; sourceTree = "<group>"; };
+		F2D2BCFE4B149E549D4E4DFC008616B9 /* Pods-WExpandLibrary_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WExpandLibrary_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		F6131D5AF58C78E5C0C807A6F58399DC /* WExpandLibrary-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WExpandLibrary-prefix.pch"; sourceTree = "<group>"; };
+		F6E8EE4755574B926F64EDFED1A3682B /* Pods-WExpandLibrary_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WExpandLibrary_Tests-resources.sh"; sourceTree = "<group>"; };
+		FA1BCD4A69E019C4845481B9D286287C /* Pods-WExpandLibrary_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WExpandLibrary_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		738E496BDD278F39B4425CE07008247D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AB1ECF64985E4CFA60DBD03F8BB0218 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9878991824AA6DB489CC99D016E59D60 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09E6C37661FE1FF86B6D254A5C675B8C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1B655A6D326D4001F5B50411E09EE6A3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F0084DBE66554C8E6CE0CA0B3F6515A6 /* Pods_WExpandLibrary_Tests.framework */,
+				8CFE8EC8A850E5ABDDACF4B669E4E6F3 /* WExpandLibrary.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		54E9204473863433B4001E0C93BF46D5 /* WExpandLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				F059B440ED4D2211AB402676F4388CF8 /* ReplaceMe.m */,
+				FD57E06980A437909F1096088EF8D700 /* Pod */,
+				94FDAB93606EEB736A6CBB996FF94AF2 /* Support Files */,
+			);
+			name = WExpandLibrary;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				D3F562DF2E9A773DC0BB985D1D6CB381 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				1B655A6D326D4001F5B50411E09EE6A3 /* Products */,
+				BF14E372E46C7C3CC11734B633E3055C /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		807A6C4CA9A7753BD73FA50BFEC04979 /* Pods-WExpandLibrary_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				61D97607F383786F9BDC2E2048609F48 /* Info.plist */,
+				A9F495F6387872AD3EC0F3BF0DE49455 /* Pods-WExpandLibrary_Tests.modulemap */,
+				8EA48E449B7339E8F2D86B21974CF579 /* Pods-WExpandLibrary_Tests-acknowledgements.markdown */,
+				FA1BCD4A69E019C4845481B9D286287C /* Pods-WExpandLibrary_Tests-acknowledgements.plist */,
+				7AE9851084F175ED61BA98E62944B032 /* Pods-WExpandLibrary_Tests-dummy.m */,
+				F2D2BCFE4B149E549D4E4DFC008616B9 /* Pods-WExpandLibrary_Tests-frameworks.sh */,
+				F6E8EE4755574B926F64EDFED1A3682B /* Pods-WExpandLibrary_Tests-resources.sh */,
+				707F2B822C57D556CBD5C0438EDA1808 /* Pods-WExpandLibrary_Tests-umbrella.h */,
+				22FBFE7E7FB7C672A85A6305E705833D /* Pods-WExpandLibrary_Tests.debug.xcconfig */,
+				4B67EE911D75719BDC1122186D7DF059 /* Pods-WExpandLibrary_Tests.release.xcconfig */,
+			);
+			name = "Pods-WExpandLibrary_Tests";
+			path = "Target Support Files/Pods-WExpandLibrary_Tests";
+			sourceTree = "<group>";
+		};
+		94FDAB93606EEB736A6CBB996FF94AF2 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0C0059FC654504B3FB877FDCDE759B0D /* Info.plist */,
+				E5F4C6B37E0E062372166B1357F11A2B /* WExpandLibrary.modulemap */,
+				3A6FB390B4942AC4E3078425CAA81ED4 /* WExpandLibrary.xcconfig */,
+				6A07707A0D2654E8EA69CFD9F2A07E6B /* WExpandLibrary-dummy.m */,
+				F6131D5AF58C78E5C0C807A6F58399DC /* WExpandLibrary-prefix.pch */,
+				551C135C8261D9FEB36A0BD7C295E804 /* WExpandLibrary-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/WExpandLibrary";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF14E372E46C7C3CC11734B633E3055C /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				807A6C4CA9A7753BD73FA50BFEC04979 /* Pods-WExpandLibrary_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		D3F562DF2E9A773DC0BB985D1D6CB381 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				54E9204473863433B4001E0C93BF46D5 /* WExpandLibrary */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		FD57E06980A437909F1096088EF8D700 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				015D5EE92C3DAA8137ED874E1A49D7F3 /* LICENSE */,
+				B5649CF2DDDFD7C6C926D71BEFCAF596 /* README.md */,
+				5FE8AADB269C4B7BC6BC2B39601347E5 /* WExpandLibrary.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0D6A99087039B348637866E898A0A2FE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1226C86D45D44332DA070CADEDECFD11 /* Pods-WExpandLibrary_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E8C657761CC1B96DBC35C81E9B9F9E4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5E7B63C5019D4A027CDF424142A64AF /* WExpandLibrary-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		BE56AFBF1687AC9F0292F475D655C45E /* Pods-WExpandLibrary_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7683915C3F653A0303940D81F70D2DE9 /* Build configuration list for PBXNativeTarget "Pods-WExpandLibrary_Tests" */;
+			buildPhases = (
+				C29C424C7B0546E8F314EB7F48DD8AD5 /* Sources */,
+				738E496BDD278F39B4425CE07008247D /* Frameworks */,
+				0D6A99087039B348637866E898A0A2FE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D93AF2391A8B249EA81164A4483B465 /* PBXTargetDependency */,
+			);
+			name = "Pods-WExpandLibrary_Tests";
+			productName = "Pods-WExpandLibrary_Tests";
+			productReference = F0084DBE66554C8E6CE0CA0B3F6515A6 /* Pods_WExpandLibrary_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E67CC58411094C2FD8F2DE0E5FAA33B9 /* WExpandLibrary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23607A77F1011F7BBBDC8506FA21F60C /* Build configuration list for PBXNativeTarget "WExpandLibrary" */;
+			buildPhases = (
+				F97F2E2B34AB42857C5804CA21DA1997 /* Sources */,
+				9878991824AA6DB489CC99D016E59D60 /* Frameworks */,
+				6E8C657761CC1B96DBC35C81E9B9F9E4 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WExpandLibrary;
+			productName = WExpandLibrary;
+			productReference = 8CFE8EC8A850E5ABDDACF4B669E4E6F3 /* WExpandLibrary.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 1B655A6D326D4001F5B50411E09EE6A3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BE56AFBF1687AC9F0292F475D655C45E /* Pods-WExpandLibrary_Tests */,
+				E67CC58411094C2FD8F2DE0E5FAA33B9 /* WExpandLibrary */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C29C424C7B0546E8F314EB7F48DD8AD5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C652F4521FC8ED390BBA1A5E6DD2084 /* Pods-WExpandLibrary_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F97F2E2B34AB42857C5804CA21DA1997 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9572929E925ECBCB1076F94725649F13 /* ReplaceMe.m in Sources */,
+				048F19AD79A10366EE5616EBDA056AA3 /* WExpandLibrary-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3D93AF2391A8B249EA81164A4483B465 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WExpandLibrary;
+			target = E67CC58411094C2FD8F2DE0E5FAA33B9 /* WExpandLibrary */;
+			targetProxy = 7CED6A14F35CB258E45B86DD05A6AE09 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		041703027C7AAAC196DC10CB550EEE58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A6FB390B4942AC4E3078425CAA81ED4 /* WExpandLibrary.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/WExpandLibrary/WExpandLibrary-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WExpandLibrary/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/WExpandLibrary/WExpandLibrary.modulemap";
+				PRODUCT_MODULE_NAME = WExpandLibrary;
+				PRODUCT_NAME = WExpandLibrary;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0E15ACBE092C3249851C21BD0B0EF73A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B67EE911D75719BDC1122186D7DF059 /* Pods-WExpandLibrary_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-WExpandLibrary_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WExpandLibrary_Tests/Pods-WExpandLibrary_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		26498C11016A68BE6E2AAB5C93A054AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22FBFE7E7FB7C672A85A6305E705833D /* Pods-WExpandLibrary_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-WExpandLibrary_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WExpandLibrary_Tests/Pods-WExpandLibrary_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8B33C5230DE4A9DFA6D8F46505DD7AF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		B42B54097A876E8A982CBF5DAA91B1AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		FDFFF1B7DA5553BCCA5029AA7B849E5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A6FB390B4942AC4E3078425CAA81ED4 /* WExpandLibrary.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/WExpandLibrary/WExpandLibrary-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WExpandLibrary/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/WExpandLibrary/WExpandLibrary.modulemap";
+				PRODUCT_MODULE_NAME = WExpandLibrary;
+				PRODUCT_NAME = WExpandLibrary;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		23607A77F1011F7BBBDC8506FA21F60C /* Build configuration list for PBXNativeTarget "WExpandLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				041703027C7AAAC196DC10CB550EEE58 /* Debug */,
+				FDFFF1B7DA5553BCCA5029AA7B849E5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B33C5230DE4A9DFA6D8F46505DD7AF7 /* Debug */,
+				B42B54097A876E8A982CBF5DAA91B1AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7683915C3F653A0303940D81F70D2DE9 /* Build configuration list for PBXNativeTarget "Pods-WExpandLibrary_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26498C11016A68BE6E2AAB5C93A054AE /* Debug */,
+				0E15ACBE092C3249851C21BD0B0EF73A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

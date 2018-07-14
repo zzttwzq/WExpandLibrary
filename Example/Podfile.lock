@@ -1,0 +1,16 @@
+PODS:
+  - WExpandLibrary (0.1.0)
+
+DEPENDENCIES:
+  - WExpandLibrary (from `../`)
+
+EXTERNAL SOURCES:
+  WExpandLibrary:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  WExpandLibrary: d5d93c305ced3256b4db5fae659911af53139a4d
+
+PODFILE CHECKSUM: 786aa74421783a35e6a3aa7c179444944cb90a73
+
+COCOAPODS: 1.5.0
