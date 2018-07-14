@@ -7,145 +7,107 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C7E07BA20F9D1DF000417A7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7E07B920F9D1DF000417A7 /* AppDelegate.m */; };
-		1C7E07BD20F9D1DF000417A7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7E07BC20F9D1DF000417A7 /* ViewController.m */; };
-		1C7E07C020F9D1DF000417A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C7E07BE20F9D1DF000417A7 /* Main.storyboard */; };
-		1C7E07C220F9D1DF000417A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C7E07C120F9D1DF000417A7 /* Assets.xcassets */; };
-		1C7E07C520F9D1DF000417A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C7E07C320F9D1DF000417A7 /* LaunchScreen.storyboard */; };
-		1C7E07C820F9D1DF000417A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7E07C720F9D1DF000417A7 /* main.m */; };
-		1C7E07D220F9D1DF000417A7 /* WExpandLibraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7E07D120F9D1DF000417A7 /* WExpandLibraryTests.m */; };
-		1C7E07DD20F9D1DF000417A7 /* WExpandLibraryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7E07DC20F9D1DF000417A7 /* WExpandLibraryUITests.m */; };
+		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
+		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
+		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
+		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
+		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
+		6003F59E195388D20070C39A /* WAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* WAppDelegate.m */; };
+		6003F5A7195388D20070C39A /* WViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* WViewController.m */; };
+		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
+		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
+		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
+		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
+		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
+		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
+		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		D0C4C24635429ED74AC476D4 /* Pods_WExpandLibrary_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD0859C06B6489D04D264FF5 /* Pods_WExpandLibrary_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1C7E07CE20F9D1DF000417A7 /* PBXContainerItemProxy */ = {
+		6003F5B3195388D20070C39A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6003F582195388D10070C39A /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1C7E07B520F9D1DF000417A7;
-			remoteInfo = WExpandLibrary;
-		};
-		1C7E07D920F9D1DF000417A7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6003F582195388D10070C39A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1C7E07B520F9D1DF000417A7;
+			remoteGlobalIDString = 6003F589195388D20070C39A;
 			remoteInfo = WExpandLibrary;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1B39F35A8BE258BF9E50000C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		1C7E07B620F9D1DF000417A7 /* WExpandLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WExpandLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1C7E07B820F9D1DF000417A7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		1C7E07B920F9D1DF000417A7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1C7E07BB20F9D1DF000417A7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1C7E07BC20F9D1DF000417A7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		1C7E07BF20F9D1DF000417A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1C7E07C120F9D1DF000417A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1C7E07C420F9D1DF000417A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		1C7E07C620F9D1DF000417A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1C7E07C720F9D1DF000417A7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1C7E07CD20F9D1DF000417A7 /* WExpandLibraryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WExpandLibraryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1C7E07D120F9D1DF000417A7 /* WExpandLibraryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WExpandLibraryTests.m; sourceTree = "<group>"; };
-		1C7E07D320F9D1DF000417A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1C7E07D820F9D1DF000417A7 /* WExpandLibraryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WExpandLibraryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1C7E07DC20F9D1DF000417A7 /* WExpandLibraryUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WExpandLibraryUITests.m; sourceTree = "<group>"; };
-		1C7E07DE20F9D1DF000417A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		298E0631D705B639615AAEB9 /* WExpandLibrary.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WExpandLibrary.podspec; path = ../WExpandLibrary.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		3FD270A249EE34C477CBCB5E /* Pods-WExpandLibrary_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WExpandLibrary_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WExpandLibrary_Tests/Pods-WExpandLibrary_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		5FEE6C1DEDB3431229EDA788 /* Pods-WExpandLibrary_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WExpandLibrary_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WExpandLibrary_Tests/Pods-WExpandLibrary_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		2577849098EF46F7E36CEF31 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		4087F10F0213425A59EF7D8E /* Pods_WExpandLibrary_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WExpandLibrary_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		58CD96D6D7855718EF49F44D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		6003F58A195388D20070C39A /* WExpandLibrary_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WExpandLibrary_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6003F595195388D20070C39A /* WExpandLibrary-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WExpandLibrary-Info.plist"; sourceTree = "<group>"; };
+		6003F597195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6003F599195388D20070C39A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6003F59B195388D20070C39A /* WExpandLibrary-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WExpandLibrary-Prefix.pch"; sourceTree = "<group>"; };
+		6003F59C195388D20070C39A /* WAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WAppDelegate.h; sourceTree = "<group>"; };
+		6003F59D195388D20070C39A /* WAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WAppDelegate.m; sourceTree = "<group>"; };
+		6003F5A5195388D20070C39A /* WViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WViewController.h; sourceTree = "<group>"; };
+		6003F5A6195388D20070C39A /* WViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WViewController.m; sourceTree = "<group>"; };
+		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6003F5AE195388D20070C39A /* WExpandLibrary_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WExpandLibrary_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		AF85F928EA9FB62B57DED801 /* Pods_WExpandLibrary_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WExpandLibrary_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B5158D23FEE2FF89BCA2FCB8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		607DEFB659F0CAEAC5960541 /* WExpandLibrary.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = WExpandLibrary.podspec; path = ../WExpandLibrary.podspec; sourceTree = "<group>"; };
+		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BD0859C06B6489D04D264FF5 /* Pods_WExpandLibrary_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WExpandLibrary_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D97A822F88B54B33711EC6DD /* Pods-WExpandLibrary_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WExpandLibrary_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-WExpandLibrary_Example/Pods-WExpandLibrary_Example.release.xcconfig"; sourceTree = "<group>"; };
+		F250A4EFF7AEE65BBDFEC761 /* Pods-WExpandLibrary_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WExpandLibrary_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WExpandLibrary_Example/Pods-WExpandLibrary_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1C7E07B320F9D1DF000417A7 /* Frameworks */ = {
+		6003F587195388D20070C39A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
+				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
+				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
+				D0C4C24635429ED74AC476D4 /* Pods_WExpandLibrary_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1C7E07CA20F9D1DF000417A7 /* Frameworks */ = {
+		6003F5AB195388D20070C39A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1C7E07D520F9D1DF000417A7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
+				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
+				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1C7E07B720F9D1DF000417A7 /* WExpandLibrary */ = {
-			isa = PBXGroup;
-			children = (
-				1C7E07B820F9D1DF000417A7 /* AppDelegate.h */,
-				1C7E07B920F9D1DF000417A7 /* AppDelegate.m */,
-				1C7E07BB20F9D1DF000417A7 /* ViewController.h */,
-				1C7E07BC20F9D1DF000417A7 /* ViewController.m */,
-				1C7E07BE20F9D1DF000417A7 /* Main.storyboard */,
-				1C7E07C120F9D1DF000417A7 /* Assets.xcassets */,
-				1C7E07C320F9D1DF000417A7 /* LaunchScreen.storyboard */,
-				1C7E07C620F9D1DF000417A7 /* Info.plist */,
-				1C7E07C720F9D1DF000417A7 /* main.m */,
-			);
-			path = WExpandLibrary;
-			sourceTree = "<group>";
-		};
-		1C7E07D020F9D1DF000417A7 /* WExpandLibraryTests */ = {
-			isa = PBXGroup;
-			children = (
-				1C7E07D120F9D1DF000417A7 /* WExpandLibraryTests.m */,
-				1C7E07D320F9D1DF000417A7 /* Info.plist */,
-			);
-			path = WExpandLibraryTests;
-			sourceTree = "<group>";
-		};
-		1C7E07DB20F9D1DF000417A7 /* WExpandLibraryUITests */ = {
-			isa = PBXGroup;
-			children = (
-				1C7E07DC20F9D1DF000417A7 /* WExpandLibraryUITests.m */,
-				1C7E07DE20F9D1DF000417A7 /* Info.plist */,
-			);
-			path = WExpandLibraryUITests;
-			sourceTree = "<group>";
-		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
+				6003F593195388D20070C39A /* Example for WExpandLibrary */,
 				6003F5B5195388D20070C39A /* Tests */,
-				1C7E07B720F9D1DF000417A7 /* WExpandLibrary */,
-				1C7E07D020F9D1DF000417A7 /* WExpandLibraryTests */,
-				1C7E07DB20F9D1DF000417A7 /* WExpandLibraryUITests */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
-				E678E731E281E2116A62B24C /* Pods */,
+				FB281ECC97C9A3873B0EED80 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
 		6003F58B195388D20070C39A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1C7E07B620F9D1DF000417A7 /* WExpandLibrary.app */,
-				1C7E07CD20F9D1DF000417A7 /* WExpandLibraryTests.xctest */,
-				1C7E07D820F9D1DF000417A7 /* WExpandLibraryUITests.xctest */,
+				6003F58A195388D20070C39A /* WExpandLibrary_Example.app */,
+				6003F5AE195388D20070C39A /* WExpandLibrary_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,9 +119,37 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				AF85F928EA9FB62B57DED801 /* Pods_WExpandLibrary_Tests.framework */,
+				BD0859C06B6489D04D264FF5 /* Pods_WExpandLibrary_Example.framework */,
+				4087F10F0213425A59EF7D8E /* Pods_WExpandLibrary_Tests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6003F593195388D20070C39A /* Example for WExpandLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				6003F59C195388D20070C39A /* WAppDelegate.h */,
+				6003F59D195388D20070C39A /* WAppDelegate.m */,
+				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
+				6003F5A5195388D20070C39A /* WViewController.h */,
+				6003F5A6195388D20070C39A /* WViewController.m */,
+				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
+				6003F5A8195388D20070C39A /* Images.xcassets */,
+				6003F594195388D20070C39A /* Supporting Files */,
+			);
+			name = "Example for WExpandLibrary";
+			path = WExpandLibrary;
+			sourceTree = "<group>";
+		};
+		6003F594195388D20070C39A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6003F595195388D20070C39A /* WExpandLibrary-Info.plist */,
+				6003F596195388D20070C39A /* InfoPlist.strings */,
+				6003F599195388D20070C39A /* main.m */,
+				6003F59B195388D20070C39A /* WExpandLibrary-Prefix.pch */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		6003F5B5195388D20070C39A /* Tests */ = {
@@ -184,18 +174,18 @@
 		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				298E0631D705B639615AAEB9 /* WExpandLibrary.podspec */,
-				B5158D23FEE2FF89BCA2FCB8 /* README.md */,
-				1B39F35A8BE258BF9E50000C /* LICENSE */,
+				607DEFB659F0CAEAC5960541 /* WExpandLibrary.podspec */,
+				58CD96D6D7855718EF49F44D /* README.md */,
+				2577849098EF46F7E36CEF31 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		E678E731E281E2116A62B24C /* Pods */ = {
+		FB281ECC97C9A3873B0EED80 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3FD270A249EE34C477CBCB5E /* Pods-WExpandLibrary_Tests.debug.xcconfig */,
-				5FEE6C1DEDB3431229EDA788 /* Pods-WExpandLibrary_Tests.release.xcconfig */,
+				F250A4EFF7AEE65BBDFEC761 /* Pods-WExpandLibrary_Example.debug.xcconfig */,
+				D97A822F88B54B33711EC6DD /* Pods-WExpandLibrary_Example.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -203,58 +193,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1C7E07B520F9D1DF000417A7 /* WExpandLibrary */ = {
+		6003F589195388D20070C39A /* WExpandLibrary_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1C7E07E520F9D1DF000417A7 /* Build configuration list for PBXNativeTarget "WExpandLibrary" */;
+			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "WExpandLibrary_Example" */;
 			buildPhases = (
-				1C7E07B220F9D1DF000417A7 /* Sources */,
-				1C7E07B320F9D1DF000417A7 /* Frameworks */,
-				1C7E07B420F9D1DF000417A7 /* Resources */,
+				BEEFB55E898B8DFD3AC7BA35 /* [CP] Check Pods Manifest.lock */,
+				6003F586195388D20070C39A /* Sources */,
+				6003F587195388D20070C39A /* Frameworks */,
+				6003F588195388D20070C39A /* Resources */,
+				2AEBC2787EE6853E0D579AF3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = WExpandLibrary;
+			name = WExpandLibrary_Example;
 			productName = WExpandLibrary;
-			productReference = 1C7E07B620F9D1DF000417A7 /* WExpandLibrary.app */;
+			productReference = 6003F58A195388D20070C39A /* WExpandLibrary_Example.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1C7E07CC20F9D1DF000417A7 /* WExpandLibraryTests */ = {
+		6003F5AD195388D20070C39A /* WExpandLibrary_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1C7E07E620F9D1DF000417A7 /* Build configuration list for PBXNativeTarget "WExpandLibraryTests" */;
+			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "WExpandLibrary_Tests" */;
 			buildPhases = (
-				1C7E07C920F9D1DF000417A7 /* Sources */,
-				1C7E07CA20F9D1DF000417A7 /* Frameworks */,
-				1C7E07CB20F9D1DF000417A7 /* Resources */,
+				6003F5AA195388D20070C39A /* Sources */,
+				6003F5AB195388D20070C39A /* Frameworks */,
+				6003F5AC195388D20070C39A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1C7E07CF20F9D1DF000417A7 /* PBXTargetDependency */,
+				6003F5B4195388D20070C39A /* PBXTargetDependency */,
 			);
-			name = WExpandLibraryTests;
+			name = WExpandLibrary_Tests;
 			productName = WExpandLibraryTests;
-			productReference = 1C7E07CD20F9D1DF000417A7 /* WExpandLibraryTests.xctest */;
+			productReference = 6003F5AE195388D20070C39A /* WExpandLibrary_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		1C7E07D720F9D1DF000417A7 /* WExpandLibraryUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1C7E07E720F9D1DF000417A7 /* Build configuration list for PBXNativeTarget "WExpandLibraryUITests" */;
-			buildPhases = (
-				1C7E07D420F9D1DF000417A7 /* Sources */,
-				1C7E07D520F9D1DF000417A7 /* Frameworks */,
-				1C7E07D620F9D1DF000417A7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1C7E07DA20F9D1DF000417A7 /* PBXTargetDependency */,
-			);
-			name = WExpandLibraryUITests;
-			productName = WExpandLibraryUITests;
-			productReference = 1C7E07D820F9D1DF000417A7 /* WExpandLibraryUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -266,19 +240,8 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = zzttwzq;
 				TargetAttributes = {
-					1C7E07B520F9D1DF000417A7 = {
-						CreatedOnToolsVersion = 9.4.1;
-						ProvisioningStyle = Automatic;
-					};
-					1C7E07CC20F9D1DF000417A7 = {
-						CreatedOnToolsVersion = 9.4.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 1C7E07B520F9D1DF000417A7;
-					};
-					1C7E07D720F9D1DF000417A7 = {
-						CreatedOnToolsVersion = 9.4.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 1C7E07B520F9D1DF000417A7;
+					6003F5AD195388D20070C39A = {
+						TestTargetID = 6003F589195388D20070C39A;
 					};
 				};
 			};
@@ -295,97 +258,111 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1C7E07B520F9D1DF000417A7 /* WExpandLibrary */,
-				1C7E07CC20F9D1DF000417A7 /* WExpandLibraryTests */,
-				1C7E07D720F9D1DF000417A7 /* WExpandLibraryUITests */,
+				6003F589195388D20070C39A /* WExpandLibrary_Example */,
+				6003F5AD195388D20070C39A /* WExpandLibrary_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1C7E07B420F9D1DF000417A7 /* Resources */ = {
+		6003F588195388D20070C39A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C7E07C520F9D1DF000417A7 /* LaunchScreen.storyboard in Resources */,
-				1C7E07C220F9D1DF000417A7 /* Assets.xcassets in Resources */,
-				1C7E07C020F9D1DF000417A7 /* Main.storyboard in Resources */,
+				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
+				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
+				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
+				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1C7E07CB20F9D1DF000417A7 /* Resources */ = {
+		6003F5AC195388D20070C39A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1C7E07D620F9D1DF000417A7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2AEBC2787EE6853E0D579AF3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WExpandLibrary_Example/Pods-WExpandLibrary_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/WBasicLibrary/WBasicLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/WExpandLibrary/WExpandLibrary.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WBasicLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WExpandLibrary.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WExpandLibrary_Example/Pods-WExpandLibrary_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BEEFB55E898B8DFD3AC7BA35 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WExpandLibrary_Example-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		1C7E07B220F9D1DF000417A7 /* Sources */ = {
+		6003F586195388D20070C39A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C7E07BD20F9D1DF000417A7 /* ViewController.m in Sources */,
-				1C7E07C820F9D1DF000417A7 /* main.m in Sources */,
-				1C7E07BA20F9D1DF000417A7 /* AppDelegate.m in Sources */,
+				6003F59E195388D20070C39A /* WAppDelegate.m in Sources */,
+				6003F5A7195388D20070C39A /* WViewController.m in Sources */,
+				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1C7E07C920F9D1DF000417A7 /* Sources */ = {
+		6003F5AA195388D20070C39A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C7E07D220F9D1DF000417A7 /* WExpandLibraryTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1C7E07D420F9D1DF000417A7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1C7E07DD20F9D1DF000417A7 /* WExpandLibraryUITests.m in Sources */,
+				6003F5BC195388D20070C39A /* Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1C7E07CF20F9D1DF000417A7 /* PBXTargetDependency */ = {
+		6003F5B4195388D20070C39A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1C7E07B520F9D1DF000417A7 /* WExpandLibrary */;
-			targetProxy = 1C7E07CE20F9D1DF000417A7 /* PBXContainerItemProxy */;
-		};
-		1C7E07DA20F9D1DF000417A7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1C7E07B520F9D1DF000417A7 /* WExpandLibrary */;
-			targetProxy = 1C7E07D920F9D1DF000417A7 /* PBXContainerItemProxy */;
+			target = 6003F589195388D20070C39A /* WExpandLibrary_Example */;
+			targetProxy = 6003F5B3195388D20070C39A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1C7E07BE20F9D1DF000417A7 /* Main.storyboard */ = {
+		6003F596195388D20070C39A /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1C7E07BF20F9D1DF000417A7 /* Base */,
+				6003F597195388D20070C39A /* en */,
 			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		1C7E07C320F9D1DF000417A7 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1C7E07C420F9D1DF000417A7 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 		6003F5B8195388D20070C39A /* InfoPlist.strings */ = {
@@ -396,236 +373,17 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
+		71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				71719F9E1E33DC2100824A3D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		1C7E07DF20F9D1DF000417A7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = WExpandLibrary/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "-33.WExpandLibrary";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		1C7E07E020F9D1DF000417A7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = WExpandLibrary/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "-33.WExpandLibrary";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		1C7E07E120F9D1DF000417A7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = WExpandLibraryTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "-33.WExpandLibraryTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WExpandLibrary.app/WExpandLibrary";
-			};
-			name = Debug;
-		};
-		1C7E07E220F9D1DF000417A7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = WExpandLibraryTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "-33.WExpandLibraryTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WExpandLibrary.app/WExpandLibrary";
-			};
-			name = Release;
-		};
-		1C7E07E320F9D1DF000417A7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = WExpandLibraryUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "-33.WExpandLibraryUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = WExpandLibrary;
-			};
-			name = Debug;
-		};
-		1C7E07E420F9D1DF000417A7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = WExpandLibraryUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "-33.WExpandLibraryUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = WExpandLibrary;
-			};
-			name = Release;
-		};
 		6003F5BD195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -699,41 +457,104 @@
 			};
 			name = Release;
 		};
+		6003F5C0195388D20070C39A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F250A4EFF7AEE65BBDFEC761 /* Pods-WExpandLibrary_Example.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WExpandLibrary/WExpandLibrary-Prefix.pch";
+				INFOPLIST_FILE = "WExpandLibrary/WExpandLibrary-Info.plist";
+				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6003F5C1195388D20070C39A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D97A822F88B54B33711EC6DD /* Pods-WExpandLibrary_Example.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WExpandLibrary/WExpandLibrary-Prefix.pch";
+				INFOPLIST_FILE = "WExpandLibrary/WExpandLibrary-Info.plist";
+				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		6003F5C3195388D20070C39A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WExpandLibrary_Example.app/WExpandLibrary_Example";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		6003F5C4195388D20070C39A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WExpandLibrary_Example.app/WExpandLibrary_Example";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1C7E07E520F9D1DF000417A7 /* Build configuration list for PBXNativeTarget "WExpandLibrary" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1C7E07DF20F9D1DF000417A7 /* Debug */,
-				1C7E07E020F9D1DF000417A7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1C7E07E620F9D1DF000417A7 /* Build configuration list for PBXNativeTarget "WExpandLibraryTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1C7E07E120F9D1DF000417A7 /* Debug */,
-				1C7E07E220F9D1DF000417A7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1C7E07E720F9D1DF000417A7 /* Build configuration list for PBXNativeTarget "WExpandLibraryUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1C7E07E320F9D1DF000417A7 /* Debug */,
-				1C7E07E420F9D1DF000417A7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		6003F585195388D10070C39A /* Build configuration list for PBXProject "WExpandLibrary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6003F5BD195388D20070C39A /* Debug */,
 				6003F5BE195388D20070C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "WExpandLibrary_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6003F5C0195388D20070C39A /* Debug */,
+				6003F5C1195388D20070C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "WExpandLibrary_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6003F5C3195388D20070C39A /* Debug */,
+				6003F5C4195388D20070C39A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

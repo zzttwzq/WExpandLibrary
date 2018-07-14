@@ -1,0 +1,6 @@
+framework module WBasicLibrary {
+  umbrella header "WBasicLibrary-umbrella.h"
+
+  export *
+  module * { export * }
+}

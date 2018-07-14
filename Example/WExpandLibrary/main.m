@@ -2,15 +2,16 @@
 //  main.m
 //  WExpandLibrary
 //
-//  Created by 吴志强 on 2018/7/14.
-//  Copyright © 2018年 zzttwzq. All rights reserved.
+//  Created by zzttwzq on 07/14/2018.
+//  Copyright (c) 2018 zzttwzq. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "AppDelegate.h"
+@import UIKit;
+#import "WAppDelegate.h"
 
-int main(int argc, char * argv[]) {
+int main(int argc, char * argv[])
+{
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([WAppDelegate class]));
     }
 }

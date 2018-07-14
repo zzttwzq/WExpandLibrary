@@ -2,8 +2,8 @@ source 'https://github.com/CocoaPods/Specs.git'
 source 'https://github.com/zzttwzq/WSpecRepo.git'
 
 use_frameworks!
-target 'WExpandLibrary_Tests' do
+
+target 'WExpandLibrary_Example' do
   pod 'WExpandLibrary', :path => '../'
-  
-  pod 'WBasicLibrary'
+  pod ‘WBasicLibrary’
 end

@@ -1,16 +1,23 @@
 PODS:
+  - WBasicLibrary (0.3.0)
   - WExpandLibrary (0.1.0)
 
 DEPENDENCIES:
+  - WBasicLibrary
   - WExpandLibrary (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - WBasicLibrary
 
 EXTERNAL SOURCES:
   WExpandLibrary:
     :path: "../"
 
 SPEC CHECKSUMS:
+  WBasicLibrary: 6bd0ed867c9b699980664ded3b448fab03174404
   WExpandLibrary: d5d93c305ced3256b4db5fae659911af53139a4d
 
-PODFILE CHECKSUM: 786aa74421783a35e6a3aa7c179444944cb90a73
+PODFILE CHECKSUM: 0b241436bf0d2f808cb27f7680e35f9904b21c4e
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3
