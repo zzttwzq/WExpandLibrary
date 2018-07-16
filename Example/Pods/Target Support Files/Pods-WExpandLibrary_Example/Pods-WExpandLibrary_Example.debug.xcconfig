@@ -1,8 +1,8 @@
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/WExpandLibrary"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/WBasicLibrary" "${PODS_CONFIGURATION_BUILD_DIR}/WExpandLibrary"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/WExpandLibrary/WExpandLibrary.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "WExpandLibrary"
+OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/WBasicLibrary/WBasicLibrary.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/WExpandLibrary/WExpandLibrary.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -framework "WBasicLibrary" -framework "WExpandLibrary"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.

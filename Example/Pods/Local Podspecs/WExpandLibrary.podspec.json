@@ -19,9 +19,8 @@
     "ios": "8.0"
   },
   "source_files": "WExpandLibrary/Classes/**/*",
-  "frameworks": "UIKit",
   "dependencies": {
-    "WBasicLibrary~> 0.3.1": [
+    "WBasicLibrary": [
 
     ]
   }
