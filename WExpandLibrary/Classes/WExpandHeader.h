@@ -20,7 +20,6 @@
 #import "WSiderViewController.h"
 #import "WScanCodeVC.h"
 #import "WTool.h"
-#import "Reachability.h"
 #import "WThreadTool.h"
 #import "WToast.h"
 #import "WNetwork.h"
