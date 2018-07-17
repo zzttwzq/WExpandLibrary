@@ -13,6 +13,30 @@
 		147767B4883650969C8982A0C4C4B911 /* NSString+WHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A9F8D77A379E7E26C9CCAEEE4F0C56B /* NSString+WHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		16E43E52C78730663D9E955F7725BE47 /* UIImage+WHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E3A47F2B91C2998BF202CA728F2359 /* UIImage+WHandler.m */; };
 		1C3E7AC03012870949AC49F087976080 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EE924219639C57B8156F11F85F13D01 /* Reachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1C7FA15F20FD761B006AF107 /* WHUDView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7FA15B20FD761B006AF107 /* WHUDView.m */; };
+		1C7FA16020FD761B006AF107 /* WHUDView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7FA15B20FD761B006AF107 /* WHUDView.m */; };
+		1C7FA16120FD761B006AF107 /* WHUDView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7FA15B20FD761B006AF107 /* WHUDView.m */; };
+		1C7FA16220FD761B006AF107 /* WJosnTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C7FA15C20FD761B006AF107 /* WJosnTool.h */; };
+		1C7FA16320FD761B006AF107 /* WJosnTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C7FA15C20FD761B006AF107 /* WJosnTool.h */; };
+		1C7FA16420FD761B006AF107 /* WJosnTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C7FA15C20FD761B006AF107 /* WJosnTool.h */; };
+		1C7FA16520FD761B006AF107 /* WJosnTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7FA15D20FD761B006AF107 /* WJosnTool.m */; };
+		1C7FA16620FD761B006AF107 /* WJosnTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7FA15D20FD761B006AF107 /* WJosnTool.m */; };
+		1C7FA16720FD761B006AF107 /* WJosnTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7FA15D20FD761B006AF107 /* WJosnTool.m */; };
+		1C7FA16820FD761B006AF107 /* WHUDView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C7FA15E20FD761B006AF107 /* WHUDView.h */; };
+		1C7FA16920FD761B006AF107 /* WHUDView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C7FA15E20FD761B006AF107 /* WHUDView.h */; };
+		1C7FA16A20FD761B006AF107 /* WHUDView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C7FA15E20FD761B006AF107 /* WHUDView.h */; };
+		1C7FA16F20FD7625006AF107 /* WNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C7FA16B20FD7625006AF107 /* WNetwork.h */; };
+		1C7FA17020FD7625006AF107 /* WNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C7FA16B20FD7625006AF107 /* WNetwork.h */; };
+		1C7FA17120FD7625006AF107 /* WNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C7FA16B20FD7625006AF107 /* WNetwork.h */; };
+		1C7FA17220FD7625006AF107 /* WToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7FA16C20FD7625006AF107 /* WToast.m */; };
+		1C7FA17320FD7625006AF107 /* WToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7FA16C20FD7625006AF107 /* WToast.m */; };
+		1C7FA17420FD7625006AF107 /* WToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7FA16C20FD7625006AF107 /* WToast.m */; };
+		1C7FA17520FD7625006AF107 /* WNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7FA16D20FD7625006AF107 /* WNetwork.m */; };
+		1C7FA17620FD7625006AF107 /* WNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7FA16D20FD7625006AF107 /* WNetwork.m */; };
+		1C7FA17720FD7625006AF107 /* WNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7FA16D20FD7625006AF107 /* WNetwork.m */; };
+		1C7FA17820FD7625006AF107 /* WToast.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C7FA16E20FD7625006AF107 /* WToast.h */; };
+		1C7FA17920FD7625006AF107 /* WToast.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C7FA16E20FD7625006AF107 /* WToast.h */; };
+		1C7FA17A20FD7625006AF107 /* WToast.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C7FA16E20FD7625006AF107 /* WToast.h */; };
 		1F144345A2E370E706A1343B43153FCD /* WNumberCompare.h in Headers */ = {isa = PBXBuildFile; fileRef = 2399A3B1AA0105E89908C857020FD75C /* WNumberCompare.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1F6CAAE5D8DE42729ECB613C33E3737F /* WBasicCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FF2DD259B00B44393C5F120A191DC31 /* WBasicCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		206F9B3BBFCE7897B8FA11868D8F28FE /* WBasicLibrary-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B408A69609D2B2D287795D8ADD66B5DC /* WBasicLibrary-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -107,6 +131,14 @@
 		15753CB56429FE681A27DBC3D2AF0BBE /* WScanCodeVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WScanCodeVC.h; path = WExpandLibrary/Classes/WScanCodeVC.h; sourceTree = "<group>"; };
 		17AF213F117FAF07705B445E78A05F06 /* WExpandLibrary-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WExpandLibrary-dummy.m"; sourceTree = "<group>"; };
 		1BA22E534A3DE4B992B5FA05B5CF2B83 /* Pods-WExpandLibrary_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WExpandLibrary_Example-umbrella.h"; sourceTree = "<group>"; };
+		1C7FA15B20FD761B006AF107 /* WHUDView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WHUDView.m; path = WExpandLibrary/Classes/WHUDView.m; sourceTree = "<group>"; };
+		1C7FA15C20FD761B006AF107 /* WJosnTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WJosnTool.h; path = WExpandLibrary/Classes/WJosnTool.h; sourceTree = "<group>"; };
+		1C7FA15D20FD761B006AF107 /* WJosnTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WJosnTool.m; path = WExpandLibrary/Classes/WJosnTool.m; sourceTree = "<group>"; };
+		1C7FA15E20FD761B006AF107 /* WHUDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WHUDView.h; path = WExpandLibrary/Classes/WHUDView.h; sourceTree = "<group>"; };
+		1C7FA16B20FD7625006AF107 /* WNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WNetwork.h; path = WExpandLibrary/Classes/WNetwork.h; sourceTree = "<group>"; };
+		1C7FA16C20FD7625006AF107 /* WToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WToast.m; path = WExpandLibrary/Classes/WToast.m; sourceTree = "<group>"; };
+		1C7FA16D20FD7625006AF107 /* WNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WNetwork.m; path = WExpandLibrary/Classes/WNetwork.m; sourceTree = "<group>"; };
+		1C7FA16E20FD7625006AF107 /* WToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WToast.h; path = WExpandLibrary/Classes/WToast.h; sourceTree = "<group>"; };
 		1FDCFD881B34F6ED318430DF7BA15D2B /* WDataModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WDataModel.h; path = WExpandLibrary/Classes/WDataModel.h; sourceTree = "<group>"; };
 		207974F9A1F865924EB42F8289BCD881 /* WNavViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WNavViewController.m; path = WExpandLibrary/Classes/WNavViewController.m; sourceTree = "<group>"; };
 		231510D49DF59C10E6DCC6C412B37D11 /* UILabel+WHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UILabel+WHandler.m"; path = "WBasicLibrary/Classes/UILabel+WHandler.m"; sourceTree = "<group>"; };
@@ -114,7 +146,7 @@
 		24235DFB53ECC3F01CF8DC1FAF3200A8 /* WBasicCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WBasicCell.m; path = WExpandLibrary/Classes/WBasicCell.m; sourceTree = "<group>"; };
 		25608EEFA0A8DD7AAA426E9D26FF835C /* WTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WTool.m; path = WExpandLibrary/Classes/WTool.m; sourceTree = "<group>"; };
 		2A9F8D77A379E7E26C9CCAEEE4F0C56B /* NSString+WHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+WHandler.h"; path = "WBasicLibrary/Classes/NSString+WHandler.h"; sourceTree = "<group>"; };
-		2E2F36A50C20B5280E2550CB1AAE9F3F /* WBasicLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WBasicLibrary.framework; path = WBasicLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E2F36A50C20B5280E2550CB1AAE9F3F /* WBasicLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WBasicLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EE924219639C57B8156F11F85F13D01 /* Reachability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = WExpandLibrary/Classes/Reachability.h; sourceTree = "<group>"; };
 		3423BDC375B0795134352945CF276E58 /* WLocationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WLocationManager.m; path = WExpandLibrary/Classes/WLocationManager.m; sourceTree = "<group>"; };
 		343506F3F9DE4E5BDF463CED1C2FCAF6 /* WPlistManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WPlistManager.h; path = WExpandLibrary/Classes/WPlistManager.h; sourceTree = "<group>"; };
@@ -126,7 +158,7 @@
 		4D1DFFA5213C8B4300F5A8332E41D2D3 /* WLocationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WLocationManager.h; path = WExpandLibrary/Classes/WLocationManager.h; sourceTree = "<group>"; };
 		4D7D2E7547EFC81C6CE928D2736168F6 /* UIViewController+TableHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+TableHandler.m"; path = "WBasicLibrary/Classes/UIViewController+TableHandler.m"; sourceTree = "<group>"; };
 		4E6F4741A9F73C726893BAB4E11A93CE /* WSiderViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WSiderViewController.h; path = WExpandLibrary/Classes/WSiderViewController.h; sourceTree = "<group>"; };
-		504107CE6D1CD3BF6DED6B788B605F0B /* WExpandLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WExpandLibrary.framework; path = WExpandLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		504107CE6D1CD3BF6DED6B788B605F0B /* WExpandLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WExpandLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5293E982960E4F95CF077EE0F96AEF69 /* UIViewController+BasicHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+BasicHandler.m"; path = "WBasicLibrary/Classes/UIViewController+BasicHandler.m"; sourceTree = "<group>"; };
 		531CF335FB611195ECB498E9F1920E3A /* WBasicLibrary-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WBasicLibrary-dummy.m"; sourceTree = "<group>"; };
 		53AFB7D93A50DE1689D1A0BAD358ED72 /* WNavViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WNavViewController.h; path = WExpandLibrary/Classes/WNavViewController.h; sourceTree = "<group>"; };
@@ -158,7 +190,7 @@
 		8F3F0D814D10095632300757D56D26AA /* NSData+Base64_.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+Base64_.h"; path = "WBasicLibrary/Classes/NSData+Base64_.h"; sourceTree = "<group>"; };
 		8F6C199E44B90313EA31E4DF1DF8DEA3 /* UIColor+Whandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Whandler.m"; path = "WBasicLibrary/Classes/UIColor+Whandler.m"; sourceTree = "<group>"; };
 		904541FACFA18E490A1B54305DC241C7 /* Pods-WExpandLibrary_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WExpandLibrary_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		943C063B4B4CB354057F03A7D3695457 /* WDataModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WDataModel.m; path = WExpandLibrary/Classes/WDataModel.m; sourceTree = "<group>"; };
 		9572FE2BF9671C77F0424809925BC498 /* WThreadTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WThreadTool.h; path = WExpandLibrary/Classes/WThreadTool.h; sourceTree = "<group>"; };
 		9CFB13DD0AC0D5E5069E012368DC1605 /* UILabel+WHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UILabel+WHandler.h"; path = "WBasicLibrary/Classes/UILabel+WHandler.h"; sourceTree = "<group>"; };
@@ -174,7 +206,7 @@
 		B5BA02F590285F18A820CE07C2DA5692 /* WCheckAuthor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WCheckAuthor.m; path = WExpandLibrary/Classes/WCheckAuthor.m; sourceTree = "<group>"; };
 		B882A37E49E76D1F1DB8FD973852F288 /* NSObject+Whandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+Whandler.h"; path = "WBasicLibrary/Classes/NSObject+Whandler.h"; sourceTree = "<group>"; };
 		C4E8A1ACE1BAC72EEEE3550AE6C6D931 /* WFileManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WFileManager.h; path = WExpandLibrary/Classes/WFileManager.h; sourceTree = "<group>"; };
-		C733AE90C3DF9BDB37F3AA95DA532C6D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		C733AE90C3DF9BDB37F3AA95DA532C6D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		C7665E524C935F3196EEC8D772050708 /* WExpandLibrary.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WExpandLibrary.modulemap; sourceTree = "<group>"; };
 		CAAC04307628DBA016955B2695103A99 /* Reachability.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = WExpandLibrary/Classes/Reachability.m; sourceTree = "<group>"; };
 		CFE9BF817785B7F871140DD92E4CA846 /* UIImage+WHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+WHandler.h"; path = "WBasicLibrary/Classes/UIImage+WHandler.h"; sourceTree = "<group>"; };
@@ -183,15 +215,15 @@
 		D4D80BE83F2FA87E7D7776052B9F17D8 /* WDevice.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WDevice.m; path = WExpandLibrary/Classes/WDevice.m; sourceTree = "<group>"; };
 		DFDAB3FB70E38B4196D2C781FABC5529 /* NSMutableArray+WHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+WHandler.h"; path = "WBasicLibrary/Classes/NSMutableArray+WHandler.h"; sourceTree = "<group>"; };
 		E2E8568660158915D0E505DB3D74577B /* WCheckAuthor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WCheckAuthor.h; path = WExpandLibrary/Classes/WCheckAuthor.h; sourceTree = "<group>"; };
-		E3A0FC9A7D778F9C34888E289FEBA1E6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		E3A0FC9A7D778F9C34888E289FEBA1E6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		EB3C3269BEDEA693D31BC902BD73A921 /* WNotifyManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WNotifyManager.h; path = WExpandLibrary/Classes/WNotifyManager.h; sourceTree = "<group>"; };
-		EC64F72A1BC415DA8462B5D78C42D4DF /* WExpandLibrary.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = WExpandLibrary.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		EC64F72A1BC415DA8462B5D78C42D4DF /* WExpandLibrary.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = WExpandLibrary.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		EE8EDEE7FB47AE5BA77350B1EC8AEB4B /* WFileManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WFileManager.m; path = WExpandLibrary/Classes/WFileManager.m; sourceTree = "<group>"; };
 		F2A975E1C1DA5BF6696913348AB8B0F3 /* NSDate+Whandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+Whandler.h"; path = "WBasicLibrary/Classes/NSDate+Whandler.h"; sourceTree = "<group>"; };
 		F2F3A7203774C376B16225A3D048B99B /* UIViewController+WebHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+WebHandler.h"; path = "WBasicLibrary/Classes/UIViewController+WebHandler.h"; sourceTree = "<group>"; };
 		F3A26973A7534D181637ECF3DF6544CF /* NSString+WHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+WHandler.m"; path = "WBasicLibrary/Classes/NSString+WHandler.m"; sourceTree = "<group>"; };
 		F71C531699BCD6E8901A9A51F3EFD889 /* WTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WTool.h; path = WExpandLibrary/Classes/WTool.h; sourceTree = "<group>"; };
-		FE7B58992C6016711CA24C1B3663FD3E /* Pods_WExpandLibrary_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_WExpandLibrary_Example.framework; path = "Pods-WExpandLibrary_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE7B58992C6016711CA24C1B3663FD3E /* Pods_WExpandLibrary_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WExpandLibrary_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFEA998C08C5C27F45ED30EC2C7AFCDE /* UIColor+Whandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+Whandler.h"; path = "WBasicLibrary/Classes/UIColor+Whandler.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -309,7 +341,6 @@
 				A160B2A554646DAC1DE437F111A97EA6 /* WBasicHeader.h */,
 				DCE8CB5A1CC484A66A39F240F7D78FD1 /* Support Files */,
 			);
-			name = WBasicLibrary;
 			path = WBasicLibrary;
 			sourceTree = "<group>";
 		};
@@ -375,6 +406,15 @@
 		E51ABE667BB66D9FA734C7FFD9CB8882 /* WExpandLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				893FFEEFB27E5EE15B97F558BB4525C3 /* WExpandHeader.h */,
+				1C7FA16B20FD7625006AF107 /* WNetwork.h */,
+				1C7FA16D20FD7625006AF107 /* WNetwork.m */,
+				1C7FA16E20FD7625006AF107 /* WToast.h */,
+				1C7FA16C20FD7625006AF107 /* WToast.m */,
+				1C7FA15E20FD761B006AF107 /* WHUDView.h */,
+				1C7FA15B20FD761B006AF107 /* WHUDView.m */,
+				1C7FA15C20FD761B006AF107 /* WJosnTool.h */,
+				1C7FA15D20FD761B006AF107 /* WJosnTool.m */,
 				2EE924219639C57B8156F11F85F13D01 /* Reachability.h */,
 				CAAC04307628DBA016955B2695103A99 /* Reachability.m */,
 				3FF2DD259B00B44393C5F120A191DC31 /* WBasicCell.h */,
@@ -385,7 +425,6 @@
 				943C063B4B4CB354057F03A7D3695457 /* WDataModel.m */,
 				D2FC46EF405AC2A103CF60DCAAAAF24E /* WDevice.h */,
 				D4D80BE83F2FA87E7D7776052B9F17D8 /* WDevice.m */,
-				893FFEEFB27E5EE15B97F558BB4525C3 /* WExpandHeader.h */,
 				C4E8A1ACE1BAC72EEEE3550AE6C6D931 /* WFileManager.h */,
 				EE8EDEE7FB47AE5BA77350B1EC8AEB4B /* WFileManager.m */,
 				4D1DFFA5213C8B4300F5A8332E41D2D3 /* WLocationManager.h */,
@@ -432,15 +471,19 @@
 				1F6CAAE5D8DE42729ECB613C33E3737F /* WBasicCell.h in Headers */,
 				BF6066FC5EE7AC8498F086042178E58F /* WCheckAuthor.h in Headers */,
 				26EA36D3D03931FF277DBAF4C1B56788 /* WDataModel.h in Headers */,
+				1C7FA16420FD761B006AF107 /* WJosnTool.h in Headers */,
 				EF6F3C63525D16F6408DA50B06262F70 /* WDevice.h in Headers */,
 				D98CF92413B93ED261D11043CB8C7498 /* WExpandHeader.h in Headers */,
 				44FEE82BB877C5F6C573712E3B81879B /* WExpandLibrary-umbrella.h in Headers */,
 				27B7C6B8B837E804D4082707B3F8C4A3 /* WFileManager.h in Headers */,
+				1C7FA17A20FD7625006AF107 /* WToast.h in Headers */,
 				491F5A8BF554044FAA8865E7BB75601C /* WLocationManager.h in Headers */,
 				9237A02666290FBA6750F22D4813DC3A /* WNavViewController.h in Headers */,
 				861D3669B9C7D3E888035C74E18B8499 /* WNotifyManager.h in Headers */,
 				1F144345A2E370E706A1343B43153FCD /* WNumberCompare.h in Headers */,
+				1C7FA17120FD7625006AF107 /* WNetwork.h in Headers */,
 				3EDADD2305CA7854231575923CA90339 /* WPlistManager.h in Headers */,
+				1C7FA16A20FD761B006AF107 /* WHUDView.h in Headers */,
 				D2A8169D953DAC2B9816D961D623E720 /* WScanCodeVC.h in Headers */,
 				3C632A3BD43D286169E16D8A28B49D4C /* WSiderViewController.h in Headers */,
 				9716C92512469DC28F9B784AF10E9331 /* WThreadTool.h in Headers */,
@@ -452,8 +495,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C7FA17020FD7625006AF107 /* WNetwork.h in Headers */,
 				3618CBF19BA75BB2F0D3CD13192D5E17 /* MicroDefinetion.h in Headers */,
+				1C7FA16920FD761B006AF107 /* WHUDView.h in Headers */,
 				55E3D82FDF2522B4C4588BD2E0A19224 /* NSData+AES256_.h in Headers */,
+				1C7FA17920FD7625006AF107 /* WToast.h in Headers */,
 				DF647916B5F43708C9AD329BF777AA09 /* NSData+Base64_.h in Headers */,
 				9B9FE84FA830E57D17092C1420768D62 /* NSDate+Whandler.h in Headers */,
 				3519BFF02159CF8C9DF8C16FDEF72DC8 /* NSMutableArray+WHandler.h in Headers */,
@@ -465,6 +511,7 @@
 				91094D502BE32F8F75F7924A1AA2FD9C /* UIView+WHandler.h in Headers */,
 				6AF169A0A67CA60985DF87CB16A808E8 /* UIViewController+BasicHandler.h in Headers */,
 				6A9BDD6F8F2F64AFEA71C897EA286737 /* UIViewController+TableHandler.h in Headers */,
+				1C7FA16320FD761B006AF107 /* WJosnTool.h in Headers */,
 				69B4796EB19EA24C078243426C5D4C16 /* UIViewController+WebHandler.h in Headers */,
 				143D9E38777845331DB1AD913D20EAC7 /* WBasicHeader.h in Headers */,
 				206F9B3BBFCE7897B8FA11868D8F28FE /* WBasicLibrary-umbrella.h in Headers */,
@@ -475,7 +522,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C7FA16220FD761B006AF107 /* WJosnTool.h in Headers */,
+				1C7FA16F20FD7625006AF107 /* WNetwork.h in Headers */,
+				1C7FA16820FD761B006AF107 /* WHUDView.h in Headers */,
 				2A0F08424D72463C5514D5F61E610FBC /* Pods-WExpandLibrary_Example-umbrella.h in Headers */,
+				1C7FA17820FD7625006AF107 /* WToast.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -571,13 +622,17 @@
 			files = (
 				D21EF7E3ED193EDAD0B6BECA1A33EA84 /* NSData+AES256_.m in Sources */,
 				B3383AFB2D1D414497E3634EEC15B438 /* NSData+Base64_.m in Sources */,
+				1C7FA16020FD761B006AF107 /* WHUDView.m in Sources */,
 				BDEBAD67C6195A0CD2C7B7444B62AB0A /* NSDate+Whandler.m in Sources */,
 				7BABE5D16F9DDC89AE7A80AEE99AA081 /* NSMutableArray+WHandler.m in Sources */,
+				1C7FA17320FD7625006AF107 /* WToast.m in Sources */,
+				1C7FA16620FD761B006AF107 /* WJosnTool.m in Sources */,
 				521ED5B49A3C7F7AC471A3C389FFA241 /* NSObject+Whandler.m in Sources */,
 				4A176A10AF876048E5229095DECFB440 /* NSString+WHandler.m in Sources */,
 				56052717941C17D292438499DB52DD89 /* UIColor+Whandler.m in Sources */,
 				16E43E52C78730663D9E955F7725BE47 /* UIImage+WHandler.m in Sources */,
 				A763EFF6ADF8D6D6C0A04EC35DFF7B58 /* UILabel+WHandler.m in Sources */,
+				1C7FA17620FD7625006AF107 /* WNetwork.m in Sources */,
 				9A51EC1BB64D53BC4E8FD10A3E838F5A /* UIView+WHandler.m in Sources */,
 				EE6CF841821211397B81F8C202D15557 /* UIViewController+BasicHandler.m in Sources */,
 				765723F73F7568AB648A93B3045C77FC /* UIViewController+TableHandler.m in Sources */,
@@ -593,9 +648,12 @@
 				5D8F9496DF15812DD8B776BA11D19F9B /* Reachability.m in Sources */,
 				5BF2EBF4E1C52B98BAAA966420CA464F /* WBasicCell.m in Sources */,
 				5139CA44847D77246FCF055F9C69956A /* WCheckAuthor.m in Sources */,
+				1C7FA17420FD7625006AF107 /* WToast.m in Sources */,
 				50B96EEB4DDDDB0850374C0435525BD4 /* WDataModel.m in Sources */,
+				1C7FA16120FD761B006AF107 /* WHUDView.m in Sources */,
 				E9F9D69CB1749F6BE6E8F21D8A946F41 /* WDevice.m in Sources */,
 				22116A5431B0F188F8302A29F1497D03 /* WExpandLibrary-dummy.m in Sources */,
+				1C7FA16720FD761B006AF107 /* WJosnTool.m in Sources */,
 				EE38D78435166A03C0A0984549FAE04A /* WFileManager.m in Sources */,
 				E592A1CE6131AAF075C101C7E1F76C70 /* WLocationManager.m in Sources */,
 				26E28D7E88A1EEF6CFED43A346217ED6 /* WNavViewController.m in Sources */,
@@ -605,6 +663,7 @@
 				057AC520B5D4A7241A39564EFBCA3E71 /* WScanCodeVC.m in Sources */,
 				579C24ED151A2AE9C8CBD7E5DB0AA2C8 /* WSiderViewController.m in Sources */,
 				ACB80FF5A444347CE93D8735C7CD2762 /* WThreadTool.m in Sources */,
+				1C7FA17720FD7625006AF107 /* WNetwork.m in Sources */,
 				6DFF53CDE3ADF238F3BD4228C42E46D5 /* WTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -613,6 +672,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C7FA15F20FD761B006AF107 /* WHUDView.m in Sources */,
+				1C7FA17220FD7625006AF107 /* WToast.m in Sources */,
+				1C7FA16520FD761B006AF107 /* WJosnTool.m in Sources */,
+				1C7FA17520FD7625006AF107 /* WNetwork.m in Sources */,
 				9067EB282CB943A5DDAC0B2A17BFCBD3 /* Pods-WExpandLibrary_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
