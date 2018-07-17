@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface WBasicCell : UITableViewCell
+@property (nonatomic,strong) id model;
+
+
 /**
  实例化的类方法
 
@@ -23,11 +26,4 @@
  */
 -(void)custmView;
 
-
-/**
- 设置模型
-
- @param model 要设置的模型
- */
--(void)setModel:(id)model;
 @end

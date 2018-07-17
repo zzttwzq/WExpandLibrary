@@ -14,18 +14,6 @@
 @end
 
 @implementation WBasicCell
-
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
-
 /**
  *  构造方法(在初始化对象的时候会调用)
  *  一般在这个方法中添加需要显示的子控件
@@ -64,7 +52,10 @@
 /**
  自定义视图
  */
--(void)custmView;{}
+-(void)custmView;
+{
+    
+}
 
 
 /**
@@ -72,5 +63,8 @@
 
  @param model 要设置的模型
  */
--(void)setModel:(id)model;{}
+-(void)setModel:(id)model
+{
+
+}
 @end

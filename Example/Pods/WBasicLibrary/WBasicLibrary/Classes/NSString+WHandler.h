@@ -101,7 +101,7 @@
 
  @return 返回去除后的字符串
  */
-- (instancetype)removeEmoji;
+- (instancetype)filterEmoji;
 
 
 #pragma mark - 字符串大小计算

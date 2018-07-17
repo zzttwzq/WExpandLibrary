@@ -280,7 +280,7 @@
 
  @return 返回去除后的字符串
  */
-- (instancetype)removeEmoji;
+- (instancetype)filterEmoji;
 {
     NSMutableString* __block buffer = [NSMutableString stringWithCapacity:[self length]];
 
@@ -292,6 +292,7 @@
 
     return buffer;
 }
+
 
 #pragma mark - 字符串大小计算
 /**

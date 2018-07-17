@@ -65,14 +65,13 @@
 }
 
 
-
 /**
  将模型转换成对象
 
  @param array 要处理的数据
  @return 返回当前包含当前对象的数组
  */
-+(NSArray *)modelWithArray:(NSArray *)array;
++ (NSArray *) listWithArray:(NSArray *)array;
 {
     NSMutableArray *tmpArray = [NSMutableArray array];
 

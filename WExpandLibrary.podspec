@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WExpandLibrary'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'iOS 开发扩展库，包含定位，文件管理，模型，cell基类，扫码，设备管理，多线程'
 
 # This description is used to generate tags and improve search results.
@@ -39,4 +39,5 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit'
   s.dependency 'WBasicLibrary'
+  s.dependency 'AFNetworking'
 end
