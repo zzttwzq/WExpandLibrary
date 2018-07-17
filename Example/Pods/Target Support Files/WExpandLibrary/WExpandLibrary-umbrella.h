@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "WExpandHeader.h"
 #import "Reachability.h"
 #import "WBasicCell.h"
 #import "WCheckAuthor.h"

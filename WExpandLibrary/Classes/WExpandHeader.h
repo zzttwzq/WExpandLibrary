@@ -21,6 +21,9 @@
 #import "WScanCodeVC.h"
 #import "WTool.h"
 #import "Reachability.h"
-#import "ThreadTools.h"
+#import "WThreadTool.h"
+#import "WToast.h"
+#import "WNetwork.h"
+#import "WPlistManager.h"
 
 #endif /* WExpandHeader_h */

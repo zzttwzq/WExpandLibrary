@@ -19,6 +19,8 @@
 		1922F8ECED18DAA8B6B53CCFAC4C1347 /* WNavViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AA56898037C642C33B6008E1F68DC36 /* WNavViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		199DFF4363643C4D29D15D08DEF00B05 /* UIViewController+WebHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FAE1F0EE21150A99181FE24C9C2BCD0 /* UIViewController+WebHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1A4A29CC271101F6FBFFE396D9EFB1D0 /* UIView+WHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E4B07DF407DC6D7AF889C9ECDB681B1 /* UIView+WHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1C9113F220FE2A8D0079D5BF /* WExpandHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 64DC9EE88013C3683EFC440820634911 /* WExpandHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1C9113F420FE2A8F0079D5BF /* WExpandHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 64DC9EE88013C3683EFC440820634911 /* WExpandHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		275DE73E12E089FE35F2C02F0D0FFA74 /* WToast.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B845766E0270F90B6552F2A4612B044 /* WToast.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C66C5C56FAAE79F36CE83343B8DFFE1 /* WCheckAuthor.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A6DC5A13CF99EC7330FF655A92D4D1 /* WCheckAuthor.m */; };
 		3138B99AB27641735501DE8B3E240A8F /* WFileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 87F329F9756BA343795863F85FAD8595 /* WFileManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -724,6 +726,7 @@
 				125D321875DFD057EBA2AD919338042B /* NSMutableArray+WHandler.h in Headers */,
 				68C4B4AC9C63D5D475D894BB1A8BCBBD /* NSObject+Whandler.h in Headers */,
 				FE7864252FF50E3651D906CE98D91027 /* NSString+WHandler.h in Headers */,
+				1C9113F220FE2A8D0079D5BF /* WExpandHeader.h in Headers */,
 				F2FAA0A7041A7A72464E1F2A9DFD15DC /* UIColor+Whandler.h in Headers */,
 				723646E394017B6E04897732697666E6 /* UIImage+WHandler.h in Headers */,
 				BF6FBC4E3BC514E20D68FC7423A6D64D /* UILabel+WHandler.h in Headers */,
@@ -741,6 +744,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41F36B3A95B650671D3C2D0B5A50B76A /* Pods-WExpandLibrary_Example-umbrella.h in Headers */,
+				1C9113F420FE2A8F0079D5BF /* WExpandHeader.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
