@@ -25,12 +25,12 @@
 {
     if (![text isKindOfClass:[NSString class]]) {
 
-        [self showInfo:@"HMLabelHandler>>>不是正确的字符串！"];
+        DEBUG_LOG(self, @"HMLabelHandler>>>不是正确的字符串！");
         return;
     }
     else if (text.length == 0){
 
-        [self showInfo:@"处理一个空字符串！"];
+        DEBUG_LOG(self, @"处理一个空字符串！");
     }
 
     self.text = text;
@@ -104,16 +104,5 @@
 {
     [self adjustSizeWithText:text font:self.font maxSize:CGSizeMake(ScreenWidth, ScreenHeight) autoWith:YES autoHeight:YES];
 
-}
-
-
-/**
- 显示错误消息
-
- @param string 要显示的消息
- */
-- (void) showInfo:(NSString *)string
-{
-    WLOG(@"<!警告!> <UILabel+WHandler> %@",string);
 }
 @end

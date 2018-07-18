@@ -14,8 +14,9 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - WBasicLibrary (0.3.2)
-  - WExpandLibrary (0.1.2):
+  - WBasicLibrary (0.3.7):
+    - AFNetworking
+  - WExpandLibrary (0.1.8):
     - AFNetworking
     - WBasicLibrary
 
@@ -33,8 +34,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  WBasicLibrary: 60f1429f6ab2c3b6059de630bcfd8c26b435a46e
-  WExpandLibrary: 53a91d83e3dc7c9a95fb4ce090efc9ad82e2b5b9
+  WBasicLibrary: 90206e1205e8e88bd78f513333b194bb2d83fc53
+  WExpandLibrary: 32b34a04e606154ffe3ee9692128d8600fe90285
 
 PODFILE CHECKSUM: 8b17ff079c9c300f3a67353414928dcad659158b
 

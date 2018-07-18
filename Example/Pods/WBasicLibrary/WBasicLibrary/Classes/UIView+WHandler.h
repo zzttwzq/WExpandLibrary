@@ -29,21 +29,17 @@
 /**
  画点虚线
 
- @param position 线开始的位置
- @param lineHeight 线的高度
- @param lineWidth 线的宽度
- @param shortLineLength 小短线的宽度
- @param lineSpacing 小短线的间距
+ @param rect 线的位置和大小
+ @param lineWidth 短线的宽度
+ @param lineSpace 短线的间距
  @param lineColor 线的颜色
  @param isVertical 水平还是垂直（默认no，水平）
  */
-- (void) drawDashLineWithPosition:(CGPoint)position
-                       lineHeight:(float)lineHeight
-                        lineWidth:(float)lineWidth
-                  shortLineLength:(int)shortLineLength
-                      lineSpacing:(int)lineSpacing
-                        lineColor:(UIColor *)lineColor
-                       isVertical:(BOOL)isVertical;
+- (void)drawDashLineWithRect:(CGRect)rect
+                   lineWidth:(float)lineWidth
+                   lineSpace:(float)lineSpace
+                   lineColor:(UIColor *)lineColor
+                  isVertical:(BOOL)isVertical;
 
 
 

@@ -121,7 +121,14 @@ typedef NS_ENUM(NSInteger,WSystemDateTimeFormat) {
 
 
 
-+ (NSString *) timeIntervalWithLastTime:(id)date;
+/**
+ 获取某个时间+多少秒的时间
+
+ @param date 某个时间点 可以是时间字符串 或者是nsdate对象
+ @return 返回格式化后的时间字符串
+ */
++ (NSString *) timeIntervalWithLastTime:(NSDate *)date
+                              formatter:(id)formatter;
 
 
 
@@ -147,14 +154,4 @@ typedef NS_ENUM(NSInteger,WSystemDateTimeFormat) {
  */
 +(NSTimeInterval)compareWithDate:(id)oldDate
                        formatter:(id)formatter;
-
-
-/**
- 显示警告消息
-
- @param target 对象
- @param message 要发送的消息
- */
-+ (void) showInfoWithTarget:(id)target
-                    message:(NSString *)message;
 @end

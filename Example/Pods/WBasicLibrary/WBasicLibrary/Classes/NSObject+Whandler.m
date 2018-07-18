@@ -227,23 +227,13 @@
             }
             else{
 
-                [self showInfo:[NSString stringWithFormat:@"没有这个key:%@",key]];
+                NSString *string = [NSString stringWithFormat:@"没有这个key:%@",key];
+                DEBUG_LOG(self, string);
             }
         }
     }else{
 
-        [self showInfo:@"请传入字典！"];
+        DEBUG_LOG(self, @"请传入字典！");
     }
-}
-
-
-/**
- 显示消息
-
- @param string 要显示的消息
- */
-- (void) showInfo:(NSString *)string
-{
-    WLOG(@"<!警告!> <NSObject (Whandler)> \n%@",string);
 }
 @end

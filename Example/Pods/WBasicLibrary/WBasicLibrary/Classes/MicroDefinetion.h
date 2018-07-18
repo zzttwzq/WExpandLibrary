@@ -19,6 +19,7 @@
 #import <UIKit/UIKit.h>
 #import <sqlite3.h>
 
+#import "Reachability.h"             //网络库
 #import "NSDate+Whandler.h"          //日期分类
 #import "NSObject+Whandler.h"        //运行时分类
 #import "UIView+WHandler.h"          //view扩展分类
@@ -32,7 +33,7 @@
 #import "UIViewController+BasicHandler.h"
 #import "UIViewController+WebHandler.h"
 #import "UIViewController+TableHandler.h"
-
+#import "UIAlertController+WHandler.h"
 
 //==================================== 常用的宏定义 ==========================================
 #pragma mark - 常用的宏定义

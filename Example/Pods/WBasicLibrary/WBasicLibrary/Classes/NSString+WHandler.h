@@ -101,7 +101,7 @@
 
  @return 返回去除后的字符串
  */
-- (instancetype)filterEmoji;
+- (instancetype)removeEmoji;
 
 
 #pragma mark - 字符串大小计算
@@ -119,17 +119,15 @@
 /**
  判断是否是手机号
 
- @param mobileString 要显示的字号
  @return 是否是手机号
  */
-+ (BOOL)isMobile:(NSString *)mobileString;
+- (BOOL)isMobile;
 
 
 /**
  判断是否是邮箱
 
- @param email 要显示的字号
  @return 是否是邮箱
  */
-+ (BOOL)isEmail:(NSString *)email;
+- (BOOL)isEmail;
 @end

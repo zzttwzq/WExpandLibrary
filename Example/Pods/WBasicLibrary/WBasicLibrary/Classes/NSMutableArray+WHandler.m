@@ -21,13 +21,9 @@
         return self[index];
     }
 
-    [self showInfo:[NSString stringWithFormat:@"数组越界 \n%@ \n%ld",self,(long)index]];
+    NSString *string = [NSString stringWithFormat:@"数组越界 \n%@ \n%ld",self,(long)index];
+    DEBUG_LOG(self, string);
     return nil;
-}
-
-- (void) showInfo:(NSString *)string
-{
-    WLOG(@"<!警告!> < NSMutableArray WHandler> %@",string);
 }
 
 @end
