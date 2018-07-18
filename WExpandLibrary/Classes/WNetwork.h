@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <WBasicLibrary/WBasicHeader.h>
-#import "AFNetworking.h"
+#import <AFNetworking/AFNetworking.h>
 
 #define GET_METHOD @"GET"
 #define POST_METHOD @"POST"
