@@ -459,4 +459,123 @@
 
     return NO;
 }
+
+#pragma mark - 获取文件的大小
+/**
+ *  获取磁盘总空间 (单位是 MBytes)
+ *
+ *  @return 磁盘大小
+ */
++(CGFloat)allSizeOfDisk;
+{
+    CGFloat size = 0.0;
+
+    NSError *error;
+
+    NSDictionary *dic = [[NSFileManager defaultManager] attributesOfFileSystemForPath:NSHomeDirectory() error:&error];
+
+    if (error) {
+
+        #ifdef DEBUG
+            NSLog(@"error: %@", error.localizedDescription);
+        #endif
+    }else{
+
+        NSNumber *number = [dic objectForKey:NSFileSystemSize];
+        size = [number floatValue]/1024/1024;
+    }
+
+    return size;
+}
+
+
+/**
+ *  获取磁盘可用空间大小 (单位是 MBytes)
+ *
+ *  @return 可用空间大小
+ */
++(CGFloat)freeSizeOfDisk;
+{
+    CGFloat size = 0.0;
+
+    NSError *error;
+
+    NSDictionary *dic = [[NSFileManager defaultManager] attributesOfFileSystemForPath:NSHomeDirectory() error:&error];
+
+    if (error) {
+
+        CGFloat size = 0.0;
+
+        NSError *error;
+
+        NSDictionary *dic = [[NSFileManager defaultManager] attributesOfFileSystemForPath:NSHomeDirectory() error:&error];
+
+        if (error) {
+
+            #ifdef DEBUG
+                NSLog(@"error: %@", error.localizedDescription);
+            #endif
+        }else{
+
+            NSNumber *number = [dic objectForKey:NSFileSystemFreeSize];
+            size = [number floatValue]/1024/1024;
+        }
+
+        return size;
+    }else{
+
+        NSNumber *number = [dic objectForKey:NSFileSystemFreeSize];
+        size = [number floatValue]/1024/1024;
+    }
+
+    return size;
+}
+
+
+/**
+ *  获取指定路径下某个文件的大小
+ *
+ *  @param filePath 文件路径
+ *
+ *  @return 文件大小
+ */
++(long long)fileSizeAtPath:(NSString *)filePath;
+{
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+
+    if (![fileManager fileExistsAtPath:filePath]) return 0;
+
+    return [[fileManager attributesOfItemAtPath:filePath error:nil] fileSize];
+}
+
+
+/**
+ *  获取文件夹下所有文件的大小
+ *
+ *  @param folderPath 文件夹路径
+ *
+ *  @return 所有文件大小
+ */
++ (long long)folderSizeAtPath:(NSString *)folderPath;
+{
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+
+    if (![fileManager fileExistsAtPath:folderPath]) return 0;
+
+    NSEnumerator *filesEnumerator = [[fileManager subpathsAtPath:folderPath] objectEnumerator];
+
+    NSString *fileName;
+
+    long long folerSize = 0;
+
+    while ((fileName = [filesEnumerator nextObject]) != nil) {
+
+        NSString *filePath = [folderPath stringByAppendingPathComponent:fileName];
+
+        folerSize += [self fileSizeAtPath:filePath];
+
+    }
+    return folerSize;
+}
+
 @end

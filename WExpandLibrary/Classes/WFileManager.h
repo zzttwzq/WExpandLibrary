@@ -189,5 +189,41 @@ typedef NS_ENUM(NSInteger,WFileBasePath) {
 
 
 #pragma mark - 获取文件的大小
+/**
+ *  获取磁盘总空间 (单位是 MBytes)
+ *
+ *  @return 磁盘大小
+ */
++(CGFloat)allSizeOfDisk;
+
+
+/**
+ *  获取磁盘可用空间大小 (单位是 MBytes)
+ *
+ *  @return 可用空间大小
+ */
++(CGFloat)freeSizeOfDisk;
+
+
+/**
+ *  获取指定路径下某个文件的大小
+ *
+ *  @param filePath 文件路径
+ *
+ *  @return 文件大小
+ */
++(long long)fileSizeAtPath:(NSString *)filePath;
+
+
+/**
+ *  获取文件夹下所有文件的大小
+ *
+ *  @param folderPath 文件夹路径
+ *
+ *  @return 所有文件大小
+ */
+
++ (long long)folderSizeAtPath:(NSString *)folderPath;
+
 
 @end
