@@ -375,12 +375,14 @@
         // 打开闪光灯
         [device lockForConfiguration:nil];
         [device setTorchMode:AVCaptureTorchModeOn];//开
+        [device setFlashMode:AVCaptureFlashModeOn];//开
         [device unlockForConfiguration];
     }else if(open) {
 
         // 关闭闪光灯
         [device lockForConfiguration:nil];
         [device setTorchMode:AVCaptureTorchModeOff];//关
+        [device setFlashMode:AVCaptureFlashModeOff];//开
         [device unlockForConfiguration];
     }
 }

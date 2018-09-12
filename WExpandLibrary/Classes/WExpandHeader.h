@@ -23,5 +23,6 @@
 #import "WThreadTool.h"
 #import "WToast.h"
 #import "WPlistManager.h"
+#import "HKTableHeader.h"
 
 #endif /* WExpandHeader_h */
