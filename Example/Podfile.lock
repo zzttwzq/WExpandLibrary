@@ -17,7 +17,7 @@ PODS:
   - SDWebImage (4.4.2):
     - SDWebImage/Core (= 4.4.2)
   - SDWebImage/Core (4.4.2)
-  - WBasicLibrary (0.3.7):
+  - WBasicLibrary (0.4.0):
     - AFNetworking
   - WExpandLibrary (0.2.1):
     - SDWebImage
@@ -39,7 +39,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
-  WBasicLibrary: 90206e1205e8e88bd78f513333b194bb2d83fc53
+  WBasicLibrary: a995a7320c56706d2e3c5ec626fbd3a5bb3fbe8f
   WExpandLibrary: 654c89912507c29161ad4d99d54e891e45174171
 
 PODFILE CHECKSUM: 8b17ff079c9c300f3a67353414928dcad659158b

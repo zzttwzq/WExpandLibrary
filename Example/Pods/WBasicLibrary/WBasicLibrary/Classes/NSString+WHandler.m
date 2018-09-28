@@ -56,7 +56,7 @@
 
  @return 返回长度
  */
-- (int) chineseStringLength;
+- (int) stringUnicodeLength;
 {
     int unicodeLength = 0;
     for(int i=0; i< [self length];i++){
@@ -77,7 +77,7 @@
 
  @return 获取包含中文的字符串长度
  */
-- (int) lengthWithChinese;
+- (int) stringLengthWithUnicode;
 {
     int unicodeLength = 0;
     for(int i=0; i< [self length];i++){
@@ -102,7 +102,7 @@
 
  @return 获取不包含中文的字符串长度
  */
-- (int) lengthWithoutChinese
+- (int) stringAsicLength
 {
     int unicodeLength = 0;
     for(int i=0; i< [self length];i++){
@@ -227,9 +227,9 @@
         return [str substringToIndex:length];
     }
     else{
-
+        
+        [self DEBUGWithTarget:self message:@"字符串索引越界"];
         return nil;
-        DEBUG_LOG(self, @"字符串索引越界")
     }
 }
 
@@ -293,6 +293,26 @@
     return buffer;
 }
 
+
+/**
+ 获取字符串(或汉字)首字母
+
+ @return 获取首字母
+ */
+- (NSString *)firstCharacter;
+{
+    NSMutableString *str = [NSMutableString stringWithString:self];
+
+    CFStringTransform((CFMutableStringRef)str, NULL, kCFStringTransformMandarinLatin, NO);
+
+    CFStringTransform((CFMutableStringRef)str, NULL, kCFStringTransformStripDiacritics, NO);
+
+    NSString *pingyin = [str capitalizedString];
+
+    return [pingyin substringToIndex:1];
+}
+
+
 #pragma mark - 字符串大小计算
 /**
  获取字符串的尺寸
@@ -329,7 +349,6 @@
          * 移动号段正则表达式
 
          */
-
         NSString *CM_NUM = @"^((13[4-9])|(147)|(15[0-2,7-9])|(178)|(18[2-4,7-8]))\\d{8}|(1705)\\d{7}$";
 
         /**
@@ -337,7 +356,6 @@
          * 联通号段正则表达式
 
          */
-
         NSString *CU_NUM = @"^((13[0-2])|(145)|(15[5-6])|(176)|(18[5,6]))\\d{8}|(1709)\\d{7}$";
 
         /**
@@ -345,7 +363,6 @@
          * 电信号段正则表达式
 
          */
-
         NSString *CT_NUM = @"^((133)|(153)|(177)|(18[0,1,9]))\\d{8}$";
 
         NSPredicate *pred1 = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", CM_NUM];

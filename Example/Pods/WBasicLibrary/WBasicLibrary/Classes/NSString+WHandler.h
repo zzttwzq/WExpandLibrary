@@ -32,7 +32,7 @@
 
  @return 返回长度
  */
-- (int) chineseStringLength;
+- (int) stringUnicodeLength;
 
 
 /**
@@ -40,7 +40,7 @@
 
  @return 获取包含中文的字符串长度
  */
-- (int) lengthWithChinese;
+- (int) stringLengthWithUnicode;
 
 
 /**
@@ -48,7 +48,7 @@
 
  @return 获取不包含中文的字符串长度
  */
-- (int) lengthWithoutChinese;
+- (int) stringAsicLength;
 
 
 #pragma mark - 字符串加密
@@ -93,7 +93,7 @@
 
  @return 返回是否包含
  */
-- (BOOL)containEmoji;
+- (BOOL) containEmoji;
 
 
 /**
@@ -103,6 +103,13 @@
  */
 - (instancetype)removeEmoji;
 
+
+/**
+ 获取字符串(或汉字)首字母
+
+ @return 获取首字母
+ */
+- (NSString *)firstCharacter;
 
 #pragma mark - 字符串大小计算
 /**

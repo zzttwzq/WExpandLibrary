@@ -9,6 +9,5 @@
 #define WBasicHeader_h
 
 #import "MicroDefinetion.h"
-#import "WNetwork.h"
 
 #endif /* WBasicHeader_h */

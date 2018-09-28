@@ -227,13 +227,73 @@
             }
             else{
 
-                NSString *string = [NSString stringWithFormat:@"没有这个key:%@",key];
-                DEBUG_LOG(self, string);
+                [self DEBUGWithTarget:self message:[NSString stringWithFormat:@"没有这个key:%@",key]];
             }
         }
     }else{
 
-        DEBUG_LOG(self, @"请传入字典！");
+        [self DEBUGWithTarget:self message:@"请传入字典！"];
     }
 }
+
+
+/**
+ 显示调试信息
+
+ @param target 对象
+ @param message 消息
+ */
+- (void) DEBUGWithTarget:(id)target
+                 message:(NSString *)message;
+{
+    #ifdef DEBUG
+        NSLog(@"<! 警告 !> %@ %@",NSStringFromClass([target class]),message);
+    #endif
+}
+
+
+#pragma mark - 其他
+/**
+ 获取当前的viewcontroller
+
+ @return 当前的控制器
+ */
+- (UIViewController *)currentViewController;
+{
+    UIViewController *result = nil;
+    UIWindow * window = [[UIApplication sharedApplication] keyWindow];
+    if (window.windowLevel != UIWindowLevelNormal){
+
+        NSArray *windows = [[UIApplication sharedApplication] windows];
+        for(UIWindow * tmpWin in windows){
+
+            if (tmpWin.windowLevel == UIWindowLevelNormal){
+                window = tmpWin;
+                break;
+            }
+        }
+    }
+
+    UIView *frontView = [[window subviews] objectAtIndex:0];
+    id nextResponder = [frontView nextResponder];
+
+    if ([nextResponder isKindOfClass:[UIViewController class]])
+
+        result = nextResponder;
+    else
+        result = window.rootViewController;
+    return result;
+}
+
+
+// 重写setValue:forUndefinedKey:方法
+- (void)setValue:(id)value forUndefinedKey:(NSString *)key {
+    NSLog(@"key = %@, value = %@", key, value);
+}
+
+//- (void)setValue:(id)value forKey:(NSString *)key
+//{
+//
+//}
+
 @end

@@ -5,6 +5,64 @@
 //  Created by 吴志强 on 2018/7/9.
 //
 
+
+/**
+
+
+
+- (id)initWithTimeInterval:(NSTimeInterval)secs sinceDate:(NSDate *)refDate;
+
+初始化为以refDate为基准，然后过了secs秒的时间
+
+
+
+- (id)initWithTimeIntervalSinceNow:(NSTimeInterval)secs;
+
+初始化为以当前时间为基准，然后过了secs秒的时间
+
+
+
+
+
+- (NSTimeInterval)timeIntervalSinceDate:(NSDate *)refDate;
+
+以refDate为基准时间，返回实例保存的时间与refDate的时间间隔
+
+
+
+- (NSTimeInterval)timeIntervalSinceNow;
+
+以当前时间(Now)为基准时间，返回实例保存的时间与当前时间(Now)的时间间隔
+
+
+
+- (NSTimeInterval)timeIntervalSince1970;
+
+以1970/01/01 GMT为基准时间，返回实例保存的时间与1970/01/01 GMT的时间间隔
+
+
+
+- (NSTimeInterval)timeIntervalSinceReferenceDate;
+
+以2001/01/01 GMT为基准时间，返回实例保存的时间与2001/01/01 GMT的时间间隔
+
+
+
+
+
++ (NSTimeInterval)timeIntervalSinceReferenceDate;
+
+
+
+**/
+
+//秒
+// - (NSTimeInterval)timeIntervalSinceNow;
+//    以当前时间(Now)为基准时间，返回实例保存的时间与当前时间(Now)的时间间隔
+
+
+
+
 #import <Foundation/Foundation.h>
 #import "MicroDefinetion.h"
 
@@ -154,4 +212,21 @@ typedef NS_ENUM(NSInteger,WSystemDateTimeFormat) {
  */
 +(NSTimeInterval)compareWithDate:(id)oldDate
                        formatter:(id)formatter;
+
+
+
+/**
+ *  计算上次日期距离现在多久
+ *
+ *  @param lastTime    上次日期(需要和格式对应)
+ *  @param format1     上次日期格式
+ *  @param currentTime 最近日期(需要和格式对应)
+ *  @param format2     最近日期格式
+ *
+ *  @return xx分钟前、xx小时前、xx天前
+ */
++ (NSString *)timeIntervalFromLastTime:(NSString *)lastTime
+                        lastTimeFormat:(NSString *)format1
+                         ToCurrentTime:(NSString *)currentTime
+                     currentTimeFormat:(NSString *)format2;
 @end

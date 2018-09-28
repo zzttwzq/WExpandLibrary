@@ -28,7 +28,6 @@
 #import "UIViewController+WebHandler.h"
 #import "WBasicHeader.h"
 #import "WMessageAction.h"
-#import "WNetwork.h"
 #import "WNodataView.h"
 #import "WRequestStatueView.h"
 

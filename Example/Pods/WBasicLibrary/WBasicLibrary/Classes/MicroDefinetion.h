@@ -38,18 +38,23 @@
 //==================================== 常用的宏定义 ==========================================
 #pragma mark - 常用的宏定义
 //==================================== 常用的宏定义 ==========================================
-#define ScreenWidth [UIScreen mainScreen].bounds.size.width
-#define ScreenHeight [UIScreen mainScreen].bounds.size.height
-//#define NavBarHeight [WTool getNavbarHeight]
-//#define BottomHeight [WTool getBottomHeight]
-//#define isIPHoneX [WTool isiPhoneX]
+#define ScreenWidth             [UIScreen mainScreen].bounds.size.width
+#define ScreenHeight            [UIScreen mainScreen].bounds.size.height
+
+#define IS_IPHONE_X             (Screen_Height == 812.0f) ? YES : NO
+#define Height_NavContentBar    44.0f
+#define Height_StatusBar        (IS_IPHONE_X==YES)?44.0f: 20.0f
+#define Height_NavBar           (IS_IPHONE_X==YES)?88.0f: 64.0f
+#define Height_TabBar           (IS_IPHONE_X==YES)?83.0f: 49.0f
 
 #ifdef DEBUG
-#define WLOG(...) NSLog(__VA_ARGS__);
-#define WLOG_METHOD NSLog(@"%s", __func__);
+
+    #define WLOG(...)           NSLog(__VA_ARGS__);
+    #define WLOG_METHOD         NSLog(@"%s", __func__);
 #else
-#define WLOG(...);
-#define WLOG_METHOD;
+
+    #define WLOG(...);
+    #define WLOG_METHOD;
 #endif
 
 //显示调试消息
@@ -104,8 +109,8 @@
 #pragma mark - 常用的宏定义
 //================================== 显示消息 ==============================================
 #define SHOW_SUCCESS_MESSAGE(_MESSAGE_) [WMessage showSuccessMessage:_MESSAGE_];
-#define SHOW_INFO_MESSAGE(_MESSAGE_) [WMessage showInfoMessage:_MESSAGE_];
-#define SHOW_ERROR_MESSAGE(_MESSAGE_) [WMessage showErrorMessage:_MESSAGE_];
+#define SHOW_INFO_MESSAGE(_MESSAGE_)    [WMessage showInfoMessage:_MESSAGE_];
+#define SHOW_ERROR_MESSAGE(_MESSAGE_)   [WMessage showErrorMessage:_MESSAGE_];
 
 
 
