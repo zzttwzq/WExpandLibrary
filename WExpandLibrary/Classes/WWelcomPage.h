@@ -6,11 +6,11 @@
 //  Copyright © 2017年 吴志强. All rights reserved.
 //
 
-#import "Definitions.h"
+//#import "Definitions.h"
 #import "WFileManager.h"
 
 @interface WWelcomPage : UIView
-@property(nonatomic,copy)StateBlock state;
+@property(nonatomic,copy) void(^state)(BOOL state);
 
 /**
  初始化方法（会自动判断是否是url或者是图片格式）

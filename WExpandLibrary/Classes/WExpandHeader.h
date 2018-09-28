@@ -21,8 +21,8 @@
 #import "WScanCodeVC.h"
 #import "WTool.h"
 #import "WThreadTool.h"
-#import "WToast.h"
 #import "WPlistManager.h"
+#import "WWelcomPage.h"
 //#import "HKTableHeader.h"
 
 #endif /* WExpandHeader_h */

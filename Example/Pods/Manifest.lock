@@ -14,10 +14,13 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - SDWebImage (4.4.2):
+    - SDWebImage/Core (= 4.4.2)
+  - SDWebImage/Core (4.4.2)
   - WBasicLibrary (0.3.7):
     - AFNetworking
-  - WExpandLibrary (0.1.8):
-    - AFNetworking
+  - WExpandLibrary (0.2.1):
+    - SDWebImage
     - WBasicLibrary
 
 DEPENDENCIES:
@@ -26,6 +29,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - SDWebImage
     - WBasicLibrary
 
 EXTERNAL SOURCES:
@@ -34,8 +38,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
   WBasicLibrary: 90206e1205e8e88bd78f513333b194bb2d83fc53
-  WExpandLibrary: 32b34a04e606154ffe3ee9692128d8600fe90285
+  WExpandLibrary: 654c89912507c29161ad4d99d54e891e45174171
 
 PODFILE CHECKSUM: 8b17ff079c9c300f3a67353414928dcad659158b
 

@@ -8,6 +8,7 @@
 
 #import "WWelcomPage.h"
 #import "UIImageView+WebCache.h"
+#import <WBasicLibrary/WBasicHeader.h>
 
 @interface WWelcomPage ()<UIScrollViewDelegate>
 
@@ -84,7 +85,7 @@
 
         if ([item containsString:@"http"]) {
 
-            [image sd_setImageWithURL:[NSURL URLWithString:item] placeholderImage:[UIImage imageNamed:PLACEHOLDER_IMG]];
+            [image sd_setImageWithURL:[NSURL URLWithString:item]];
         }else{
 
             NSString *path = [WFileManager getFilePathWithFileName:item];

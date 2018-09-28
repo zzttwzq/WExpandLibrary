@@ -16,7 +16,6 @@
 #import "WDevice.h"
 #import "WExpandHeader.h"
 #import "WFileManager.h"
-#import "WHUDView.h"
 #import "WJosnTool.h"
 #import "WLocationManager.h"
 #import "WNavViewController.h"
@@ -26,8 +25,8 @@
 #import "WScanCodeVC.h"
 #import "WSiderViewController.h"
 #import "WThreadTool.h"
-#import "WToast.h"
 #import "WTool.h"
+#import "WWelcomPage.h"
 
 FOUNDATION_EXPORT double WExpandLibraryVersionNumber;
 FOUNDATION_EXPORT const unsigned char WExpandLibraryVersionString[];
