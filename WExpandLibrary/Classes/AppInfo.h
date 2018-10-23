@@ -5,7 +5,7 @@
 //  Created by 吴志强 on 2018/2/8.
 //
 
-#import "WNetwork.h"
+#import <UIKit/UIKit.h>
 
 //设备类型
 typedef NS_ENUM(NSInteger,WScreenType) {
@@ -39,4 +39,5 @@ typedef NS_ENUM(NSInteger,WScreenType) {
  获取app信息并存到全局中
  */
 +(void)getAppInfo;
+
 @end
