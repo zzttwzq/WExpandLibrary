@@ -14,20 +14,13 @@
 @property(nonatomic,copy) void(^state)(BOOL state);
 @property (nonatomic,strong) UILabel *comfirmBtn;
 
-
 /**
- 初始化方法（会自动判断是否是url或者是图片格式）
+ 类方法实例化对象 （会自动判断是否是url或者是图片格式）
 
- @param images 图片数组
- @param enablePageControl 是否开启pagectroll
- @return 返回新建的实例
+ @param images images 图片数组
+ @param enablePageControl 是否显示pagectroll
  */
--(instancetype)initWithImages:(NSArray *)images enablePageControl:(BOOL)enablePageControl;
++ (void) welcomPageWithImages:(NSArray *)images
+            enablePageControl:(BOOL)enablePageControl;
 
-
-
-/**
- 取消导航view
- */
--(void)dismiss;
 @end

@@ -19,11 +19,32 @@
 @end
 
 @implementation WWelcomPage
+
+/**
+ 类方法实例化对象 （会自动判断是否是url或者是图片格式）
+
+ @param images images 图片数组
+ @param enablePageControl 是否显示pagectroll
+ */
++ (void) welcomPageWithImages:(NSArray *)images
+            enablePageControl:(BOOL)enablePageControl;
+{
+    NSString *str = [[NSUserDefaults standardUserDefaults] objectForKey:@"GUIDE_SHOW"];
+    if (str.length == 0) {
+
+        WWelcomPage *page = [[WWelcomPage alloc] initWithImages:images
+                                              enablePageControl:enablePageControl];
+        page.contentMode = UIViewContentModeScaleAspectFill;
+        [[UIApplication sharedApplication].keyWindow addSubview:page];
+    }
+}
+
+
 /**
  初始化方法（会自动判断是否是url或者是图片格式）
 
  @param images 图片数组
- @param enablePageControl 是否开启pagectroll
+ @param enablePageControl 是否显示pagectroll
  @return 返回新建的实例
  */
 -(instancetype)initWithImages:(NSArray *)images
