@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WExpandLibrary'
-  s.version          = '0.2.1'
+  s.version          = '0.2.3'
   s.summary          = 'iOS 开发扩展库，包含定位，文件管理，模型，cell基类，扫码，设备管理，多线程'
 
 # This description is used to generate tags and improve search results.
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+iOS 开发扩展库，包含定位，文件管理，模型，cell基类，扫码，设备管理，多线程，等扩展开发库.
                        DESC
 
   s.homepage         = 'https://github.com/zzttwzq/WExpandLibrary'

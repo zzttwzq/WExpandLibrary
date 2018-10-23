@@ -75,11 +75,14 @@
 {
     NSMutableArray *tmpArray = [NSMutableArray array];
 
-    for (NSDictionary *consumptionDic in array) {
+    if (array) {
 
-        id obj = [[NSClassFromString(NSStringFromClass([self class])) alloc] init];
-        [obj setObjectWithDict:consumptionDic];
-        [tmpArray addObject:obj];
+        for (NSDictionary *consumptionDic in array) {
+
+            id obj = [[NSClassFromString(NSStringFromClass([self class])) alloc] init];
+            [obj setObjectWithDict:consumptionDic];
+            [tmpArray addObject:obj];
+        }
     }
 
     return tmpArray;

@@ -100,6 +100,14 @@
 +(int)countCharNum:(NSString *)string;
 
 
+/**
+ 判断ver1 是否大于 ver2 最多支持3位
+
+ @param Ver1 版本1
+ @param Ver2 版本2
+ @return 返回是否需要升级 1:大于 0:等于 -1:小于 -10:其他
+ */
++(int)compareWithVer1:(NSString *)Ver1 Ver2:(NSString *)Ver2;
 
 ///**
 // 创建静态字符串

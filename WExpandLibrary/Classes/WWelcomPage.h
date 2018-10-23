@@ -10,7 +10,10 @@
 #import "WFileManager.h"
 
 @interface WWelcomPage : UIView
+@property (nonatomic,assign) UIViewContentMode contentMode;
 @property(nonatomic,copy) void(^state)(BOOL state);
+@property (nonatomic,strong) UILabel *comfirmBtn;
+
 
 /**
  初始化方法（会自动判断是否是url或者是图片格式）

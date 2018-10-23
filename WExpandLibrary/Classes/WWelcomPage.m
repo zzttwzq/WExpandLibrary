@@ -14,6 +14,7 @@
 
 @property(nonatomic,strong)UIScrollView *scroll;
 @property(nonatomic,strong)UIPageControl *pageCotroll;
+@property (nonatomic,assign) int totalCount;
 
 @end
 
@@ -75,21 +76,27 @@
     //1.设置总的
     _scroll.contentSize = CGSizeMake(ScreenWidth*array.count, ScreenHeight-64);
     _pageCotroll.numberOfPages = array.count;
+    _totalCount = (int)array.count;
 
     for (int i = 0; i<array.count; i++) {
 
         NSString *item = array[i];
         UIImageView *image = [[UIImageView alloc] initWithFrame:CGRectMake(i*ScreenWidth, 0, ScreenWidth, ScreenHeight)];
-        image.contentMode = UIViewContentModeScaleAspectFit;
+        image.tag = 1000+i;
         [self addSubview:image];
 
         if ([item containsString:@"http"]) {
 
             [image sd_setImageWithURL:[NSURL URLWithString:item]];
-        }else{
+        }
+        else if ([item containsString:@"jpg"]) {
 
             NSString *path = [WFileManager getFilePathWithFileName:item];
             image.image = [UIImage imageWithContentsOfFile:path];
+        }
+        else{
+
+            image.image = [UIImage imageNamed:item];
         }
         [_scroll addSubview:image];
 
@@ -98,6 +105,24 @@
             image.userInteractionEnabled = YES;
             [image addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(click)]];
         }
+    }
+
+    if (!_comfirmBtn) {
+        _comfirmBtn = LABEL_WITH_RECT((array.count-1)*ScreenWidth+30, ScreenHeight-80, ScreenWidth-60, 45);
+        _comfirmBtn.layer.cornerRadius = 5;
+        _comfirmBtn.layer.masksToBounds = YES;
+        _comfirmBtn.layer.borderColor = [UIColor whiteColor].CGColor;
+        _comfirmBtn.layer.borderWidth = 0.5;
+//        [_comfirmBtn setTitle: forState:UIControlStateNormal];
+//        _comfirmBtn.titleLabel.font = [UIFont systemFontOfSize:15];
+        _comfirmBtn.text = @"立即体验";
+        _comfirmBtn.font = [UIFont systemFontOfSize:15];
+        _comfirmBtn.textColor = [UIColor whiteColor];
+        _comfirmBtn.textAlignment = NSTextAlignmentCenter;
+        [_scroll addSubview:_comfirmBtn];
+    }
+    else{
+        [_scroll addSubview:_comfirmBtn];
     }
 }
 
@@ -124,6 +149,17 @@
 
         [self removeFromSuperview];
     }];
+}
+
+- (void) setContentMode:(UIViewContentMode)contentMode
+{
+    _contentMode = contentMode;
+
+    for (int i = 0; i<_totalCount; i++) {
+
+        UIImageView *imageview = [self viewWithTag:1000+i];
+        imageview.contentMode = self.contentMode;
+    }
 }
 
 

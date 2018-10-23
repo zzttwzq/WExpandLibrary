@@ -176,7 +176,7 @@
  */
 +(BOOL)isiPhoneX;
 {
-    if (ScreenHeight == 812) {
+    if (ScreenHeight >= 812) {
 
         return YES;
     }
@@ -279,6 +279,67 @@
     }
 
     return count+count1;
+}
+
+
+/**
+ 判断ver1 是否大于 ver2
+
+ @param Ver1 版本1
+ @param Ver2 版本2
+ @return 返回是否需要升级 1:大于 0:等于 -1:小于 -10:其他
+ */
++(int)compareWithVer1:(NSString *)Ver1 Ver2:(NSString *)Ver2;
+{
+    NSArray *array1 = [Ver1 componentsSeparatedByString:@"."];
+    NSArray *array2 = [Ver2 componentsSeparatedByString:@"."];
+
+    int ver1 = 0;
+    int ver2 = 0;
+
+        //版本1
+    if (array1.count > 3) {
+
+        ver1 = [array1[0] intValue]*1000000 + [array1[1] intValue]*10000 + [array1[2] intValue]*100 + [array1[3] intValue];
+    }
+    else if (array1.count > 2) {
+
+        ver1 = [array1[0] intValue]*1000000 + [array1[1] intValue]*10000 + [array1[2] intValue];
+    }
+    else if (array1.count > 1){
+
+        ver1 = [array1[0] intValue]*1000000 + [array1[1] intValue]*10000;
+    }
+
+        //版本2
+    if (array2.count > 3) {
+
+        ver2 = [array2[0] intValue]*1000000 + [array2[1] intValue]*10000 + [array2[2] intValue]*100 + [array2[3] intValue];
+    }
+    else if (array2.count > 2) {
+
+        ver2 = [array2[0] intValue]*1000000 + [array2[1] intValue]*10000 + [array2[2] intValue];
+    }
+    else if (array2.count > 1){
+
+        ver2 = [array2[0] intValue]*1000000 + [array2[1] intValue]*10000;
+    }
+
+        //比较
+    if (ver1 > ver2) {
+
+        return 1;
+    }
+    else if (ver1 == ver2){
+
+        return 0;
+    }
+    else if (ver1 < ver2){
+
+        return -1;
+    }
+
+    return -10;
 }
 
 
