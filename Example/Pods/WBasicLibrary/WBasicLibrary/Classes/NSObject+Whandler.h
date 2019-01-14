@@ -54,14 +54,6 @@
 
 #pragma mark - 赋值类操作
 /**
- 用字典设置对象的数据
-
- @param dict 要设置的字典
- */
-- (void) setObjectWithDict:(NSDictionary *)dict;
-
-
-/**
  安全的动态设置对象数据（如果要设置的数据包含父类的属性，会出现设置不了的情况）
 
  @param dict 要设置的字典
@@ -78,12 +70,4 @@
 - (void) DEBUGWithTarget:(id)target
                  message:(NSString *)message;
 
-
-#pragma mark - 其他
-/**
- 获取当前的viewcontroller
-
- @return 当前的控制器
- */
-- (UIViewController *)currentViewController;
 @end

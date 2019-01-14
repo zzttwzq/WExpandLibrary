@@ -1,7 +1,4 @@
-
-
-
-    //
+//
 //  WDevice.m
 //  AFNetworking
 //
@@ -10,7 +7,6 @@
 
 #import "WDevice.h"
 
-
 @interface WDevice ()
 
 //@property (nonatomic,copy)viewOrientationChanged orientationChange;
@@ -18,6 +14,108 @@
 @end
 
 @implementation WDevice
+
+#pragma mark - 获取系统信息
+/**
+ 判断是否是iphonex
+
+ @return 返回判断值
+ */
++ (BOOL) is_Iphone_4;
+{
+    if (ScreenHeight >= 480) {
+
+        return YES;
+    }
+
+    return NO;
+}
+
+
+/**
+ 判断是否是iphonex
+
+ @return 返回判断值
+ */
++ (BOOL) is_Iphone_5;
+{
+    if (ScreenHeight >= 568) {
+
+        return YES;
+    }
+
+    return NO;
+}
+
+
+/**
+ 判断是否是iphonex
+
+ @return 返回判断值
+ */
++ (BOOL) is_Iphone_6;
+{
+    if (ScreenHeight >= 667) {
+
+        return YES;
+    }
+
+    return NO;
+}
+
+
+/**
+ 判断是否是iphonex
+
+ @return 返回判断值
+ */
++ (BOOL) is_Iphone_6p;
+{
+    if (ScreenHeight >= 736) {
+
+        return YES;
+    }
+
+    return NO;
+}
+
+
+/**
+ 判断是否是iphonex
+
+ @return 返回判断值
+ */
++ (BOOL) is_Iphone_x;
+{
+    if (ScreenHeight >= 812) {
+
+        return YES;
+    }
+
+    return NO;
+}
+
+
+/**
+ 返回导航栏高度
+
+ @return 返回高度
+ */
++(NSInteger)getNavbarHeight;
+{
+    float height = 64;
+    if (IS_IPHONE_X) {
+
+        height = 88;
+    }
+
+    if ([WDevice HotSpotIsOpened]) {
+
+        height += 20;
+    }
+
+    return height;
+}
 
 #pragma mark - 获取系统信息
 /**
@@ -33,6 +131,101 @@
         sharedInstance = [[self alloc] init];
     });
     return sharedInstance;
+}
+
+
+/**
+ 获取设备uuid
+
+ @return 获取设备uuid
+ */
++ (NSString *) getDeviceUUID;
+{
+    return [self getUUIDInKeychain];
+}
+
+NSString * const kUUIDKey = @"com.myApp.uuid";
+
+#pragma mark - 获取到UUID后存入系统中的keychain中
+
++ (NSString *)getUUIDInKeychain {
+        // 1.直接从keychain中获取UUID
+    NSString *getUDIDInKeychain = (NSString *)[self load:kUUIDKey];
+    NSLog(@"从keychain中获取UUID%@", getUDIDInKeychain);
+
+        // 2.如果获取不到，需要生成UUID并存入系统中的keychain
+    if (!getUDIDInKeychain || [getUDIDInKeychain isEqualToString:@""] || [getUDIDInKeychain isKindOfClass:[NSNull class]]) {
+            // 2.1 生成UUID
+        CFUUIDRef puuid = CFUUIDCreate(nil);
+        CFStringRef uuidString = CFUUIDCreateString(nil, puuid);
+        NSString *result = (NSString *)CFBridgingRelease(CFStringCreateCopy(NULL, uuidString));
+        CFRelease(puuid);
+        CFRelease(uuidString);
+        NSLog(@"生成UUID：%@",result);
+            // 2.2 将生成的UUID保存到keychain中
+        [self save:kUUIDKey data:result];
+            // 2.3 从keychain中获取UUID
+        getUDIDInKeychain = (NSString *)[self load:kUUIDKey];
+    }
+
+    return getUDIDInKeychain;
+}
+
+
+#pragma mark - 删除存储在keychain中的UUID
+
++ (void)deleteKeyChain {
+    [self delete:kUUIDKey];
+}
+
+
+#pragma mark - 私有方法
+
++ (NSMutableDictionary *)getKeyChainQuery:(NSString *)service {
+    return [NSMutableDictionary dictionaryWithObjectsAndKeys:(id)kSecClassGenericPassword,(id)kSecClass,service,(id)kSecAttrService,service,(id)kSecAttrAccount,(id)kSecAttrAccessibleAfterFirstUnlock,(id)kSecAttrAccessible, nil];
+}
+
+    // 从keychain中获取UUID
++ (id)load:(NSString *)service {
+    id ret = nil;
+    NSMutableDictionary *keychainQuery = [self getKeyChainQuery:service];
+    [keychainQuery setObject:(id)kCFBooleanTrue forKey:(id)kSecReturnData];
+    [keychainQuery setObject:(id)kSecMatchLimitOne forKey:(id)kSecMatchLimit];
+    CFDataRef keyData = NULL;
+    if (SecItemCopyMatching((CFDictionaryRef)keychainQuery, (CFTypeRef *)&keyData) == noErr) {
+        @try {
+            ret = [NSKeyedUnarchiver unarchiveObjectWithData:(__bridge NSData *)keyData];
+        }
+        @catch (NSException *exception) {
+            NSLog(@"Unarchive of %@ failed: %@", service, exception);
+        }
+        @finally {
+            NSLog(@"finally");
+        }
+    }
+
+    if (keyData) {
+        CFRelease(keyData);
+    }
+    NSLog(@"ret = %@", ret);
+    return ret;
+}
+
++ (void)delete:(NSString *)service {
+    NSMutableDictionary *keychainQuery = [self getKeyChainQuery:service];
+    SecItemDelete((CFDictionaryRef)keychainQuery);
+}
+
+    // 将生成的UUID保存到keychain中
++ (void)save:(NSString *)service data:(id)data {
+        // Get search dictionary
+    NSMutableDictionary *keychainQuery = [self getKeyChainQuery:service];
+        // Delete old item before add new item
+    SecItemDelete((CFDictionaryRef)keychainQuery);
+        // Add new object to search dictionary(Attention:the data format)
+    [keychainQuery setObject:[NSKeyedArchiver archivedDataWithRootObject:data] forKey:(id)kSecValueData];
+        // Add item to keychain with the search dictionary
+    SecItemAdd((CFDictionaryRef)keychainQuery, NULL);
 }
 
 
@@ -216,6 +409,17 @@
 
 #pragma mark - 设置系统状态
 /**
+ 自动息屏
+
+ @param shut 是否自动息屏， 默认是yes
+ */
++(void)auotShutScreen:(BOOL)shut;
+{
+    [[UIApplication sharedApplication] setIdleTimerDisabled:shut];
+}
+
+
+/**
  设置状态条为白色
 
  @param isWhite yes 白色  no 黑色
@@ -252,17 +456,6 @@
 {
 
     
-}
-
-
-/**
- 自动息屏
-
- @param shut 是否自动息屏， 默认是yes
- */
-+(void)auotShutScreen:(BOOL)shut;
-{
-    [[UIApplication sharedApplication] setIdleTimerDisabled:shut];
 }
 
 

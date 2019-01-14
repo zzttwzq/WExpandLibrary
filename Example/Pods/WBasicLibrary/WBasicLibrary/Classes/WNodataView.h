@@ -5,7 +5,7 @@
 //  Created by 吴志强 on 2018/7/17.
 //
 
-#import "MicroDefinetion.h"
+#import "WBasicHeader.h"
 
 @interface WNodataView : UIView
 @property (nonatomic,strong) UIImageView *logoImage;

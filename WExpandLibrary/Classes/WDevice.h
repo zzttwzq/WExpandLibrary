@@ -11,6 +11,7 @@
 #include <arpa/inet.h>
 #include <net/if.h>
 #import "WThreadTool.h"
+#import <WBasicLibrary/WBasicHeader.h>
 
 #define IOS_CELLULAR    @"pdp_ip0"
 #define IOS_WIFI        @"en0"
@@ -20,6 +21,54 @@
 
 @interface WDevice : NSObject
 @property (nonatomic,copy) StateBlock deviceDistenceChanged; //设备距离变化代理
+
+#pragma mark - 获取系统信息
+/**
+ 判断是否是iphonex
+
+ @return 返回判断值
+ */
++ (BOOL) is_Iphone_4;
+
+
+/**
+ 判断是否是iphonex
+
+ @return 返回判断值
+ */
++ (BOOL) is_Iphone_5;
+
+
+/**
+ 判断是否是iphonex
+
+ @return 返回判断值
+ */
++ (BOOL) is_Iphone_6;
+
+
+/**
+ 判断是否是iphonex
+
+ @return 返回判断值
+ */
++ (BOOL) is_Iphone_6p;
+
+
+/**
+ 判断是否是iphonex
+
+ @return 返回判断值
+ */
++ (BOOL) is_Iphone_x;
+
+
+/**
+ 返回导航栏高度
+
+ @return 返回高度
+ */
++(NSInteger)getNavbarHeight;
 
 #pragma mark - 获取系统信息
 /**
@@ -77,13 +126,28 @@
  */
 //+(void)viewOrientationChange:(viewOrientationChanged)change;
 
+/**
+ 获取设备uuid
+
+ @return 获取设备uuid
+ */
++ (NSString *) getDeviceUUID;
+
 #pragma mark - 设置系统状态
+/**
+ 自动息屏
+
+ @param shut 是否自动息屏， 默认是yes
+ */
++ (void) auotShutScreen:(BOOL)shut;
+
+
 /**
  设置状态条为白色
 
  @param isWhite yes 白色  no 黑色
  */
-+(void)setStatueBarColorWihte:(BOOL)isWhite;
++ (void) setStatueBarColorWihte:(BOOL)isWhite;
 
 
 /**
@@ -91,15 +155,7 @@
 
  @param brightness 屏幕亮度
  */
-+(void)setScreenBrightness:(CGFloat)brightness;
-
-
-/**
- 自动息屏
-
- @param shut 是否自动息屏， 默认是yes
- */
-+(void)auotShutScreen:(BOOL)shut;
++ (void) setScreenBrightness:(CGFloat)brightness;
 
 
 /**
@@ -107,7 +163,7 @@
 
  @param show 显示
  */
-+(void)showStatueBar:(BOOL)show;
++ (void) showStatueBar:(BOOL)show;
 
 
 /**

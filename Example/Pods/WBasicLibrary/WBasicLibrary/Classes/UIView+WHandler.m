@@ -9,84 +9,119 @@
 
 @implementation UIView (WHandler)
 
+#pragma mark - 属性方法
 - (CGFloat)left {
     return self.frame.origin.x;
 }
 
-- (void)setLeft:(CGFloat)x {
+- (void) setLeft:(CGFloat)x {
     CGRect frame = self.frame;
     frame.origin.x = x;
     self.frame = frame;
 }
 
-- (CGFloat)top {
+- (CGFloat) top {
     return self.frame.origin.y;
 }
 
-- (void)setTop:(CGFloat)y {
+- (void) setTop:(CGFloat)y {
     CGRect frame = self.frame;
     frame.origin.y = y;
     self.frame = frame;
 }
 
-- (CGFloat)right {
+- (CGFloat) right {
     return self.frame.origin.x + self.frame.size.width;
 }
 
-- (void)setRight:(CGFloat)right {
+- (void) setRight:(CGFloat)right {
     CGRect frame = self.frame;
     frame.origin.x = right - frame.size.width;
     self.frame = frame;
 }
 
-- (CGFloat)bottom {
+- (CGFloat) bottom {
     return self.frame.origin.y + self.frame.size.height;
 }
 
-- (void)setBottom:(CGFloat)bottom {
+- (void) setBottom:(CGFloat)bottom {
     CGRect frame = self.frame;
     frame.origin.y = bottom - frame.size.height;
     self.frame = frame;
 }
 
-- (CGFloat)width {
+- (CGFloat) width {
     return self.frame.size.width;
 }
 
-- (void)setWidth:(CGFloat)width {
+- (void) setWidth:(CGFloat)width {
     CGRect frame = self.frame;
     frame.size.width = width;
     self.frame = frame;
 }
 
-- (CGFloat)height {
+- (CGFloat) height {
     return self.frame.size.height;
 }
 
-- (void)setHeight:(CGFloat)height {
+- (void) setHeight:(CGFloat)height {
     CGRect frame = self.frame;
     frame.size.height = height;
     self.frame = frame;
 }
 
-- (CGSize)size {
+- (CGSize) size {
     return self.frame.size;
 }
 
-- (void)setSize:(CGSize)size {
+- (void) setSize:(CGSize)size {
     CGRect frame = self.frame;
     frame.size = size;
     self.frame = frame;
 }
 
+- (CGPoint) center {
+    return self.frame.origin;
+}
 
+- (void) setCenter:(CGPoint)center {
+    CGRect frame = self.frame;
+    frame.origin = center;
+    self.frame = frame;
+}
+
+- (CGFloat) centerX
+{
+    return self.center.x;
+}
+
+- (void) setCenterX:(CGFloat)centerX
+{
+    CGPoint center = self.center;
+    center.x = centerX;
+    self.center = center;
+}
+
+- (CGFloat) centerY
+{
+    return self.center.y;
+}
+
+- (void) setCenterY:(CGFloat)centerY
+{
+    CGPoint center = self.center;
+    center.y = centerY;
+    self.center = center;
+}
+
+#pragma mark - 子视图操作
 /**
  根据类名来获取子view
 
  @param className 类名
  @return 子view
  */
-- (UIView*)subViewOfClassName:(NSString*)className;
+- (UIView *) subViewOfClassName:(NSString*)className;
 {
     for (UIView* subView in self.subviews) {
 
@@ -103,6 +138,55 @@
     return nil;
 }
 
+/**
+ 根据类名来获取子view 数组
+
+ @param className 类名
+ @return 子view 数组
+ */
+- (NSArray *) subViewsOfClassName:(NSString*)className;
+{
+    NSMutableArray *array = [NSMutableArray array];
+    for (UIView* subView in self.subviews) {
+
+        if ([NSStringFromClass(subView.class) isEqualToString:className]) {
+
+            [array addObject:subView];
+        }
+    }
+
+    return [array mutableCopy];
+}
+
+/**
+ 移除所有子视图
+ */
+- (void) removeAllSubViews;
+{
+    for (UIView* subView in self.subviews) {
+
+        [subView removeFromSuperview];
+    }
+}
+
+
+/**
+ 添加线
+
+ @param rect 位置
+ @param color 颜色
+ */
+- (UIView *) addLineWithRect:(CGRect)rect
+                       color:(UIColor *)color;
+{
+    UIView *line = [[UIView alloc] initWithFrame:rect];
+    line.backgroundColor = color;
+
+    [self addSubview:line];
+
+    return line;
+}
+
 
 /**
  画点虚线
@@ -113,9 +197,9 @@
  @param lineColor 线的颜色
  @param isVertical 水平还是垂直（默认no，水平）
  */
-- (void)drawDashLineWithRect:(CGRect)rect
+- (void) addDashLineWithRect:(CGRect)rect
                    lineWidth:(float)lineWidth
-                  lineSpace:(float)lineSpace
+                   lineSpace:(float)lineSpace
                    lineColor:(UIColor *)lineColor
                   isVertical:(BOOL)isVertical;
 {
@@ -196,22 +280,6 @@
 
 
 /**
- 添加线
-
- @param rect 位置
- @param color 颜色
- */
--(void)addLineWithRect:(CGRect)rect
-                 color:(UIColor *)color;
-{
-    UIView *line = [[UIView alloc] initWithFrame:rect];
-    line.backgroundColor = color;
-
-    [self addSubview:line];
-}
-
-
-/**
  添加虚化效果
 
  @param effects 效果的颜色
@@ -224,4 +292,80 @@
 
     [self addSubview:effectView];
 }
+
+
+/**
+ 生成阴影view
+
+ @param frame frame
+ @param color 颜色
+ @param offset 阴影扩散范围
+ @param radius 阴影弧度
+ @return 返回view
+ */
++ (UIView *) viewWithFrame:(CGRect)frame
+                     color:(UIColor *)color
+                    offset:(CGSize)offset
+                    radius:(float)radius;
+{
+    UIView *view = [[UIView alloc] initWithFrame:frame];
+    view.layer.shadowColor = color.CGColor;
+    view.layer.shadowOffset = offset;
+    view.layer.shadowOpacity = 0.5;
+    view.layer.shadowRadius = radius;
+
+    return view;
+}
+
+
+/**
+ 生成阴影
+
+ @param color 颜色
+ @param offset 阴影扩散范围
+ @param radius 阴影弧度
+ */
+- (void) shadowWithColor:(UIColor *)color
+                offset:(CGSize)offset
+                radius:(float)radius;
+{
+    self.layer.shadowColor = color.CGColor;
+    self.layer.shadowOffset = offset;
+    self.layer.shadowOpacity = 0.5;
+    self.layer.shadowRadius = radius;
+}
+
+
+/**
+ 获取当前的viewcontroller
+
+ @return 当前的控制器
+ */
+- (UIViewController *)currentViewController;
+{
+    UIViewController *result = nil;
+    UIWindow * window = [[UIApplication sharedApplication] keyWindow];
+    if (window.windowLevel != UIWindowLevelNormal){
+
+        NSArray *windows = [[UIApplication sharedApplication] windows];
+        for(UIWindow * tmpWin in windows){
+
+            if (tmpWin.windowLevel == UIWindowLevelNormal){
+                window = tmpWin;
+                break;
+            }
+        }
+    }
+
+    UIView *frontView = [[window subviews] objectAtIndex:0];
+    id nextResponder = [frontView nextResponder];
+
+    if ([nextResponder isKindOfClass:[UIViewController class]])
+
+        result = nextResponder;
+    else
+        result = window.rootViewController;
+    return result;
+}
+
 @end

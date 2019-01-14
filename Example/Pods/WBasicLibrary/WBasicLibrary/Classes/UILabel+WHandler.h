@@ -5,7 +5,7 @@
 //  Created by 吴志强 on 2018/7/13.
 //
 
-#import "MicroDefinetion.h"
+#import "WBasicHeader.h"
 
 //typedef NS_ENUM(NSInteger,WLableTextPosition) {
 //    WLableTextPosition_top_left,

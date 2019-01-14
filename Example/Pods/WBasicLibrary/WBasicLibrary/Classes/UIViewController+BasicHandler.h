@@ -11,7 +11,7 @@
 
 @class WNodataView,WRequestStatueView;
 
-@interface UIViewController (BasicHandler)
+@interface UIViewController (BasicHandler) <SKStoreProductViewControllerDelegate>
 /**
  设置触摸空白区域是否可以取消输入模式
  */

@@ -10,64 +10,75 @@
 @implementation UIImage (WHandler)
 #pragma mark - 生成图片
 /**
- 创建一个单色的image
+ 生成单色图片
 
- @param color image的颜色
- @return 返回创建的image
+ @param color 图片的颜色
+ @param size 图片的尺寸
+ @return 返回图片
  */
-+ (UIImage *) imageWithColor:(UIColor*)color;
++ (UIImage *) imageWithColor:(UIColor *)color
+                        size:(CGSize)size;
 {
-    CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
+    CGRect rect = CGRectMake(0.0f, 0.0f, size.width, size.height);
     UIGraphicsBeginImageContext(rect.size);
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSetFillColorWithColor(context, [color CGColor]);
     CGContextFillRect(context, rect);
     UIImage *theImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
+
     return theImage;
 }
 
 
 /**
- 创建条形码
+ 生成条形码
 
- @param barCode 条码
- @return 返回创建的image
+ @param barCode 条形码
+ @param size 尺寸
+ @return 返回图片
  */
-+ (CIImage *) imageWithBarCode:(NSString *)barCode;
++ (UIImage *) barCodeImageWithBarCode:(NSString *)barCode
+                                 size:(CGSize)size;
 {
-    // iOS 8.0以上的系统才支持条形码的生成，iOS8.0以下使用第三方控件生成
-    if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
+    // 注意生成条形码的编码方式
+    NSData *data = [barCode dataUsingEncoding: NSASCIIStringEncoding];
+    CIFilter *filter = [CIFilter filterWithName:@"CICode128BarcodeGenerator"];
+    [filter setValue:data forKey:@"inputMessage"];
 
-        // 注意生成条形码的编码方式
-        NSData *data = [barCode dataUsingEncoding: NSASCIIStringEncoding];
-        CIFilter *filter = [CIFilter filterWithName:@"CICode128BarcodeGenerator"];
-        [filter setValue:data forKey:@"inputMessage"];
+    // 设置生成的条形码的上，下，左，右的margins的值
+    [filter setValue:[NSNumber numberWithInteger:0] forKey:@"inputQuietSpace"];
 
-        // 设置生成的条形码的上，下，左，右的margins的值
-        [filter setValue:[NSNumber numberWithInteger:0] forKey:@"inputQuietSpace"];
-        return filter.outputImage;
-    }else{
+    UIGraphicsBeginImageContext(size);
+    [[UIImage imageWithCIImage:filter.outputImage] drawInRect:CGRectMake(0,0,size.width,size.height)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
 
-        return nil;
-    }
+    return newImage;
 }
 
 
 /**
- 二维码图片
+ 生成二维码
 
  @param QRCode 二维码
- @return 返回创建的image
+ @param size 尺寸
+ @return 返回图片
  */
-+ (CIImage *) imageWtihQRCode:(NSString *)QRCode;
++ (UIImage *) QRCodeImageWithQRCode:(NSString *)QRCode
+                               size:(CGSize)size;
 {
     NSData *data = [QRCode dataUsingEncoding:NSUTF8StringEncoding];
     CIFilter *filter = [CIFilter filterWithName:@"CIQRCodeGenerator"];
     [filter setValue:data forKey:@"inputMessage"];
     [filter setValue:@"Q" forKey:@"inputCorrectionLevel"];
 
-    return filter.outputImage;
+    UIGraphicsBeginImageContext(size);
+    [[UIImage imageWithCIImage:filter.outputImage] drawInRect:CGRectMake(0,0,size.width,size.height)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+
+    return newImage;
 }
 
 
@@ -91,14 +102,15 @@
     return image;
 }
 
+
 #pragma mark - 调整尺寸
 /**
- 缩小图片到一个尺寸
+ 重新调整图片尺寸
 
  @param size 要缩小的尺寸
  @return 返回缩小后的尺寸
  */
-- (UIImage *)scaledToSize:(CGSize)size;
+- (UIImage *)reszie:(CGSize)size;
 {
     UIGraphicsBeginImageContext(size);
     [self drawInRect:CGRectMake(0,0,size.width,size.height)];
@@ -186,30 +198,31 @@
     return data;
 }
 
-#pragma mark - 对图片进行模糊处理
 
-// CIGaussianBlur ---> 高斯模糊
+#pragma mark - 对图片进行处理
+/**
+ 图片模糊处理
 
-// CIBoxBlur      ---> 均值模糊(Available in iOS 9.0 and later)
+ @param name 模糊方式
+ // CIGaussianBlur ---> 高斯模糊
+ // CIBoxBlur      ---> 均值模糊(Available in iOS 9.0 and later)
+ // CIDiscBlur     ---> 环形卷积模糊(Available in iOS 9.0 and later)
+ // CIMedianFilter ---> 中值模糊, 用于消除图像噪点, 无需设置radius(Available in iOS 9.0 and later)
+ // CIMotionBlur   ---> 运动模糊, 用于模拟相机移动拍摄时的扫尾效果(Available in iOS 9.0 and later)
 
-// CIDiscBlur     ---> 环形卷积模糊(Available in iOS 9.0 and later)
-
-// CIMedianFilter ---> 中值模糊, 用于消除图像噪点, 无需设置radius(Available in iOS 9.0 and later)
-
-// CIMotionBlur   ---> 运动模糊, 用于模拟相机移动拍摄时的扫尾效果(Available in iOS 9.0 and later)
-+ (UIImage *)blurWithOriginalImage:(UIImage *)image
-                          blurName:(NSString *)name
-                            radius:(NSInteger)radius
+ @param radius 模糊度
+ @return 返回图片
+ */
+- (UIImage *) imageBlurWithName:(NSString *)name
+                         radius:(NSInteger)radius;
 {
-    CIContext *context = [CIContext contextWithOptions:nil];
-
-    CIImage *inputImage = [[CIImage alloc] initWithImage:image];
-
-    CIFilter *filter;
-
     if (name.length != 0) {
 
-        filter = [CIFilter filterWithName:name];
+        CIContext *context = [CIContext contextWithOptions:nil];
+
+        CIImage *inputImage = [[CIImage alloc] initWithImage:self];
+
+        CIFilter *filter = [CIFilter filterWithName:name];
 
         [filter setValue:inputImage forKey:kCIInputImageKey];
 
@@ -228,43 +241,37 @@
 
         return resultImage;
 
-    }else{
-
-        return nil;
     }
+
+    return nil;
 }
 
 
 /**
  *  调整图片饱和度, 亮度, 对比度
  *
- *  @param image      目标图片
- *  @param saturation 饱和度
+ *  @param saturation 饱和度 0 ~ 1.0
  *  @param brightness 亮度: -1.0 ~ 1.0
- *  @param contrast   对比度
+ *  @param contrast   对比度 0 ~ 1.0
  *
  */
-+ (UIImage *)colorControlsWithOriginalImage:(UIImage *)image
-                                 saturation:(CGFloat)saturation
-                                 brightness:(CGFloat)brightness
-                                   contrast:(CGFloat)contrast;
+- (UIImage *) imageSaturation:(CGFloat)saturation
+                    brightness:(CGFloat)brightness
+                      contrast:(CGFloat)contrast;
 {
     CIContext *context = [CIContext contextWithOptions:nil];
 
-    CIImage *inputImage = [[CIImage alloc] initWithImage:image];
+    CIImage *inputImage = [[CIImage alloc] initWithImage:self];
 
     CIFilter *filter = [CIFilter filterWithName:@"CIColorControls"];
 
     [filter setValue:inputImage forKey:kCIInputImageKey];
-
-
 
     [filter setValue:@(saturation) forKey:@"inputSaturation"];
 
     [filter setValue:@(brightness) forKey:@"inputBrightness"];// 0.0 ~ 1.0
 
     [filter setValue:@(contrast) forKey:@"inputContrast"];
-
 
     CIImage *result = [filter valueForKey:kCIOutputImageKey];
 
@@ -278,17 +285,25 @@
 }
 
 
-// 怀旧 --> CIPhotoEffectInstant                         单色 --> CIPhotoEffectMono
-// 黑白 --> CIPhotoEffectNoir                            褪色 --> CIPhotoEffectFade
-// 色调 --> CIPhotoEffectTonal                           冲印 --> CIPhotoEffectProcess
-// 岁月 --> CIPhotoEffectTransfer                        铬黄 --> CIPhotoEffectChrome
+
 // CILinearToSRGBToneCurve, CISRGBToneCurveToLinear, CIGaussianBlur, CIBoxBlur, CIDiscBlur, CISepiaTone, CIDepthOfField
-+ (UIImage *)filterWithOriginalImage:(UIImage *)image
-                          filterName:(NSString *)name
+
+/**
+ 调整图片效果
+
+ @param name 图片效果
+ // 怀旧 --> CIPhotoEffectInstant                         单色 --> CIPhotoEffectMono
+ // 黑白 --> CIPhotoEffectNoir                            褪色 --> CIPhotoEffectFade
+ // 色调 --> CIPhotoEffectTonal                           冲印 --> CIPhotoEffectProcess
+ // 岁月 --> CIPhotoEffectTransfer                        铬黄 --> CIPhotoEffectChrome
+
+ @return 返回图片
+ */
+- (UIImage *) imageEffectWithName:(NSString *)name;
 {
     CIContext *context = [CIContext contextWithOptions:nil];
 
-    CIImage *inputImage = [[CIImage alloc] initWithImage:image];
+    CIImage *inputImage = [[CIImage alloc] initWithImage:self];
 
     CIFilter *filter = [CIFilter filterWithName:name];
 

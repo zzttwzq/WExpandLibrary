@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MicroDefinetion.h"
+#import "WBasicHeader.h"
 
 @interface NSString (WHandler)
 
@@ -24,23 +24,15 @@
 
  @return 返回结果
  */
--(BOOL)isPureInt;
+- (BOOL) isPureInt;
 
 
 /**
- 获取中文字符串的长度
+ 中文字符串的长度，中文占1位
 
  @return 返回长度
  */
-- (int) stringUnicodeLength;
-
-
-/**
- 获取包含中文的字符串长度
-
- @return 获取包含中文的字符串长度
- */
-- (int) stringLengthWithUnicode;
+- (int) unicodeCount;
 
 
 /**
@@ -48,7 +40,15 @@
 
  @return 获取不包含中文的字符串长度
  */
-- (int) stringAsicLength;
+- (int) asciiCount;
+
+
+/**
+ 字符串总长度,中文占1位
+
+ @return 获取包含中文的字符串长度
+ */
+- (int) totalCount;
 
 
 #pragma mark - 字符串加密
@@ -74,7 +74,7 @@
 
  @return 过滤完成的字符串
  */
-- (NSString *)filterHTMLSpecialString;
+- (NSString *)escapeHTMLSpecialString;
 
 
 /**
@@ -84,7 +84,7 @@
  @param length 截取长度
  @return 返回截取后的字符串
  */
--(NSString *)subStringAtIndex:(int)index
+-(NSString *)getStringAtIndex:(int)index
                        length:(int)length;
 
 
@@ -101,7 +101,7 @@
 
  @return 返回去除后的字符串
  */
-- (instancetype)removeEmoji;
+- (instancetype) removeEmoji;
 
 
 /**
@@ -109,7 +109,8 @@
 
  @return 获取首字母
  */
-- (NSString *)firstCharacter;
+- (NSString *) firstCharacter;
+
 
 #pragma mark - 字符串大小计算
 /**
@@ -119,7 +120,7 @@
  @param maxSize 最大尺寸
  @return 返回字符串的
  */
--(CGSize)sizeWithFont:(UIFont *)font maxSize:(CGSize)maxSize;
+- (CGSize) sizeWithFont:(UIFont *)font maxSize:(CGSize)maxSize;
 
 
 #pragma mark - 判断字符串
@@ -128,7 +129,7 @@
 
  @return 是否是手机号
  */
-- (BOOL)isMobile;
+- (BOOL) validMobile;
 
 
 /**
@@ -136,5 +137,30 @@
 
  @return 是否是邮箱
  */
-- (BOOL)isEmail;
+- (BOOL) validEmail;
+
+
+/**
+ 检查密码
+
+ @return 密码是否包含数字和字母
+ */
+- (BOOL) validPassWord;
+
+
+/**
+ 检查身份证
+
+ @return 身份证是否正确
+ */
+- (BOOL) validIDCard;
+
+
+/**
+ 判断密码是否过于简单
+
+ @return 返回值
+ */
+- (BOOL) needChangePass;
+
 @end

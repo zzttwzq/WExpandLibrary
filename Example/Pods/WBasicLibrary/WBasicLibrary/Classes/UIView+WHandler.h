@@ -8,22 +8,53 @@
 #import <UIKit/UIKit.h>
 
 @interface UIView (WHandler)
-@property (nonatomic) CGFloat left;        ///< Shortcut for frame.origin.x.
-@property (nonatomic) CGFloat top;         ///< Shortcut for frame.origin.y
-@property (nonatomic) CGFloat right;       ///< Shortcut for frame.origin.x + frame.size.width
-@property (nonatomic) CGFloat bottom;      ///< Shortcut for frame.origin.y + frame.size.height
-@property (nonatomic) CGFloat width;       ///< Shortcut for frame.size.width.
-@property (nonatomic) CGFloat height;      ///< Shortcut for frame.size.height.
-@property (nonatomic) CGSize size;
+
+#pragma mark - 属性方法
+@property (nonatomic,assign) CGFloat left;        ///< Shortcut for frame.origin.x.
+@property (nonatomic,assign) CGFloat top;         ///< Shortcut for frame.origin.y
+@property (nonatomic,assign) CGFloat right;       ///< Shortcut for frame.origin.x + frame.size.width
+@property (nonatomic,assign) CGFloat bottom;      ///< Shortcut for frame.origin.y + frame.size.height
+@property (nonatomic,assign) CGFloat width;       ///< Shortcut for frame.size.width.
+@property (nonatomic,assign) CGFloat height;      ///< Shortcut for frame.size.height.
+@property (nonatomic,assign) CGFloat centerX;
+@property (nonatomic,assign) CGFloat centerY;
+@property (nonatomic,assign) CGSize size;
+@property (nonatomic,assign) CGPoint center;
 
 
+#pragma mark - 子视图操作
 /**
  根据类名来获取子view
 
  @param className 类名
  @return 子view
  */
-- (UIView*) subViewOfClassName:(NSString*)className;
+- (UIView *) subViewOfClassName:(NSString*)className;
+
+
+/**
+ 根据类名来获取子view 数组
+
+ @param className 类名
+ @return 子view 数组
+ */
+- (NSArray *) subViewsOfClassName:(NSString*)className;
+
+
+/**
+ 移除所有子视图
+ */
+- (void) removeAllSubViews;
+
+
+/**
+ 添加线
+
+ @param rect 位置
+ @param color 颜色
+ */
+- (UIView *) addLineWithRect:(CGRect)rect
+                       color:(UIColor *)color;
 
 
 /**
@@ -35,12 +66,11 @@
  @param lineColor 线的颜色
  @param isVertical 水平还是垂直（默认no，水平）
  */
-- (void)drawDashLineWithRect:(CGRect)rect
+- (void) addDashLineWithRect:(CGRect)rect
                    lineWidth:(float)lineWidth
                    lineSpace:(float)lineSpace
                    lineColor:(UIColor *)lineColor
                   isVertical:(BOOL)isVertical;
-
 
 
 /**
@@ -60,14 +90,7 @@
 - (void) clockwiseRotate:(NSInteger)degress;
 
 
-/**
- 添加线
 
- @param rect 位置
- @param color 颜色
- */
-- (void) addLineWithRect:(CGRect)rect
-                   color:(UIColor *)color;
 
 /**
  添加虚化效果
@@ -75,6 +98,40 @@
  @param effects 效果的颜色
  */
 - (void) addBlurEffectStyle:(UIBlurEffectStyle)effects;
+
+
+/**
+ 生成阴影view
+
+ @param frame frame
+ @param color 颜色
+ @param offset 阴影扩散范围
+ @param radius 阴影弧度
+ @return 返回view
+ */
++ (UIView *) viewWithFrame:(CGRect)frame
+                     color:(UIColor *)color
+                    offset:(CGSize)offset
+                    radius:(float)radius;
+
+/**
+ 生成阴影
+ 
+ @param color 颜色
+ @param offset 阴影扩散范围
+ @param radius 阴影弧度
+ */
+- (void) shadowWithColor:(UIColor *)color
+                  offset:(CGSize)offset
+                  radius:(float)radius;
+
+
+/**
+ 获取当前的viewcontroller
+
+ @return 当前的控制器
+ */
+- (UIViewController *)currentViewController;
 
 
 @end

@@ -32,6 +32,20 @@
 /**
  显示弹出提示 只有确定和取消按钮，颜色是系统默认的颜色
 
+ @param target 在哪个控制器
+ @param enableCancelBtn 显示取消按钮
+ @param message 消息内容
+ @param comfirmAction 确定点击事件
+ */
++(void)showAlertWithTarget:(UIViewController *)target
+          enableCancelBtn:(BOOL)enableCancelBtn
+                  message:(NSString *)message
+            comfirmAction:(void(^)(UIAlertAction *action))comfirmAction;
+
+
+/**
+ 显示弹出提示 只有确定和取消按钮，颜色是系统默认的颜色
+
  @param title 标题
  @param target 在哪个控制器
  @param enableCancelBtn 显示取消按钮

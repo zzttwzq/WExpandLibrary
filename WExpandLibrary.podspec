@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WExpandLibrary'
-  s.version          = '0.2.5'
+  s.version          = '0.2.6'
   s.summary          = 'iOS 开发扩展库，包含定位，文件管理，模型，cell基类，扫码，设备管理，多线程'
 
 # This description is used to generate tags and improve search results.

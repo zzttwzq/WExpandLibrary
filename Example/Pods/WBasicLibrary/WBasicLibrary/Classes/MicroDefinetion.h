@@ -12,77 +12,76 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-
 #pragma mark - 常用分类
 //系统框架
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <sqlite3.h>
 
-#import "Reachability.h"             //网络库
-#import "NSDate+Whandler.h"          //日期分类
-#import "NSObject+Whandler.h"        //运行时分类
-#import "UIView+WHandler.h"          //view扩展分类
-#import "UIColor+Whandler.h"         //color扩展分类
-#import "NSData+AES256_.h"           //data的分类
-#import "NSData+Base64_.h"           //data的分类
-#import "NSString+WHandler.h"        //字符串的分类
-#import "NSMutableArray+WHandler.h"  //数组的分类
-#import "UILabel+WHandler.h"         //标签的分类
-#import "UIImage+WHandler.h"         //image的分类
-#import "UIViewController+BasicHandler.h"
-#import "UIViewController+WebHandler.h"
-#import "UIViewController+TableHandler.h"
-#import "UIAlertController+WHandler.h"
+//================================== 屏幕尺寸 ==============================================
+#pragma mark - 屏幕尺寸
+//================================== 屏幕尺寸 ==============================================
 
-//==================================== 常用的宏定义 ==========================================
-#pragma mark - 常用的宏定义
-//==================================== 常用的宏定义 ==========================================
 #define ScreenWidth             [UIScreen mainScreen].bounds.size.width
 #define ScreenHeight            [UIScreen mainScreen].bounds.size.height
 
-#define IS_IPHONE_X             (Screen_Height == 812.0f) ? YES : NO
+#define Adjust_Width(x) ScreenWidth / 375 * x
+#define Adjust_Heght(y) (kScreen_Height == 812.0 ? 667.0 : kScreen_Height) / 667 * y
+#define Adjust_Font(float) [UIFont systemFontOfSize:float * (ScreenHeight == 812.0 ? 667.0 : ScreenHeight) / 667.0]
+
+#define IS_IPHONE_4             [WDevice is_Iphone_4]
+#define IS_IPHONE_5             [WDevice is_Iphone_5]
+#define IS_IPHONE_6             [WDevice is_Iphone_6]
+#define IS_IPHONE_6p            [WDevice is_Iphone_6p]
+#define IS_IPHONE_X             [WDevice is_Iphone_x]
+
 #define Height_NavContentBar    44.0f
 #define Height_StatusBar        (IS_IPHONE_X==YES)?44.0f: 20.0f
-#define Height_NavBar           (IS_IPHONE_X==YES)?88.0f: 64.0f
+#define Height_NavBar           [WDevice getNavbarHeight]
 #define Height_TabBar           (IS_IPHONE_X==YES)?83.0f: 49.0f
+#define Height_Bottom           (IS_IPHONE_X==YES)?34.0f: 0.0f
 
 #ifdef DEBUG
 
-    #define WLOG(...)           NSLog(__VA_ARGS__);
+    #define WLOG(FORMAT, ...) fprintf(stderr,"%s:%d\t%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+
+    #define WJSON_LOG(FORMAT, ...) fprintf(stderr,"%s:%d\t%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[[NSString alloc] initWithData:[NSJSONSerialization dataWithJSONObject:__VA_ARGS__ options:kNilOptions error:nil] encoding:NSUTF8StringEncoding] UTF8String]);
+
     #define WLOG_METHOD         NSLog(@"%s", __func__);
 #else
 
     #define WLOG(...);
+    #define WJSON_LOG;
     #define WLOG_METHOD;
 #endif
 
 //显示调试消息
-#define DEBUG_LOG(TARGET,MESSAGE) WLOG(@"<!警告!> %@ %@",TARGET,MESSAGE)
-
-#define VIEW_WITH_RECT(x,y,width,height) [[UIView alloc] initWithFrame:CGRectMake(x, y, width, height)]
-#define LABEL_WITH_RECT(x,y,width,height) [[UILabel alloc] initWithFrame:CGRectMake(x, y, width, height)]
-#define IMAGE_WITH_RECT(x,y,width,height) [[UIImageView alloc] initWithFrame:CGRectMake(x, y, width, height)]
-
-//是否要显示导航页
-#define SHOWNAVPAGE @"SHOWNAVPAGE"
-
-//升级成功提示
-#define UPDATE_LATER @"UPDATE_LATER"
-
-
+#define DEBUG_LOG(TARGET,MESSAGE) WLOG(@"<! 警告 !> %@ %@",TARGET,MESSAGE)
 
 //================================== 常用方法 ==============================================
-#pragma mark - 常用的宏定义
+#pragma mark - 常用的方法
 //================================== 常用方法 ==============================================
-#define NavBarHeight [WTool getNavbarHeight]
-#define BottomHeight [WTool getBottomHeight]
-#define isIPHoneX [WTool isiPhoneX]
+
+#define KeyWindow               [UIApplication sharedApplication].keyWindow
+#define keyViewController       [UIApplication sharedApplication].keyWindow.rootViewController
+
+#define VIEW_WITH_RECT(x,y,width,height) [[UIView alloc] initWithFrame:CGRectMake(x, y, width, height)];
+#define LABEL_WITH_RECT(x,y,width,height) [[UILabel alloc] initWithFrame:CGRectMake(x, y, width, height)];
+#define IMAGE_WITH_RECT(x,y,width,height) [[UIImageView alloc] initWithFrame:CGRectMake(x, y, width, height)];
+#define TEXTFIELD_WITH_RECT(x,y,width,height) [[UITextField alloc] initWithFrame:CGRectMake(x, y, width, height)];
+#define BUTTON_WITH_RECT(x,y,width,height) [[UIButton alloc] initWithFrame:CGRectMake(x, y, width, height)];
+
+#define VIEW [[UIView alloc] init];
+#define LABEL [[UILabel alloc] init];
+#define IMAGE [[UIImageView alloc] init];
+#define TEXTFIELD [[UITextField alloc] init];
+#define BUTTON [UIButton buttonWithType:UIButtonTypeCustom];
 
 //获取颜色
 #define RGBA(R,G,B,A) [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:A]
 #define RGB(R,G,B) [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:1]
 #define COLORWITHHEX(HEX) [UIColor colorWithHexString:[NSString stringWithFormat:@"#%@",HEX]]
+#define RandomColor RGB(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
 #define WINDOW_COLOR [UIColor colorWithRed:0 green:0 blue:0 alpha:0.4]
 
 //弱引用
@@ -103,16 +102,15 @@
 //弧度转角度
 #define RADIANS_TO_DEGREES(radians) (radians * (180.0 / M_PI))
 
+#define IMAGE_NAMED(A) [UIImage imageNamed:A]
 
+#define URL_WITH_STRING(A) [NSURL URLWithString:A]
 
-//================================== 显示消息 ==============================================
-#pragma mark - 常用的宏定义
-//================================== 显示消息 ==============================================
-#define SHOW_SUCCESS_MESSAGE(_MESSAGE_) [WMessage showSuccessMessage:_MESSAGE_];
-#define SHOW_INFO_MESSAGE(_MESSAGE_)    [WMessage showInfoMessage:_MESSAGE_];
-#define SHOW_ERROR_MESSAGE(_MESSAGE_)   [WMessage showErrorMessage:_MESSAGE_];
+#define iOSVersion  [[[UIDevice currentDevice] systemVersion] floatValue]
 
+#define UserDefault [NSUserDefaults standardUserDefaults]
 
+#define RandomWithRange(A,B) [WTool getRandomNumber:A to:B]
 
 //================================== block回调 ==============================================
 #pragma mark - 常用的宏定义
@@ -131,6 +129,15 @@ typedef void (^floatCallBack)(float update);
 typedef void (^ImageBlock)(UIImage * _Nullable image);
 //按钮回调
 typedef void (^BtnBlock)(UIButton * _Nullable btn);
+//按钮回调
+typedef void (^Array_Block)(NSArray *array);
+//按钮回调
+typedef void (^ButtonBlock)(UIButton *btn);
 
+//是否要显示导航页
+#define SHOWNAVPAGE @"SHOWNAVPAGE"
+
+//升级成功提示
+#define UPDATE_LATER @"UPDATE_LATER"
 
 #endif /* Definetion_h */

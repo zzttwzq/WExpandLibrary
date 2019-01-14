@@ -77,6 +77,8 @@
         }
     }
 
+    [dateformatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"UTC"]];
+
     return dateformatter;
 }
 
@@ -101,7 +103,12 @@
     }
     else if ([date isKindOfClass:[NSString class]]){
 
-        return [[self formatterWithType:formatter] dateFromString:(NSString *)date];
+        NSDateFormatter *fommater = [self formatterWithType:formatter];
+//
+//        NSTimeZone *beijingZone = [NSTimeZone timeZoneWithName:@"Asia/Shanghai"];
+//        [fommater setTimeZone:beijingZone];
+
+        return [fommater dateFromString:(NSString *)date];
     }
     else if ((NSInteger)date > 0){
 

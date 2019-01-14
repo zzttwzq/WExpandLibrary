@@ -10,12 +10,4 @@
 
 @interface NSMutableArray (WHandler)
 
-/**
- 安全的取出数组内容
-
- @param index 下标
- @return 返回数组内容
- */
-- (id) safeObjectAtIndex:(NSInteger)index;
-
 @end

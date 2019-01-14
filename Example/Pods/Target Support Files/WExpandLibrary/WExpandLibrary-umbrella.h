@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "AppInfo.h"
 #import "WBasicCell.h"
 #import "WCheckAuthor.h"
 #import "WDataModel.h"

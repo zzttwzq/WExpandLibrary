@@ -43,7 +43,7 @@
 
  @return 返回结果
  */
--(BOOL)isPureInt;
+- (BOOL) isPureInt;
 {
     NSScanner* scan = [NSScanner scannerWithString:self];
     int val;
@@ -52,42 +52,17 @@
 
 
 /**
- 获取中文字符串的长度
+ 中文字符串的长度，中文占1位
 
  @return 返回长度
  */
-- (int) stringUnicodeLength;
+- (int) unicodeCount;
 {
     int unicodeLength = 0;
     for(int i=0; i< [self length];i++){
 
         int a = [self characterAtIndex:i];
         if( a > 0x4e00 && a < 0x9fff){
-
-            unicodeLength ++;
-        }
-    }
-
-    return unicodeLength;
-}
-
-
-/**
- 获取包含中文的字符串长度
-
- @return 获取包含中文的字符串长度
- */
-- (int) stringLengthWithUnicode;
-{
-    int unicodeLength = 0;
-    for(int i=0; i< [self length];i++){
-
-        int a = [self characterAtIndex:i];
-        if( a > 0x4e00 && a < 0x9fff){
-
-            unicodeLength ++;
-        }
-        else{
 
             unicodeLength ++;
         }
@@ -102,7 +77,7 @@
 
  @return 获取不包含中文的字符串长度
  */
-- (int) stringAsicLength
+- (int) asciiCount;
 {
     int unicodeLength = 0;
     for(int i=0; i< [self length];i++){
@@ -118,6 +93,30 @@
     return unicodeLength;
 }
 
+
+/**
+ 字符串总长度,中文占1位
+
+ @return 获取包含中文的字符串长度
+ */
+- (int) totalCount;
+{
+    int unicodeLength = 0;
+    for(int i=0; i< [self length];i++){
+
+        int a = [self characterAtIndex:i];
+        if( a > 0x4e00 && a < 0x9fff){
+
+            unicodeLength ++;
+        }
+        else{
+
+            unicodeLength ++;
+        }
+    }
+
+    return unicodeLength;
+}
 
 #pragma mark - 字符串加密
 
@@ -188,7 +187,7 @@
 
  @return 过滤完成的字符串
  */
-- (NSString *)filterHTMLSpecialString;
+- (NSString *)escapeHTMLSpecialString;
 {
     NSString *returnStr = [self stringByReplacingOccurrencesOfString:@"\r" withString:@"\n"];
     returnStr = [returnStr stringByReplacingOccurrencesOfString:@"&gt;" withString:@">"];
@@ -196,16 +195,13 @@
     returnStr = [returnStr stringByReplacingOccurrencesOfString:@"&amp;" withString:@"&"];
     returnStr = [returnStr stringByReplacingOccurrencesOfString:@"&nbsp;" withString:@" "];
     returnStr = [returnStr stringByReplacingOccurrencesOfString:@"<br/>" withString:@"\n"];
+    returnStr = [returnStr stringByReplacingOccurrencesOfString:@"&ge;" withString:@"—"];
+    returnStr = [returnStr stringByReplacingOccurrencesOfString:@"&mdash;" withString:@"®"];
+    returnStr = [returnStr stringByReplacingOccurrencesOfString:@"&ldquo;" withString:@"“"];
+    returnStr = [returnStr stringByReplacingOccurrencesOfString:@"&rdquo;" withString:@"”"];
+    returnStr = [returnStr stringByReplacingOccurrencesOfString:@"&quot;" withString:@"\""];
 
-        // 如果还有别的特殊字符，请添加在这里
-        // ...
-    /*
-     returnStr = [returnStr stringByReplacingOccurrencesOfString:@"&ge;" withString:@"—"];
-     returnStr = [returnStr stringByReplacingOccurrencesOfString:@"&mdash;" withString:@"®"];
-     returnStr = [returnStr stringByReplacingOccurrencesOfString:@"&ldquo;" withString:@"“"];
-     returnStr = [returnStr stringByReplacingOccurrencesOfString:@"&rdquo;" withString:@"”"];
-     returnStr = [returnStr stringByReplacingOccurrencesOfString:@"&quot;" withString:@"\""];
-     */
+    // 如果还有别的特殊字符，请添加在这里
 
     return returnStr;
 }
@@ -218,7 +214,7 @@
  @param length 截取长度
  @return 返回截取后的字符串
  */
--(NSString *)subStringAtIndex:(int)index
+-(NSString *)getStringAtIndex:(int)index
                        length:(int)length;
 {
     if (index+length < self.length) {
@@ -334,7 +330,7 @@
 
  @return 是否是手机号
  */
-- (BOOL)isMobile;
+- (BOOL) validMobile;
 {
     [self stringByReplacingOccurrencesOfString:@" " withString:@""];
 
@@ -390,11 +386,80 @@
 
  @return 是否是邮箱
  */
-- (BOOL)isEmail;
+- (BOOL) validEmail;
 {
     NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
     NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
     return [emailTest evaluateWithObject:self];
+}
+
+
+/**
+ 检查密码
+
+ @return 密码是否包含数字和字母
+ */
+- (BOOL) validPassWord;
+{
+    //6-20位数字和字母组成(可根据情况修改)
+    NSString *regex = @"^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,12}$";
+    NSPredicate *   pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+    if ([pred evaluateWithObject:self]) {
+        return YES ;
+    }
+    else {
+        return NO;
+    }
+}
+
+
+/**
+ 检查身份证
+
+ @return 身份证是否正确
+ */
+- (BOOL) validIDCard;
+{
+    NSMutableArray *IDArray = [NSMutableArray array];
+        // 遍历身份证字符串,存入数组中
+    for (int i = 0; i <18; i++) {
+        NSRange range = NSMakeRange(i, 1);
+        NSString *subString = [self substringWithRange:range];
+        [IDArray addObject:subString];
+    }
+        // 系数数组
+    NSArray *coefficientArray = @[@7, @9, @10, @5, @8, @4, @2, @1, @6, @3, @7, @9, @10, @5, @8, @4, @"2"];
+        // 余数数组
+    NSArray *remainderArray = @[@"1", @"0", @"X", @"9", @"8", @"7", @"6", @"5", @"4", @"3", @"2"];
+        // 每一位身份证号码和对应系数相乘之后相加所得的和
+    int sum = 0;
+    for (int i = 0; i <17; i++) {
+        int coefficient = [coefficientArray[i] intValue];
+        int ID = [IDArray[i] intValue];
+        sum += coefficient * ID;
+    }
+        // 这个和除以11的余数对应的数
+    NSString *str = remainderArray[(sum % 11)];
+        // 身份证号码最后一位
+    NSString *string = [self substringFromIndex:17];
+        // 如果这个数字和身份证最后一位相同,则符合国家标准,返回YES
+    return [str isEqualToString:string];
+}
+
+
+/**
+ 判断密码是否过于简单
+
+ @return 返回值
+ */
+- (BOOL) needChangePass;
+{
+    NSArray *array = @[@"123456",@"111111",@"654321",@"123123",@"222222"];
+    if ([array containsObject:self]) {
+
+        return YES;
+    }
+    return NO;
 }
 
 @end

@@ -156,35 +156,6 @@
 
 
 #pragma mark - 赋值类操作
-
-/**
- 用字典设置对象的数据
-
- @param dict 要设置的字典
- */
-- (void) setObjectWithDict:(NSDictionary *)dict;
-{
-    for (NSString *key in dict) {
-
-        if (dict[key] &&
-            ![dict[key] isKindOfClass:[NSNull class]]) {
-
-            if ([dict[key] isKindOfClass:[NSString class]]) {
-
-                if (![dict[key] isEqualToString:@"<null>"]) {
-
-                    [self setValue:dict[key] forKey:key];
-                }
-            }
-            else{
-                
-                [self setValue:dict[key] forKey:key];
-            }
-        }
-    }
-}
-
-
 /**
  安全的动态设置对象数据（如果要设置的数据包含父类的属性，会出现设置不了的情况）
 
@@ -214,6 +185,10 @@
                 else if ([valueClassString containsString:@"__NSCFBoolean"]) {
 
                     [self setValue:dict[key] forKey:key];
+                }
+                else if ([valueClassString containsString:@"NSNull"]) {
+
+//                    [self setValue:nil forKey:key];
                 }
                 else if (dict[key] &&
                     ![dict[key] isKindOfClass:[NSNull class]]) {
@@ -246,54 +221,12 @@
 - (void) DEBUGWithTarget:(id)target
                  message:(NSString *)message;
 {
-    #ifdef DEBUG
-        NSLog(@"<! 警告 !> %@ %@",NSStringFromClass([target class]),message);
-    #endif
+    DEBUG_LOG(target, message);
 }
-
-
-#pragma mark - 其他
-/**
- 获取当前的viewcontroller
-
- @return 当前的控制器
- */
-- (UIViewController *)currentViewController;
-{
-    UIViewController *result = nil;
-    UIWindow * window = [[UIApplication sharedApplication] keyWindow];
-    if (window.windowLevel != UIWindowLevelNormal){
-
-        NSArray *windows = [[UIApplication sharedApplication] windows];
-        for(UIWindow * tmpWin in windows){
-
-            if (tmpWin.windowLevel == UIWindowLevelNormal){
-                window = tmpWin;
-                break;
-            }
-        }
-    }
-
-    UIView *frontView = [[window subviews] objectAtIndex:0];
-    id nextResponder = [frontView nextResponder];
-
-    if ([nextResponder isKindOfClass:[UIViewController class]])
-
-        result = nextResponder;
-    else
-        result = window.rootViewController;
-    return result;
-}
-
 
 // 重写setValue:forUndefinedKey:方法
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key {
-    NSLog(@"key = %@, value = %@", key, value);
+//    WLOG(@"key = %@, value = %@", key, value);
 }
-
-//- (void)setValue:(id)value forKey:(NSString *)key
-//{
-//
-//}
 
 @end
