@@ -17,10 +17,12 @@
 /**
  类方法实例化对象 （会自动判断是否是url或者是图片格式）
 
- @param images images 图片数组
+ @param iphoneImages iphone 图片数组
+ @param iphonexImages iphonex 图片数组
  @param enablePageControl 是否显示pagectroll
  */
-+ (void) welcomPageWithImages:(NSArray *)images
-            enablePageControl:(BOOL)enablePageControl;
++ (void) configGuideViewWithIphoneImages:(NSArray *)iphoneImages
+                           iphonexImages:(NSArray *)iphonexImages
+                       enablePageControl:(BOOL)enablePageControl;
 
 @end
