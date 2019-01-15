@@ -31,7 +31,7 @@
                            iphonexImages:(NSArray *)iphonexImages
                        enablePageControl:(BOOL)enablePageControl;
 {
-    NSString *str = [[NSUserDefaults standardUserDefaults] objectForKey:@"GUIDE_SHOW"];
+    NSString *str = [[NSUserDefaults standardUserDefaults] objectForKey:SHOWNAVPAGE];
     if (str.length == 0) {
 
         if (ScreenHeight >= 812) {
@@ -174,6 +174,8 @@
  */
 -(void)dismiss
 {
+    [UserDefault setObject:@"1" forKey:SHOWNAVPAGE];
+
     [UIView animateWithDuration:0.3 animations:^{
 
         self.alpha = 0;
