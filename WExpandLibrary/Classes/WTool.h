@@ -7,7 +7,7 @@
 //
 
 #import <WBasicLibrary/WBasicHeader.h>
-#import "WDevice.h"
+//#import "WDevice.h"
 
 @interface WTool : NSObject
 

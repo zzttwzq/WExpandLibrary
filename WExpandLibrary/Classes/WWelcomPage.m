@@ -8,7 +8,7 @@
 
 #import "WWelcomPage.h"
 #import "UIImageView+WebCache.h"
-#import "WDevice.h"
+#import <WBasicLibrary/WBasicHeader.h>
 
 @interface WWelcomPage ()<UIScrollViewDelegate>
 
@@ -34,7 +34,7 @@
     NSString *str = [[NSUserDefaults standardUserDefaults] objectForKey:@"GUIDE_SHOW"];
     if (str.length == 0) {
 
-        if ([WDevice is_Iphone_x]) {
+        if (ScreenHeight >= 812) {
             WWelcomPage *page = [[WWelcomPage alloc] initWithImages:iphonexImages
                                                   enablePageControl:enablePageControl];
             page.contentMode = UIViewContentModeScaleAspectFill;

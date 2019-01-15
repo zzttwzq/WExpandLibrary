@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "WFileManager.h"
-#import "WThreadTool.h"
+#import <WBasicLibrary/WBasicHeader.h>
 
 @interface WPlistManager : NSObject
 

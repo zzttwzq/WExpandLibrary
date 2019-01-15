@@ -9,7 +9,6 @@
 #define WExpandHeader_h
 
 #import "WBasicCell.h"
-#import "WDevice.h"
 #import "WDataModel.h"
 #import "WFileManager.h"
 #import "WLocationManager.h"
@@ -20,7 +19,6 @@
 #import "WSiderViewController.h"
 #import "WScanCodeVC.h"
 #import "WTool.h"
-#import "WThreadTool.h"
 #import "WPlistManager.h"
 #import "WWelcomPage.h"
 #import "AppInfo.h"

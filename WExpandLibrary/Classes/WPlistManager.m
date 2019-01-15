@@ -124,18 +124,27 @@
                      value:(id)value;
 {
     WEAK_SELF(WPlistManager);
-    [WThreadTool startTaskWithBlock:^{
+//    [WThreadTool startTaskWithBlock:^{
+//
+//        for (NSString *dictKey in weakSelf.fileDict) {
+//
+//            if ([dictKey isEqualToString:key]) {
+//
+//                [weakSelf.fileDict setObject:value forKey:key];
+//            }
+//        }
+//
+//        [self wirteToFile];
+//    }];
 
-        for (NSString *dictKey in weakSelf.fileDict) {
+    for (NSString *dictKey in weakSelf.fileDict) {
 
-            if ([dictKey isEqualToString:key]) {
+        if ([dictKey isEqualToString:key]) {
 
-                [weakSelf.fileDict setObject:value forKey:key];
-            }
+            [weakSelf.fileDict setObject:value forKey:key];
         }
-
-        [self wirteToFile];
-    }];
+    }
+    [self wirteToFile];
 }
 
 
@@ -149,17 +158,26 @@
                   value:(id)value;
 {
     WEAK_SELF(WPlistManager);
-    [WThreadTool startTaskWithBlock:^{
+//    [WThreadTool startTaskWithBlock:^{
+//
+//        for (NSString *dictKey in weakSelf.fileDict) {
+//
+//            if ([dictKey isEqualToString:key]) {
+//
+//                [weakSelf.fileDict setObject:value forKey:key];
+//            }
+//        }
+//        [self wirteToFile];
+//    }];
 
-        for (NSString *dictKey in weakSelf.fileDict) {
+    for (NSString *dictKey in weakSelf.fileDict) {
 
-            if ([dictKey isEqualToString:key]) {
+        if ([dictKey isEqualToString:key]) {
 
-                [weakSelf.fileDict setObject:value forKey:key];
-            }
+            [weakSelf.fileDict setObject:value forKey:key];
         }
-        [self wirteToFile];
-    }];
+    }
+    [self wirteToFile];
 }
 
 
@@ -171,17 +189,25 @@
 - (void) deleteItemWithKey:(NSString *)key;
 {
     WEAK_SELF(WPlistManager);
-    [WThreadTool startTaskWithBlock:^{
+//    [WThreadTool startTaskWithBlock:^{
+//
+//        for (NSString *dictKey in weakSelf.fileDict) {
+//
+//            if ([dictKey isEqualToString:key]) {
+//
+//                [weakSelf.fileDict removeObjectForKey:key];
+//            }
+//        }
+//        [self wirteToFile];
+//    }];
+    for (NSString *dictKey in weakSelf.fileDict) {
 
-        for (NSString *dictKey in weakSelf.fileDict) {
+        if ([dictKey isEqualToString:key]) {
 
-            if ([dictKey isEqualToString:key]) {
-
-                [weakSelf.fileDict removeObjectForKey:key];
-            }
+            [weakSelf.fileDict removeObjectForKey:key];
         }
-        [self wirteToFile];
-    }];
+    }
+    [self wirteToFile];
 }
 
 @end
