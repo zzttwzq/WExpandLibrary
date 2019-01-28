@@ -254,9 +254,6 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = zzttwzq;
 				TargetAttributes = {
-					6003F589195388D20070C39A = {
-						DevelopmentTeam = ZZ7QJD8PMQ;
-					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -507,10 +504,11 @@
 			baseConfigurationReference = F250A4EFF7AEE65BBDFEC761 /* Pods-WExpandLibrary_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = ZZ7QJD8PMQ;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WExpandLibrary/WExpandLibrary-Prefix.pch";
 				INFOPLIST_FILE = "WExpandLibrary/WExpandLibrary-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
@@ -524,10 +522,11 @@
 			baseConfigurationReference = D97A822F88B54B33711EC6DD /* Pods-WExpandLibrary_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = ZZ7QJD8PMQ;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WExpandLibrary/WExpandLibrary-Prefix.pch";
 				INFOPLIST_FILE = "WExpandLibrary/WExpandLibrary-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
